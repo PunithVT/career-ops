@@ -516,7 +516,95 @@ tr:hover td { background: var(--surface2); }
   to   { transform: translateY(0);    opacity: 1; }
 }
 
+/* ── Tools tab ────────────────────────────────────────────────────────────── */
+.tools-mode-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.mode-btn {
+  padding: 0.45rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.mode-btn:hover { background: var(--surface2); color: var(--text); }
+.mode-btn.active { background: var(--accent-dim); color: var(--accent); border-color: var(--accent); }
+
+.tool-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 1rem;
+  align-items: start;
+}
+.mode-panel { display: none; }
+.mode-panel.active { display: block; }
+
+.field-row { display: flex; gap: 0.75rem; padding: 0.75rem 1rem 0; }
+.field-row .field { flex: 1; }
+
+.tool-input { border: none; border-radius: 0; resize: vertical; min-height: 120px; }
+
+/* ── Scanner tab ──────────────────────────────────────────────────────────── */
+.scanner-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+.scan-log {
+  padding: 1rem;
+  font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: pre-wrap;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: transparent;
+  border: none;
+}
+.scan-log .new-job { color: var(--green); }
+.scan-log .error   { color: var(--red); }
+
+/* ── Follow-ups tab ───────────────────────────────────────────────────────── */
+.followup-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.followup-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+.followup-card.overdue { border-color: var(--orange); }
+.followup-card.due-soon { border-color: var(--accent); }
+.followup-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
+.followup-company { font-weight: 600; font-size: 0.9rem; }
+.followup-badge {
+  font-size: 0.72rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+  background: var(--surface2);
+  color: var(--text-muted);
+}
+.followup-badge.overdue { background: #2d1e0d; color: var(--orange); }
+.followup-badge.due-soon { background: var(--accent-dim); color: var(--accent); }
+.followup-role { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.6rem; }
+.followup-meta { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+.followup-empty { color: var(--text-muted); font-style: italic; font-size: 0.88rem; padding: 1rem 0; }
+
 /* ── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .tool-layout, .scanner-layout { grid-template-columns: 1fr; }
+}
 @media (max-width: 900px) {
   .eval-layout, .reports-layout { grid-template-columns: 1fr; }
   .stats-row { grid-template-columns: repeat(3, 1fr); }

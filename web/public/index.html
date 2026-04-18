@@ -110,6 +110,7 @@
             <textarea id="eval-jd" rows="14" placeholder="Paste the job description text, or a URL (e.g. https://jobs.ashbyhq.com/...)"></textarea>
             <div class="card-footer">
               <button id="eval-btn" class="btn btn-primary" onclick="runEvaluation()">⚡ Evaluate</button>
+              <button id="eval-pdf-btn" class="btn btn-ghost hidden" onclick="generatePDF('eval')">⬇ Generate PDF CV</button>
               <span id="eval-status" class="eval-status"></span>
             </div>
           </div>
@@ -134,6 +135,7 @@
         <button class="mode-btn" data-mode="interview-prep">Interview prep</button>
         <button class="mode-btn" data-mode="training">Evaluate course</button>
         <button class="mode-btn" data-mode="project">Evaluate project</button>
+        <button class="mode-btn" data-mode="apply">Apply assistant</button>
       </div>
 
       <!-- Mode descriptions + input areas -->
@@ -206,6 +208,19 @@
             </div>
           </div>
 
+          <div class="mode-panel" data-mode="apply">
+            <div class="card">
+              <div class="card-header">Apply assistant — form answer generator</div>
+              <p class="card-hint">Paste the application form questions and Claude generates tailored answers from your CV and profile. Never submits — you copy-paste.</p>
+              <div class="field-row">
+                <div class="field"><label>Company</label><input type="text" id="apply-company" placeholder="e.g. Stripe"></div>
+                <div class="field"><label>Role</label><input type="text" id="apply-role" placeholder="e.g. Senior Engineer"></div>
+              </div>
+              <textarea class="tool-input" rows="12" placeholder="Paste the application form questions here, one per line:&#10;&#10;Why do you want to work here?&#10;Describe a time you led a complex project.&#10;What's your experience with distributed systems?"></textarea>
+              <div class="card-footer"><button class="btn btn-primary tool-run-btn">✍ Generate answers</button><span class="tool-status"></span></div>
+            </div>
+          </div>
+
         </div>
 
         <!-- Shared output area -->
@@ -275,7 +290,17 @@
 
     <!-- ── Pipeline ── -->
     <div class="tab-panel" data-panel="pipeline">
-      <div class="page-header"><h1>Pipeline</h1><button class="btn btn-primary btn-sm" onclick="savePipeline()">Save</button></div>
+      <div class="page-header">
+        <h1>Pipeline</h1>
+        <div style="display:flex;gap:.5rem">
+          <button class="btn btn-ghost btn-sm" onclick="savePipeline()">Save</button>
+          <button id="process-btn" class="btn btn-primary btn-sm" onclick="processPipeline()">⚡ Process all URLs</button>
+        </div>
+      </div>
+      <div id="process-log-wrap" class="card hidden" style="margin-bottom:1rem">
+        <div class="card-header">Processing log</div>
+        <pre id="process-log" class="scan-log"></pre>
+      </div>
       <div class="card">
         <div class="card-header">Pending job URLs</div>
         <p class="card-hint">Add URLs one per line under "## Pending". Evaluated ones go to "## Processed".</p>

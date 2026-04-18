@@ -262,6 +262,7 @@ window.runEvaluation = async function() {
         lastReportIds.eval = evt.reportId;
         statusEl.textContent = 'Done — report saved.';
         show('save-report-btn');
+        show('eval-pdf-btn');
         loadDashboard();
       }
     });
@@ -274,6 +275,35 @@ window.viewSavedReport = function(ctx) {
   if (!id) return;
   switchTab('reports');
   loadReports().then(() => selectReport(id));
+};
+
+/* ── PDF CV generation ─────────────────────────────────────────────────────── */
+window.generatePDF = async function(ctx) {
+  const jd = ctx === 'eval' ? $('eval-jd').value.trim() : $('tool-output').textContent;
+  if (!jd) return showToast('No JD text to generate PDF from', 'error');
+
+  const btn = $('eval-pdf-btn');
+  btn.disabled = true; btn.textContent = '⏳ Generating…';
+
+  let filename = null;
+  try {
+    await streamRequest('/api/pdf', { jd }, {
+      onChunk: chunk => { setText('eval-status', chunk.replace(/\n/g, ' ').trim()); },
+      onDone: evt => { filename = evt.filename; }
+    });
+    if (filename) {
+      // Trigger download
+      const a = document.createElement('a');
+      a.href = `/api/pdf/download/${encodeURIComponent(filename)}`;
+      a.download = filename;
+      a.click();
+      showToast('PDF downloaded!');
+    }
+  } catch (e) {
+    showToast(e.message, 'error');
+  } finally {
+    btn.disabled = false; btn.textContent = '⬇ Generate PDF CV';
+  }
 };
 
 /* ── Tools tab ─────────────────────────────────────────────────────────────── */
@@ -320,6 +350,12 @@ async function runTool(triggerBtn) {
     const role = $('prep-role').value.trim();
     if (!company || !role) return showToast('Company name and role are required', 'error');
     input = `Prepare interview intel for: Company = "${company}", Role = "${role}".\n\nContext:\n${input}`;
+  } else if (mode === 'apply') {
+    const company = $('apply-company').value.trim();
+    const role = $('apply-role').value.trim();
+    if (!company || !role) return showToast('Company and role are required', 'error');
+    if (!input) return showToast('Paste the application form questions', 'error');
+    input = `Generate tailored answers for a job application at "${company}" for the role "${role}".\n\nApplication form questions:\n\n${input}`;
   } else if (!input) {
     return showToast('Please fill in the input first', 'error');
   }
@@ -494,6 +530,34 @@ async function loadPipeline() {
 window.savePipeline = async function() {
   await api('PUT', '/api/pipeline', { content: $('pipeline-editor').value });
   showToast('Pipeline saved');
+};
+
+window.processPipeline = async function() {
+  // Save first so the server reads latest content
+  await api('PUT', '/api/pipeline', { content: $('pipeline-editor').value });
+
+  const btn = $('process-btn');
+  const logWrap = $('process-log-wrap');
+  const log = $('process-log');
+  btn.disabled = true; btn.textContent = '⏳ Processing…';
+  log.textContent = '';
+  logWrap.classList.remove('hidden');
+
+  const append = t => { log.textContent += t; log.scrollTop = log.scrollHeight; };
+
+  try {
+    await streamRequest('/api/pipeline/process', {}, {
+      onChunk: chunk => append(chunk),
+      onDone: async evt => {
+        append(`\nAll done — ${evt.processed} URLs processed.`);
+        // Reload pipeline editor with updated content
+        const { content } = await api('GET', '/api/pipeline');
+        $('pipeline-editor').value = content;
+        loadDashboard();
+      }
+    });
+  } catch (e) { append(`\nError: ${e.message}`); showToast(e.message, 'error'); }
+  finally { btn.disabled = false; btn.textContent = '⚡ Process all URLs'; }
 };
 
 /* ── Reports ───────────────────────────────────────────────────────────────── */

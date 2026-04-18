@@ -159,3 +159,24 @@ export function saveReport(userPath, content, jdSnippet) {
   return filename.replace('.md', '');
 }
 
+export function addToTracker(userPath, entry) {
+  const appsPath = join(userPath, 'data', 'applications.md');
+  const content = existsSync(appsPath) ? readFileSync(appsPath, 'utf8') : '# Applications Tracker\n\n| # | Date | Company | Role | Score | Status | PDF | Report | Notes |\n|---|------|---------|------|-------|--------|-----|--------|-------|\n';
+
+  const lines = content.split('\n');
+  const maxNum = lines.reduce((max, l) => {
+    const m = l.match(/^\|\s*(\d+)\s*\|/);
+    return m ? Math.max(max, parseInt(m[1], 10)) : max;
+  }, 0);
+
+  const num = maxNum + 1;
+  const row = `| ${num} | ${entry.date} | ${entry.company} | ${entry.role} | ${entry.score} | ${entry.status} | ${entry.pdf} | ${entry.report} | ${entry.notes} |`;
+
+  const lastRowIdx = lines.reduce((last, l, i) => (l.startsWith('|') && !l.startsWith('| #') && !l.startsWith('|---')) ? i : last, -1);
+  if (lastRowIdx >= 0) lines.splice(lastRowIdx + 1, 0, row);
+  else lines.push(row);
+
+  writeFileSync(appsPath, lines.join('\n'));
+  return num;
+}
+

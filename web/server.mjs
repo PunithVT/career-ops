@@ -3,10 +3,10 @@ import session from 'express-session';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { spawn } from 'child_process';
-import { existsSync, readFileSync, writeFileSync, copyFileSync } from 'fs';
+import { existsSync, readFileSync, writeFileSync, copyFileSync, createReadStream } from 'fs';
 import * as users from './lib/users.mjs';
 import * as data from './lib/data.mjs';
-import { evaluateJob, runMode, fetchUrl } from './lib/evaluate.mjs';
+import { evaluateJob, runMode, fetchUrl, generatePDF } from './lib/evaluate.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -192,7 +192,7 @@ app.post('/api/evaluate', requireAuth, requireApiKey, async (req, res) => {
 
 // ─── Generic AI mode (SSE streaming) ─────────────────────────────────────────
 
-const ALLOWED_MODES = ['ofertas', 'contacto', 'deep', 'interview-prep', 'training', 'project', 'patterns', 'followup', 'apply'];
+const ALLOWED_MODES = ['ofertas', 'contacto', 'deep', 'interview-prep', 'training', 'project', 'patterns', 'followup', 'apply', 'batch'];
 
 app.post('/api/ai/:mode', requireAuth, requireApiKey, async (req, res) => {
   const { mode } = req.params;
@@ -301,6 +301,117 @@ app.post('/api/followup-draft', requireAuth, requireApiKey, async (req, res) => 
     await runMode('followup', input, req.userDataPath, ROOT, chunk => send({ chunk }));
     send({ done: true });
   } catch (e) { send({ error: e.message }); }
+  res.end();
+});
+
+// ─── PDF CV generation ────────────────────────────────────────────────────────
+
+app.post('/api/pdf', requireAuth, requireApiKey, async (req, res) => {
+  let { jd } = req.body ?? {};
+  if (!jd?.trim()) return res.status(400).json({ error: 'Job description or URL required' });
+  if (/^https?:\/\//i.test(jd.trim())) {
+    const fetched = await fetchUrl(jd.trim());
+    if (fetched) jd = fetched;
+  }
+  if (!data.getSetupStatus(req.userDataPath).cv)
+    return res.status(400).json({ error: 'Please add your CV first (Profile tab)' });
+
+  const send = sseSetup(res);
+  try {
+    const { pdfFilename } = await generatePDF(jd, req.userDataPath, ROOT, msg => send({ chunk: msg }));
+    send({ done: true, filename: pdfFilename });
+  } catch (e) {
+    send({ error: `PDF generation failed: ${e.message}. Make sure Playwright is installed: npx playwright install chromium` });
+  }
+  res.end();
+});
+
+app.get('/api/pdf/download/:filename', requireAuth, (req, res) => {
+  const safe = req.params.filename.replace(/[^a-zA-Z0-9._-]/g, '');
+  if (!safe.endsWith('.pdf')) return res.status(400).json({ error: 'Invalid filename' });
+  const filePath = join(req.userDataPath, 'output', safe);
+  if (!existsSync(filePath)) return res.status(404).json({ error: 'File not found' });
+  res.setHeader('Content-Disposition', `attachment; filename="${safe}"`);
+  res.setHeader('Content-Type', 'application/pdf');
+  createReadStream(filePath).pipe(res);
+});
+
+// ─── Pipeline auto-process ────────────────────────────────────────────────────
+
+app.post('/api/pipeline/process', requireAuth, requireApiKey, async (req, res) => {
+  const send = sseSetup(res);
+
+  const pipelineContent = data.readFile(req.userDataPath, 'data/pipeline.md');
+  const lines = pipelineContent.split('\n');
+  const pending = lines
+    .map((line, idx) => ({ line, idx }))
+    .filter(({ line }) => /^\s*-\s*\[\s*\]/.test(line));
+
+  if (!pending.length) {
+    send({ chunk: 'No pending URLs found in pipeline.\n' });
+    send({ done: true, processed: 0 });
+    return res.end();
+  }
+
+  send({ chunk: `Found ${pending.length} pending URL(s). Processing…\n\n` });
+
+  const updatedLines = [...lines];
+  let processed = 0;
+
+  for (const { line, idx } of pending) {
+    const urlMatch = line.match(/https?:\/\/[^\s|]+/);
+    if (!urlMatch) { send({ chunk: `  Skipping line (no URL): ${line.trim()}\n` }); continue; }
+
+    const url = urlMatch[0];
+    send({ chunk: `[${++processed}/${pending.length}] ${url}\n` });
+
+    // Fetch page
+    send({ chunk: `  → Fetching page…\n` });
+    let jd = await fetchUrl(url);
+    if (!jd) {
+      send({ chunk: `  ✗ Could not fetch. Marking as error.\n` });
+      updatedLines[idx] = line.replace(/^\s*-\s*\[\s*\]/, m => m.replace('[ ]', '[!]')) + ' — Error: could not fetch';
+      continue;
+    }
+
+    // Evaluate
+    send({ chunk: `  → Evaluating (this takes ~30s)…\n` });
+    let result = '';
+    try {
+      result = await evaluateJob(jd, req.userDataPath, ROOT, () => {});
+    } catch (e) {
+      send({ chunk: `  ✗ Evaluation error: ${e.message}\n` }); continue;
+    }
+
+    const reportId = data.saveReport(req.userDataPath, result, jd.slice(0, 200));
+    const reportNum = reportId.split('-')[0];
+
+    // Extract score
+    const scoreMatch = result.match(/(\d+\.?\d*)\/5/);
+    const score = scoreMatch ? parseFloat(scoreMatch[1]) : null;
+
+    // Extract company from URL
+    let company = 'unknown';
+    try {
+      const host = new URL(url).hostname.replace(/^www\./, '');
+      const pathParts = new URL(url).pathname.split('/').filter(Boolean);
+      company = pathParts.find(p => p.length > 2 && !/jobs?|careers?|posting/i.test(p)) || host.split('.')[0];
+    } catch {}
+
+    const date = new Date().toISOString().split('T')[0];
+    data.addToTracker(req.userDataPath, {
+      date, company, role: 'Pending review',
+      score: score ? `${score}/5` : '—', status: 'Evaluated',
+      pdf: '❌', report: `[${reportNum}](reports/${reportId}.md)`, notes: url
+    });
+
+    updatedLines[idx] = `- [x] #${reportNum} | ${url} | ${company} | ${score ? score + '/5' : '—'}`;
+    send({ chunk: `  ✓ Score: ${score ?? 'N/A'}/5 | Report #${reportNum} saved\n` });
+  }
+
+  data.writeFile(req.userDataPath, 'data/pipeline.md', updatedLines.join('\n'));
+  send({ chunk: `\n✓ Done. ${processed} URL(s) processed.\n` });
+  send({ done: true, processed });
   res.end();
 });
 

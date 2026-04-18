@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>career-ops</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+<!-- ── Auth Screen ─────────────────────────────────────────────────────────── -->
+<div id="auth-screen" class="screen">
+  <div class="auth-box">
+    <div class="auth-logo">career-ops</div>
+    <p class="auth-sub">AI-powered job search pipeline</p>
+
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-form="login">Sign in</button>
+      <button class="auth-tab" data-form="register">Create account</button>
+    </div>
+
+    <form id="login-form" class="auth-form">
+      <div class="field">
+        <label>Username</label>
+        <input type="text" id="login-username" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="login-password" autocomplete="current-password" required>
+      </div>
+      <div id="login-error" class="form-error hidden"></div>
+      <button type="submit" class="btn btn-primary full">Sign in</button>
+    </form>
+
+    <form id="register-form" class="auth-form hidden">
+      <div class="field">
+        <label>Username</label>
+        <input type="text" id="reg-username" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="reg-password" autocomplete="new-password" required>
+      </div>
+      <div id="reg-error" class="form-error hidden"></div>
+      <button type="submit" class="btn btn-primary full">Create account</button>
+    </form>
+  </div>
+</div>
+
+<!-- ── Onboarding Wizard ───────────────────────────────────────────────────── -->
+<div id="onboarding-screen" class="screen hidden">
+  <div class="onboard-wrap">
+    <div class="onboard-header">
+      <div class="auth-logo">career-ops</div>
+      <p class="auth-sub">Let's get you set up</p>
+    </div>
+
+    <div class="onboard-steps">
+      <div class="step active" data-step="1"><span>1</span> CV</div>
+      <div class="step" data-step="2"><span>2</span> Profile</div>
+      <div class="step" data-step="3"><span>3</span> Ready</div>
+    </div>
+
+    <!-- Step 1: CV -->
+    <div id="onboard-step-1" class="onboard-step active">
+      <h2>Add your CV</h2>
+      <p class="hint">Paste your CV in markdown or plain text. This is your source of truth for all evaluations.</p>
+      <textarea id="onboard-cv" rows="18" placeholder="# Your Name&#10;&#10;## Summary&#10;..."></textarea>
+      <div id="onboard-cv-error" class="form-error hidden"></div>
+      <button class="btn btn-primary" onclick="onboardNext(1)">Continue →</button>
+    </div>
+
+    <!-- Step 2: Profile -->
+    <div id="onboard-step-2" class="onboard-step hidden">
+      <h2>Your profile</h2>
+      <p class="hint">Edit the YAML configuration. Fill in your name, email, target roles, and compensation target.</p>
+      <textarea id="onboard-profile" rows="22"></textarea>
+      <div id="onboard-profile-error" class="form-error hidden"></div>
+      <div class="btn-row">
+        <button class="btn btn-ghost" onclick="onboardBack(2)">← Back</button>
+        <button class="btn btn-primary" onclick="onboardNext(2)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Done -->
+    <div id="onboard-step-3" class="onboard-step hidden">
+      <div class="done-icon">✓</div>
+      <h2>You're all set!</h2>
+      <p>Your profile is ready. Paste a job URL or description to evaluate it, or explore the dashboard.</p>
+      <button class="btn btn-primary" onclick="finishOnboarding()">Go to dashboard →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Main App ────────────────────────────────────────────────────────────── -->
+<div id="app-screen" class="screen hidden">
+
+  <nav id="sidebar">
+    <div class="sidebar-logo">career-ops</div>
+
+    <ul class="nav-list">
+      <li class="nav-item active" data-tab="dashboard">
+        <span class="nav-icon">⊞</span> Dashboard
+      </li>
+      <li class="nav-item" data-tab="evaluate">
+        <span class="nav-icon">⚡</span> Evaluate
+      </li>
+      <li class="nav-item" data-tab="pipeline">
+        <span class="nav-icon">⟳</span> Pipeline
+      </li>
+      <li class="nav-item" data-tab="reports">
+        <span class="nav-icon">☰</span> Reports
+      </li>
+      <li class="nav-item" data-tab="profile">
+        <span class="nav-icon">◎</span> Profile
+      </li>
+    </ul>
+
+    <div class="sidebar-user">
+      <span id="sidebar-username"></span>
+      <button class="btn-link" id="logout-btn">Sign out</button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- Dashboard -->
+    <div class="tab-panel active" data-panel="dashboard">
+      <div class="page-header">
+        <h1>Dashboard</h1>
+        <button class="btn btn-ghost btn-sm" onclick="refreshDashboard()">↻ Refresh</button>
+      </div>
+
+      <div id="stats-row" class="stats-row"></div>
+
+      <div class="card">
+        <div class="card-header">
+          <span>Applications</span>
+          <input type="text" id="app-filter" class="filter-input" placeholder="Filter by company or role…">
+        </div>
+        <div class="table-wrap">
+          <table id="apps-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Date</th>
+                <th>Company</th>
+                <th>Role</th>
+                <th>Score</th>
+                <th>Status</th>
+                <th>Report</th>
+              </tr>
+            </thead>
+            <tbody id="apps-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Evaluate -->
+    <div class="tab-panel" data-panel="evaluate">
+      <div class="page-header">
+        <h1>Evaluate a job posting</h1>
+      </div>
+
+      <div class="eval-layout">
+        <div class="eval-input-col">
+          <div class="card">
+            <div class="card-header">Job description or URL</div>
+            <textarea id="eval-jd" rows="14" placeholder="Paste the job description text, or a URL (e.g. https://jobs.ashbyhq.com/...)"></textarea>
+            <div class="card-footer">
+              <button id="eval-btn" class="btn btn-primary" onclick="runEvaluation()">⚡ Evaluate</button>
+              <span id="eval-status" class="eval-status"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="eval-output-col">
+          <div class="card eval-output-card">
+            <div class="card-header">
+              <span>Evaluation</span>
+              <button id="save-report-btn" class="btn btn-ghost btn-sm hidden" onclick="viewSavedReport()">View saved report →</button>
+            </div>
+            <div id="eval-output" class="markdown-body eval-placeholder">
+              The evaluation will appear here as it streams in.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pipeline -->
+    <div class="tab-panel" data-panel="pipeline">
+      <div class="page-header">
+        <h1>Pipeline</h1>
+        <button class="btn btn-primary btn-sm" onclick="savePipeline()">Save</button>
+      </div>
+      <div class="card">
+        <div class="card-header">Pending job URLs</div>
+        <p class="card-hint">Add URLs one per line under "## Pending". Move evaluated ones to "## Processed".</p>
+        <textarea id="pipeline-editor" rows="24" class="code-editor"></textarea>
+      </div>
+    </div>
+
+    <!-- Reports -->
+    <div class="tab-panel" data-panel="reports">
+      <div class="page-header">
+        <h1>Reports</h1>
+      </div>
+      <div class="reports-layout">
+        <div class="reports-list-col">
+          <div class="card">
+            <div class="card-header">All evaluations</div>
+            <div id="reports-list" class="reports-list"></div>
+          </div>
+        </div>
+        <div class="reports-detail-col">
+          <div class="card">
+            <div class="card-header" id="report-title">Select a report</div>
+            <div id="report-content" class="markdown-body report-placeholder">
+              Click a report on the left to read it.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile -->
+    <div class="tab-panel" data-panel="profile">
+      <div class="page-header">
+        <h1>Profile</h1>
+      </div>
+
+      <div class="profile-tabs">
+        <button class="ptab active" data-ptab="cv-tab">CV</button>
+        <button class="ptab" data-ptab="config-tab">Profile config</button>
+        <button class="ptab" data-ptab="archetypes-tab">Archetypes</button>
+      </div>
+
+      <div id="cv-tab" class="ptab-panel active">
+        <div class="card">
+          <div class="card-header">
+            <span>cv.md — your canonical CV</span>
+            <button class="btn btn-primary btn-sm" onclick="saveCV()">Save</button>
+          </div>
+          <p class="card-hint">This is the source of truth for all evaluations. Keep it accurate and up-to-date.</p>
+          <textarea id="cv-editor" rows="28" class="code-editor"></textarea>
+        </div>
+      </div>
+
+      <div id="config-tab" class="ptab-panel hidden">
+        <div class="card">
+          <div class="card-header">
+            <span>config/profile.yml</span>
+            <button class="btn btn-primary btn-sm" onclick="saveProfileConfig()">Save</button>
+          </div>
+          <p class="card-hint">Name, email, target roles, compensation targets.</p>
+          <textarea id="profile-config-editor" rows="28" class="code-editor"></textarea>
+        </div>
+      </div>
+
+      <div id="archetypes-tab" class="ptab-panel hidden">
+        <div class="card">
+          <div class="card-header">
+            <span>modes/_profile.md — archetype preferences</span>
+            <button class="btn btn-primary btn-sm" onclick="saveProfileMd()">Save</button>
+          </div>
+          <p class="card-hint">Customize scoring weights, archetypes, and framing.</p>
+          <textarea id="profile-md-editor" rows="28" class="code-editor"></textarea>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- Toast notification -->
+<div id="toast" class="toast hidden"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

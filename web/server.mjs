@@ -241,7 +241,10 @@ app.post('/api/scan', requireAuth, async (req, res) => {
   if (req.body?.dryRun) args.push('--dry-run');
   if (req.body?.company) args.push('--company', req.body.company);
 
-  const proc = spawn('node', args, { cwd: userPath });
+  const proc = spawn('node', args, {
+    cwd: userPath,
+    env: { ...process.env, CAREER_OPS_DATA_PATH: userPath }
+  });
 
   proc.stdout.on('data', d => send({ chunk: d.toString() }));
   proc.stderr.on('data', d => send({ chunk: `[stderr] ${d}` }));
@@ -421,7 +424,8 @@ function runScript(scriptPath, cwd, args = []) {
   return new Promise((resolve, reject) => {
     const proc = spawn('node', ['--no-warnings', scriptPath, ...args], {
       cwd,
-      stdio: ['ignore', 'pipe', 'pipe']
+      stdio: ['ignore', 'pipe', 'pipe'],
+      env: { ...process.env, CAREER_OPS_DATA_PATH: cwd }
     });
     let out = '', err = '';
     proc.stdout.on('data', d => out += d);

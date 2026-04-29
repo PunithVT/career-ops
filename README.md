@@ -1,282 +1,162 @@
-# Career-Ops
+# career-ops — AI Job Search Platform 🚀
 
-[English](README.md) | [Español](README.es.md) | [Português (Brasil)](README.pt-BR.md) | [한국어](README.ko-KR.md) | [日本語](README.ja.md) | [Русский](README.ru.md) | [繁體中文](README.zh-TW.md)
+> **The all-in-one, self-hosted, AI-powered job search command center.** Evaluate job descriptions with Claude AI, generate ATS-optimized PDF CVs tailored to every role, scan Greenhouse / Ashby / Lever portals automatically, track every application, draft LinkedIn outreach, prep interviews, and analyze rejection patterns — all from a single multi-user web app you can host on AWS, your own VPS, or any Node.js server.
 
-<p align="center">
-  <a href="https://x.com/santifer"><img src="docs/hero-banner.jpg" alt="Career-Ops — Multi-Agent Job Search System" width="800"></a>
-</p>
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D22-brightgreen)](https://nodejs.org)
+[![Powered by Claude](https://img.shields.io/badge/AI-Claude%20Sonnet%204.6-orange)](https://anthropic.com)
+[![Self-hosted](https://img.shields.io/badge/deploy-self--hosted-purple)]()
 
-<p align="center">
-  <em>I spent months applying to jobs the hard way. So I engineered the system I wish I had.</em><br>
-  Companies use AI to filter candidates. <strong>I gave candidates AI to <em>choose</em> companies.</strong><br>
-  <em>Now it's open source.</em>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Claude_Code-000?style=flat&logo=anthropic&logoColor=white" alt="Claude Code">
-  <img src="https://img.shields.io/badge/OpenCode-111827?style=flat&logo=terminal&logoColor=white" alt="OpenCode">
-  <img src="https://img.shields.io/badge/Codex_(soon)-6B7280?style=flat&logo=openai&logoColor=white" alt="Codex">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" alt="Go">
-  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat&logo=playwright&logoColor=white" alt="Playwright">
-  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT">
-  <a href="https://discord.gg/8pRpHETxa4"><img src="https://img.shields.io/badge/Discord-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord"></a>
-  <br>
-  <img src="https://img.shields.io/badge/EN-blue?style=flat" alt="EN">
-  <img src="https://img.shields.io/badge/ES-red?style=flat" alt="ES">
-  <img src="https://img.shields.io/badge/DE-grey?style=flat" alt="DE">
-  <img src="https://img.shields.io/badge/FR-blue?style=flat" alt="FR">
-  <img src="https://img.shields.io/badge/PT--BR-green?style=flat" alt="PT-BR">
-  <img src="https://img.shields.io/badge/KO-white?style=flat" alt="KO">
-  <img src="https://img.shields.io/badge/JA-red?style=flat" alt="JA">
-  <img src="https://img.shields.io/badge/ZH--TW-blue?style=flat" alt="ZH-TW">
-</p>
+**Search keywords:** AI job search · AI resume builder · ATS-optimized CV generator · Claude AI career assistant · LinkedIn outreach AI · interview prep AI · job application tracker · multi-user self-hosted job search platform · Greenhouse Ashby Lever scraper · rejection pattern analyzer · follow-up cadence tracker · salary negotiation assistant · tailored cover letter · open-source career tools · Anthropic API job pipeline · ChatGPT job search alternative · Claude Sonnet 4.6 web app
 
 ---
 
-<p align="center">
-  <img src="docs/demo.gif" alt="Career-Ops Demo" width="800">
-</p>
+## ⚡ Why career-ops
 
-<p align="center"><strong>740+ job listings evaluated · 100+ personalized CVs · 1 dream role landed</strong></p>
+Sending hundreds of generic applications doesn't work anymore. **career-ops uses Claude AI to find the right roles, tailor your CV to each one, and track every step** — turning the modern job hunt from a soul-crushing slog into a focused, data-driven pipeline.
 
-<p align="center"><a href="https://discord.gg/8pRpHETxa4"><img src="https://img.shields.io/badge/Join_the_community-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a></p>
+Originally built and used to evaluate **740+ job offers and land a Head of Applied AI role**, it's now a self-hostable web platform you and your friends can run privately. No SaaS lock-in, no monthly subscription, no data leaving your server.
 
-## What Is This
+## 🎯 What it does
 
-Career-Ops turns any AI coding CLI into a full job search command center. Instead of manually tracking applications in a spreadsheet, you get an AI-powered pipeline that:
+### 🌐 Multi-user Web App ([`web/`](web/))
 
-- **Evaluates offers** with a structured A-F scoring system (10 weighted dimensions)
-- **Generates tailored PDFs** -- ATS-optimized CVs customized per job description
-- **Scans portals** automatically (Greenhouse, Ashby, Lever, company pages)
-- **Processes in batch** -- evaluate 10+ offers in parallel with sub-agents
-- **Tracks everything** in a single source of truth with integrity checks
-
-> **Important: This is NOT a spray-and-pray tool.** Career-ops is a filter -- it helps you find the few offers worth your time out of hundreds. The system strongly recommends against applying to anything scoring below 4.0/5. Your time is valuable, and so is the recruiter's. Always review before submitting.
-
-Career-ops is agentic: Claude Code navigates career pages with Playwright, evaluates fit by reasoning about your CV vs the job description (not keyword matching), and adapts your resume per listing.
-
-> **Heads up: the first evaluations won't be great.** The system doesn't know you yet. Feed it context -- your CV, your career story, your proof points, your preferences, what you're good at, what you want to avoid. The more you nurture it, the better it gets. Think of it as onboarding a new recruiter: the first week they need to learn about you, then they become invaluable.
-
-Built by someone who used it to evaluate 740+ job offers, generate 100+ tailored CVs, and land a Head of Applied AI role. [Read the full case study](https://santifer.io/career-ops-system).
-
-## Features
+A single Node.js server gives every user their own private workspace:
 
 | Feature | Description |
 |---------|-------------|
-| **Auto-Pipeline** | Paste a URL, get a full evaluation + PDF + tracker entry |
-| **6-Block Evaluation** | Role summary, CV match, level strategy, comp research, personalization, interview prep (STAR+R) |
-| **Interview Story Bank** | Accumulates STAR+Reflection stories across evaluations -- 5-10 master stories that answer any behavioral question |
-| **Negotiation Scripts** | Salary negotiation frameworks, geographic discount pushback, competing offer leverage |
-| **ATS PDF Generation** | Keyword-injected CVs with Space Grotesk + DM Sans design |
-| **Portal Scanner** | 45+ companies pre-configured (Anthropic, OpenAI, ElevenLabs, Retool, n8n...) + custom queries across Ashby, Greenhouse, Lever, Wellfound |
-| **Batch Processing** | Parallel evaluation with `claude -p` workers |
-| **Dashboard TUI** | Terminal UI to browse, filter, and sort your pipeline |
-| **Human-in-the-Loop** | AI evaluates and recommends, you decide and act. The system never submits an application -- you always have the final call |
-| **Pipeline Integrity** | Automated merge, dedup, status normalization, health checks |
+| 🔐 **Multi-user accounts** | bcrypt-hashed passwords, session cookies, fully isolated per-user data |
+| 📊 **Dashboard** | Applications tracker with status, scores, filters, statistics |
+| ⚡ **AI Job Evaluation** | Paste any JD or URL → get a 7-block A–G analysis (fit, comp, gaps, red flags, posting legitimacy) streamed live |
+| 📄 **ATS-Optimized PDF CV** | Claude tailors your CV to each JD, Playwright renders a clean PDF that passes ATS parsers |
+| 🆚 **Compare Multiple Offers** | 10-dimension scoring matrix to rank competing offers |
+| 🔍 **Deep Company Research** | Structured intel brief — AI strategy, recent moves, culture, tech stack |
+| ✉️ **LinkedIn Outreach Generator** | Three-sentence framework for recruiters, hiring managers, and peers |
+| 📚 **Interview Prep Engine** | Glassdoor / Blind / LeetCode pattern analysis + STAR stories |
+| 📋 **Course / Certification ROI** | "Should I take this course?" → MAKE / SKIP / TIMEBOX verdict |
+| 🚀 **Portfolio Project Evaluator** | Scores project ideas across signal, uniqueness, demo-ability |
+| ✍️ **Apply Assistant** | Paste form questions → get tailored answers ready to copy-paste |
+| 📡 **Portal Scanner** | Zero-token scan of Greenhouse, Ashby, Lever APIs to discover new roles |
+| ⟳ **Pipeline Auto-Process** | Paste 10 URLs, get 10 evaluations + reports + tracker entries in one click |
+| 📊 **Rejection Pattern Analyzer** | Detects what's working and what's wasting time, recommends targeting changes |
+| 📬 **Follow-up Cadence Tracker** | Calculates which applications need a follow-up and drafts the message |
+| ◎ **Profile & CV Editor** | Edit CV, archetypes, scoring weights, application tracker — all from the browser |
 
-## Quick Start
+### 💻 CLI mode
 
-```bash
-# 1. Clone and install
-git clone https://github.com/santifer/career-ops.git
-cd career-ops && npm install
-npx playwright install chromium   # Required for PDF generation
+The original career-ops CLI is also available — every mode is exposed as a Claude Code slash command (`/career-ops`, `/career-ops oferta`, `/career-ops scan`, etc.). See [CLAUDE.md](CLAUDE.md) for the full command list.
 
-# 2. Check setup
-npm run doctor                     # Validates all prerequisites
+---
 
-# 3. Configure
-cp config/profile.example.yml config/profile.yml  # Edit with your details
-cp templates/portals.example.yml portals.yml       # Customize companies
+## 🛠 Quick start
 
-# 4. Add your CV
-# Create cv.md in the project root with your CV in markdown
-
-# 5. Personalize with Claude
-claude   # Open Claude Code in this directory
-
-# Then ask Claude to adapt the system to you:
-# "Change the archetypes to backend engineering roles"
-# "Translate the modes to English"
-# "Add these 5 companies to portals.yml"
-# "Update my profile with this CV I'm pasting"
-
-# 6. Start using
-# Paste a job URL or run /career-ops
-```
-
-> **The system is designed to be customized by Claude itself.** Modes, archetypes, scoring weights, negotiation scripts -- just ask Claude to change them. It reads the same files it uses, so it knows exactly what to edit.
-
-See [docs/SETUP.md](docs/SETUP.md) for the full setup guide.
-
-## Usage
-
-Career-ops is a single slash command with multiple modes:
-
-```
-/career-ops                → Show all available commands
-/career-ops {paste a JD}   → Full auto-pipeline (evaluate + PDF + tracker)
-/career-ops scan           → Scan portals for new offers
-/career-ops pdf            → Generate ATS-optimized CV
-/career-ops batch          → Batch evaluate multiple offers
-/career-ops tracker        → View application status
-/career-ops apply          → Fill application forms with AI
-/career-ops pipeline       → Process pending URLs
-/career-ops contacto       → LinkedIn outreach message
-/career-ops deep           → Deep company research
-/career-ops training       → Evaluate a course/cert
-/career-ops project        → Evaluate a portfolio project
-```
-
-Or just paste a job URL or description directly -- career-ops auto-detects it and runs the full pipeline.
-
-## How It Works
-
-```
-You paste a job URL or description
-        │
-        ▼
-┌──────────────────┐
-│  Archetype       │  Classifies: LLMOps / Agentic / PM / SA / FDE / Transformation
-│  Detection       │
-└────────┬─────────┘
-         │
-┌────────▼─────────┐
-│  A-F Evaluation  │  Match, gaps, comp research, STAR stories
-│  (reads cv.md)   │
-└────────┬─────────┘
-         │
-    ┌────┼────┐
-    ▼    ▼    ▼
- Report  PDF  Tracker
-  .md   .pdf   .tsv
-```
-
-## Pre-configured Portals
-
-The scanner comes with **45+ companies** ready to scan and **19 search queries** across major job boards. Copy `templates/portals.example.yml` to `portals.yml` and add your own:
-
-**AI Labs:** Anthropic, OpenAI, Mistral, Cohere, LangChain, Pinecone
-**Voice AI:** ElevenLabs, PolyAI, Parloa, Hume AI, Deepgram, Vapi, Bland AI
-**AI Platforms:** Retool, Airtable, Vercel, Temporal, Glean, Arize AI
-**Contact Center:** Ada, LivePerson, Sierra, Decagon, Talkdesk, Genesys
-**Enterprise:** Salesforce, Twilio, Gong, Dialpad
-**LLMOps:** Langfuse, Weights & Biases, Lindy, Cognigy, Speechmatics
-**Automation:** n8n, Zapier, Make.com
-**European:** Factorial, Attio, Tinybird, Clarity AI, Travelperk
-
-**Job boards searched:** Ashby, Greenhouse, Lever, Wellfound, Workable, RemoteFront
-
-## Dashboard TUI
-
-The built-in terminal dashboard lets you browse your pipeline visually:
+### Run the web app locally (5 minutes)
 
 ```bash
-cd dashboard
-go build -o career-dashboard .
-./career-dashboard --path ..
+git clone https://github.com/PunithVT/career-ops.git
+cd career-ops
+
+# Install root deps (Playwright for PDF generation)
+npm install
+npx playwright install chromium
+
+# Install + run the web app
+cd web
+npm install
+cp .env.example .env
+# Edit .env — add your ANTHROPIC_API_KEY (get one at console.anthropic.com)
+npm start
 ```
 
-Features: 6 filter tabs, 4 sort modes, grouped/flat view, lazy-loaded previews, inline status changes.
+Open **http://localhost:3000**, register an account, paste your CV during onboarding, and start evaluating roles.
 
-## Project Structure
+---
 
-```
-career-ops/
-├── CLAUDE.md                    # Agent instructions
-├── cv.md                        # Your CV (create this)
-├── article-digest.md            # Your proof points (optional)
-├── config/
-│   └── profile.example.yml      # Template for your profile
-├── modes/                       # 14 skill modes
-│   ├── _shared.md               # Shared context (customize this)
-│   ├── oferta.md                # Single evaluation
-│   ├── pdf.md                   # PDF generation
-│   ├── scan.md                  # Portal scanner
-│   ├── batch.md                 # Batch processing
-│   └── ...
-├── templates/
-│   ├── cv-template.html         # ATS-optimized CV template
-│   ├── portals.example.yml      # Scanner config template
-│   └── states.yml               # Canonical statuses
-├── batch/
-│   ├── batch-prompt.md          # Self-contained worker prompt
-│   └── batch-runner.sh          # Orchestrator script
-├── dashboard/                   # Go TUI pipeline viewer
-├── data/                        # Your tracking data (gitignored)
-├── reports/                     # Evaluation reports (gitignored)
-├── output/                      # Generated PDFs (gitignored)
-├── fonts/                       # Space Grotesk + DM Sans
-├── docs/                        # Setup, customization, architecture
-└── examples/                    # Sample CV, report, proof points
+## ☁️ Deploy to AWS EC2 (production)
+
+```bash
+# On a fresh Ubuntu EC2 instance:
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+sudo apt-get install -y nodejs git
+
+git clone https://github.com/PunithVT/career-ops.git
+cd career-ops
+npm install
+npx playwright install --with-deps chromium
+
+cd web
+npm install
+cp .env.example .env
+nano .env   # paste your ANTHROPIC_API_KEY + a long random SESSION_SECRET
+
+# Keep it running with PM2
+sudo npm install -g pm2
+pm2 start "node --env-file=.env server.mjs" --name career-ops
+pm2 save && pm2 startup
 ```
 
-## Tech Stack
+Open port 3000 in your EC2 security group (or front it with nginx + Let's Encrypt for a proper HTTPS domain). Share the URL — friends register their own accounts with their own private data.
 
-![Claude Code](https://img.shields.io/badge/Claude_Code-000?style=flat&logo=anthropic&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat&logo=playwright&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
-![Bubble Tea](https://img.shields.io/badge/Bubble_Tea-FF75B5?style=flat&logo=go&logoColor=white)
+---
 
-- **Agent**: Claude Code with custom skills and modes
-- **PDF**: Playwright/Puppeteer + HTML template
-- **Scanner**: Playwright + Greenhouse API + WebSearch
-- **Dashboard**: Go + Bubble Tea + Lipgloss (Catppuccin Mocha theme)
-- **Data**: Markdown tables + YAML config + TSV batch files
+## 🧠 Architecture
 
-## Also Open Source
+```
+┌─────────────────┐
+│  Browser (SPA)  │  ←  vanilla HTML / CSS / JS, dark theme, no build step
+└────────┬────────┘
+         │  fetch + Server-Sent Events (streaming)
+┌────────▼────────┐
+│  Express server │  ←  bcrypt auth · session cookies · per-user data dirs
+│   (Node.js 22)  │
+└────────┬────────┘
+         │
+         ├──→ Anthropic API (Claude Sonnet 4.6)   ←  all AI modes, with prompt caching
+         ├──→ Playwright (Chromium headless)      ←  HTML → ATS-clean PDF rendering
+         └──→ Greenhouse / Ashby / Lever APIs     ←  zero-token portal scan
+```
 
-- **[cv-santiago](https://github.com/santifer/cv-santiago)** -- The portfolio website (santifer.io) with AI chatbot, LLMOps dashboard, and case studies. If you need a portfolio to showcase alongside your job search, fork it and make it yours.
+Each user has an isolated data directory (CV, profile, applications, reports, PDF output). The 13 AI prompt modes in [`modes/`](modes/) are loaded as Claude system prompts with **prompt caching enabled** to reduce token costs.
 
-## About the Author
+---
 
-I'm Santiago -- Head of Applied AI, former founder (built and sold a business that still runs with my name on it). I built career-ops to manage my own job search. It worked: I used it to land my current role.
+## 🔧 Tech stack
 
-My portfolio and other open source projects → [santifer.io](https://santifer.io)
+- **Backend:** Node.js 22 · Express 4 · `express-session` · `bcryptjs` · `js-yaml`
+- **AI / LLM:** [`@anthropic-ai/sdk`](https://www.npmjs.com/package/@anthropic-ai/sdk) — Claude Sonnet 4.6, prompt caching, SSE streaming
+- **PDF rendering:** [Playwright](https://playwright.dev) — Chromium headless, ATS-parseable output
+- **Frontend:** Vanilla HTML / CSS / JS — no React, no Vue, no build pipeline, no bundler
+- **Storage:** File-based — markdown + YAML, per-user directories. No database, no Docker required
+- **Job portals:** Greenhouse, Ashby, Lever (direct REST APIs, zero LLM tokens spent)
+- **Deployment:** Single Node process · works on any VPS · AWS-ready · Docker-friendly
 
-☕ [Buy me a coffee](https://buymeacoffee.com/santifer) if career-ops helped your job search.
+---
 
-## Star History
+## 🚀 Comparable to / better than
 
-<a href="https://www.star-history.com/?repos=santifer%2Fcareer-ops&type=timeline&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=santifer/career-ops&type=timeline&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=santifer/career-ops&type=timeline&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=santifer/career-ops&type=timeline&legend=top-left" />
- </picture>
-</a>
+career-ops gives you the power of paid AI career platforms, **self-hosted and free**:
 
-## Disclaimer
+- **Better than ChatGPT job search** — automated portal scanning, persistent tracker, multi-user
+- **Better than Teal / Huntr** — AI-tailored PDF CVs, deep evaluation, interview prep, all integrated
+- **Better than Resume.io / Kickresume** — your CV is a markdown file, AI tailors it per role
+- **Better than LinkedIn Premium** — outreach scripts that actually convert, no monthly fee
+- **Better than Final Round AI / Glider** — interview intel pulled from real Glassdoor / Blind / LeetCode data
 
-**career-ops is a local, open-source tool — NOT a hosted service.** By using this software, you acknowledge:
+---
 
-1. **You control your data.** Your CV, contact info, and personal data stay on your machine and are sent directly to the AI provider you choose (Anthropic, OpenAI, etc.). We do not collect, store, or have access to any of your data.
-2. **You control the AI.** The default prompts instruct the AI not to auto-submit applications, but AI models can behave unpredictably. If you modify the prompts or use different models, you do so at your own risk. **Always review AI-generated content for accuracy before submitting.**
-3. **You comply with third-party ToS.** You must use this tool in accordance with the Terms of Service of the career portals you interact with (Greenhouse, Lever, Workday, LinkedIn, etc.). Do not use this tool to spam employers or overwhelm ATS systems.
-4. **No guarantees.** Evaluations are recommendations, not truth. AI models may hallucinate skills or experience. The authors are not liable for employment outcomes, rejected applications, account restrictions, or any other consequences.
+## 🤝 Contributing
 
-See [LEGAL_DISCLAIMER.md](LEGAL_DISCLAIMER.md) for full details. This software is provided under the [MIT License](LICENSE) "as is", without warranty of any kind.
+This is a fork of the excellent [santifer/career-ops](https://github.com/santifer/career-ops) CLI with a custom multi-user web app added. Pull requests, bug reports, and feedback welcome.
 
-## Contributors
+## 📜 License
 
-<a href="https://github.com/santifer/career-ops/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=santifer/career-ops" />
-</a>
+MIT — see [LICENSE](LICENSE).
 
-Got hired using career-ops? [Share your story!](https://github.com/santifer/career-ops/issues/new?template=i-got-hired.yml)
+## 🙏 Credits
 
-## License
+- Original career-ops CLI, prompt logic, archetypes, and scoring system by [Santiago Fernández de Valderrama](https://santifer.io)
+- Multi-user web app, AWS deployment, and platform engineering by [Punith VT](https://github.com/PunithVT)
 
-MIT
+---
 
-## Let's Connect
-
-[![Website](https://img.shields.io/badge/santifer.io-000?style=for-the-badge&logo=safari&logoColor=white)](https://santifer.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/santifer)
-[![X](https://img.shields.io/badge/X-000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/santifer)
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/8pRpHETxa4)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hi@santifer.io)
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/santifer)
-# career-ops
+🌐 Available in: [English](README.md) · [Español](README.es.md) · [Português](README.pt-BR.md) · [한국어](README.ko-KR.md) · [日本語](README.ja.md) · [Русский](README.ru.md) · [繁體中文](README.zh-TW.md)

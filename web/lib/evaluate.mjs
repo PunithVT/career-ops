@@ -112,11 +112,12 @@ export async function generatePDF(jdText, userDataPath, rootPath, onProgress) {
   const doctypeIdx = html.indexOf('<!DOCTYPE');
   if (doctypeIdx > 0) html = html.slice(doctypeIdx);
 
-  // Rewrite relative font paths to absolute
+  // Rewrite relative font paths to absolute (file://) — preserve original quote style
   const fontsDir = join(rootPath, 'fonts').replace(/\\/g, '/');
-  html = html
-    .replace(/url\(['"]?\.\/fonts\//g, `url('${fontsDir}/`)
-    .replace(/url\(['"]?fonts\//g, `url('${fontsDir}/`);
+  html = html.replace(
+    /url\(\s*(['"]?)(?:\.\/)?fonts\//g,
+    (_, quote) => `url(${quote}file://${fontsDir}/`
+  );
 
   // Save HTML + generate PDF
   const date = new Date().toISOString().split('T')[0];

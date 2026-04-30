@@ -152,7 +152,24 @@ function buildLocationFilter(locationFilter) {
 function buildExperienceFilter(experienceFilter) {
   const allowed = (experienceFilter?.levels || []).map(k => k.toLowerCase());
   if (allowed.length === 0) return () => true;
-  return (title) => allowed.some(k => title.toLowerCase().includes(k));
+
+  // All level signals we recognize. If a title mentions one of these and it's
+  // NOT in the allowed list, reject. If the title mentions no level at all,
+  // allow it through — most job titles ("AI Engineer") don't have a level word
+  // and shouldn't be excluded.
+  const knownLevels = [
+    'intern', 'graduate', 'entry', 'junior', 'jr.', 'jr ',
+    'mid-', 'mid level', 'mid-level',
+    'senior', 'sr.', 'sr ',
+    'staff', 'principal', 'lead', 'head of', 'director', 'vp', 'chief'
+  ];
+
+  return (title) => {
+    const lower = title.toLowerCase();
+    const mentioned = knownLevels.filter(l => lower.includes(l));
+    if (mentioned.length === 0) return true;
+    return allowed.some(a => lower.includes(a));
+  };
 }
 
 // ── Dedup ───────────────────────────────────────────────────────────
@@ -307,7 +324,9 @@ async function main() {
   // 4. Fetch all APIs
   const date = new Date().toISOString().slice(0, 10);
   let totalFound = 0;
-  let totalFiltered = 0;
+  let rejectedByTitle = 0;
+  let rejectedByExperience = 0;
+  let rejectedByLocation = 0;
   let totalDupes = 0;
   let completed = 0;
   const newOffers = [];
@@ -322,10 +341,9 @@ async function main() {
       totalFound += jobs.length;
 
       for (const job of jobs) {
-        if (!titleFilter(job.title) || !experienceFilter(job.title) || !locationFilter(job.location)) {
-          totalFiltered++;
-          continue;
-        }
+        if (!titleFilter(job.title))      { rejectedByTitle++;      continue; }
+        if (!experienceFilter(job.title)) { rejectedByExperience++; continue; }
+        if (!locationFilter(job.location)){ rejectedByLocation++;   continue; }
         if (seenUrls.has(job.url)) {
           totalDupes++;
           continue;
@@ -365,9 +383,18 @@ async function main() {
   console.log(`${'━'.repeat(45)}`);
   console.log(`Companies scanned:     ${targets.length}`);
   console.log(`Total jobs found:      ${totalFound}`);
-  console.log(`Filtered by title:     ${totalFiltered} removed`);
+  console.log(`Rejected by title:     ${rejectedByTitle}`);
+  console.log(`Rejected by experience:${rejectedByExperience}`);
+  console.log(`Rejected by location:  ${rejectedByLocation}`);
   console.log(`Duplicates:            ${totalDupes} skipped`);
   console.log(`New offers added:      ${newOffers.length}`);
+
+  if (totalFound > 0 && newOffers.length === 0) {
+    console.log('\nHint: every job was rejected. Common fixes:');
+    if (rejectedByTitle === totalFound)      console.log('  • Title filter is too narrow. Add broader keywords (e.g. "Software Engineer", "Backend") or remove avoid keywords.');
+    else if (rejectedByExperience > 0)        console.log('  • Experience filter dropped jobs. Toggle more levels or clear it for no constraint.');
+    else if (rejectedByLocation > 0)          console.log('  • Location filter dropped jobs. Add more cities or enable "Allow remote".');
+  }
 
   if (errors.length > 0) {
     console.log(`\nErrors (${errors.length}):`);

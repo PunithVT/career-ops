@@ -458,16 +458,40 @@ async function loadScanner() {
   $('filter-allow-remote').checked = !!filters.allow_remote;
   document.querySelectorAll('.exp-option input[data-exp]').forEach(cb => {
     cb.checked = filters.experience_levels.some(l => l.toLowerCase() === cb.dataset.exp.toLowerCase());
+    cb.onchange = () => syncExperienceConflict(cb);
   });
+}
+
+// If user enables an experience level (e.g. Junior) that's also in Avoid Keywords,
+// remove the conflicting chip — otherwise the AND logic guarantees zero matches.
+function syncExperienceConflict(cb) {
+  if (!cb.checked) return;
+  const level = cb.dataset.exp.toLowerCase();
+  const negChips = $('chips-title-negative');
+  const before = negChips._values.length;
+  negChips._values = negChips._values.filter(v => v.toLowerCase() !== level);
+  if (negChips._values.length !== before) {
+    renderChips(negChips);
+    showToast(`Removed "${cb.dataset.exp}" from Avoid Keywords (would conflict with experience filter)`);
+  }
 }
 
 window.saveFilters = async function() {
   const experience_levels = Array.from(document.querySelectorAll('.exp-option input[data-exp]:checked'))
     .map(cb => cb.dataset.exp);
+
+  // Final safety: strip any negative keyword that exactly matches an enabled level
+  const enabledLevels = new Set(experience_levels.map(l => l.toLowerCase()));
+  const cleanedNegative = getChipValues('chips-title-negative')
+    .filter(v => !enabledLevels.has(v.toLowerCase()));
+  if (cleanedNegative.length !== getChipValues('chips-title-negative').length) {
+    setChipValues('chips-title-negative', cleanedNegative);
+  }
+
   try {
     await api('PUT', '/api/filters', {
       title_positive:    getChipValues('chips-title-positive'),
-      title_negative:    getChipValues('chips-title-negative'),
+      title_negative:    cleanedNegative,
       location_positive: getChipValues('chips-location-positive'),
       location_negative: getChipValues('chips-location-negative'),
       allow_remote:      $('filter-allow-remote').checked,

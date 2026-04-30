@@ -286,11 +286,13 @@ async function main() {
   let totalFound = 0;
   let totalFiltered = 0;
   let totalDupes = 0;
+  let completed = 0;
   const newOffers = [];
   const errors = [];
 
   const tasks = targets.map(company => async () => {
     const { type, url } = company._api;
+    let companyNew = 0;
     try {
       const json = await fetchJson(url);
       const jobs = PARSERS[type](json, company.name);
@@ -314,9 +316,15 @@ async function main() {
         seenUrls.add(job.url);
         seenCompanyRoles.add(key);
         newOffers.push({ ...job, source: `${type}-api` });
+        companyNew++;
       }
+      completed++;
+      const tag = companyNew > 0 ? `+${companyNew} new` : 'no new matches';
+      console.log(`[${completed}/${targets.length}] ${company.name} — ${tag}`);
     } catch (err) {
       errors.push({ company: company.name, error: err.message });
+      completed++;
+      console.log(`[${completed}/${targets.length}] ${company.name} — ✗ ${err.message}`);
     }
   });
 

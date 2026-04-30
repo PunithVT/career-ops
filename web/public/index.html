@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>career-ops</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="marked.min.js" defer></script>
+  <script src="app.js" defer></script>
 </head>
 <body>
 
@@ -49,14 +50,14 @@
       <div id="onboard-cv-error" class="form-error hidden"></div>
       <button class="btn btn-primary" onclick="onboardNext(1)">Continue →</button>
     </div>
-    <div id="onboard-step-2" class="onboard-step hidden">
+    <div id="onboard-step-2" class="onboard-step">
       <h2>Your profile</h2>
       <p class="hint">Fill in your name, email, target roles, and compensation target.</p>
       <textarea id="onboard-profile" rows="22"></textarea>
       <div id="onboard-profile-error" class="form-error hidden"></div>
       <div class="btn-row"><button class="btn btn-ghost" onclick="onboardBack(2)">← Back</button><button class="btn btn-primary" onclick="onboardNext(2)">Continue →</button></div>
     </div>
-    <div id="onboard-step-3" class="onboard-step hidden">
+    <div id="onboard-step-3" class="onboard-step">
       <div class="done-icon">✓</div>
       <h2>You're all set!</h2>
       <p>Your profile is ready. Paste a job URL or description to evaluate it, or explore the dashboard.</p>
@@ -85,11 +86,28 @@
 
   <main id="main-content">
 
+    <div id="api-key-banner" class="api-banner hidden">
+      <span class="api-banner-icon">⚠</span>
+      <div class="api-banner-text">
+        <strong>AI features are disabled.</strong>
+        Add an <code>ANTHROPIC_API_KEY</code> to <code>web/.env</code> and restart the server to enable evaluation, deep research, interview prep, and tailored CVs. The Scanner, Patterns, Follow-ups, Tracker, and Profile editor work without a key.
+      </div>
+    </div>
+
     <!-- ── Dashboard ── -->
     <div class="tab-panel active" data-panel="dashboard">
       <div class="page-header"><h1>Dashboard</h1><button class="btn btn-ghost btn-sm" onclick="refreshDashboard()">↻ Refresh</button></div>
       <div id="stats-row" class="stats-row"></div>
-      <div class="card">
+      <div id="dashboard-empty" class="empty-state hidden">
+        <div class="empty-state-title">Welcome to career-ops</div>
+        <div class="empty-state-sub">No applications yet. Pick where to start:</div>
+        <div class="empty-state-grid">
+          <button class="empty-card" onclick="switchTab('evaluate')"><span class="empty-card-icon">⚡</span><span class="empty-card-title">Evaluate a job</span><span class="empty-card-desc">Paste a JD or URL and get an A–F fit analysis</span></button>
+          <button class="empty-card" onclick="switchTab('scanner')"><span class="empty-card-icon">📡</span><span class="empty-card-title">Scan portals</span><span class="empty-card-desc">Discover new openings on Greenhouse, Ashby, Lever</span></button>
+          <button class="empty-card" onclick="switchTab('profile')"><span class="empty-card-icon">◎</span><span class="empty-card-title">Edit your CV</span><span class="empty-card-desc">Keep your CV and profile up to date</span></button>
+        </div>
+      </div>
+      <div id="dashboard-tracker" class="card hidden">
         <div class="card-header"><span>Applications</span><input type="text" id="app-filter" class="filter-input" placeholder="Filter…"></div>
         <div class="table-wrap">
           <table id="apps-table">
@@ -337,21 +355,21 @@
           <textarea id="cv-editor" rows="28" class="code-editor"></textarea>
         </div>
       </div>
-      <div id="config-tab" class="ptab-panel hidden">
+      <div id="config-tab" class="ptab-panel">
         <div class="card">
           <div class="card-header"><span>config/profile.yml</span><button class="btn btn-primary btn-sm" onclick="saveProfileConfig()">Save</button></div>
           <p class="card-hint">Name, email, target roles, compensation targets.</p>
           <textarea id="profile-config-editor" rows="28" class="code-editor"></textarea>
         </div>
       </div>
-      <div id="archetypes-tab" class="ptab-panel hidden">
+      <div id="archetypes-tab" class="ptab-panel">
         <div class="card">
           <div class="card-header"><span>modes/_profile.md — archetypes & scoring</span><button class="btn btn-primary btn-sm" onclick="saveProfileMd()">Save</button></div>
           <p class="card-hint">Customize archetypes, scoring weights, and framing per role type.</p>
           <textarea id="profile-md-editor" rows="28" class="code-editor"></textarea>
         </div>
       </div>
-      <div id="tracker-tab" class="ptab-panel hidden">
+      <div id="tracker-tab" class="ptab-panel">
         <div class="card">
           <div class="card-header"><span>data/applications.md — tracker (raw)</span><button class="btn btn-primary btn-sm" onclick="saveTrackerRaw()">Save</button></div>
           <p class="card-hint">Edit the raw markdown tracker. Be careful with table formatting.</p>
@@ -364,6 +382,5 @@
 </div>
 
 <div id="toast" class="toast hidden"></div>
-<script src="app.js"></script>
 </body>
 </html>

@@ -495,6 +495,64 @@ tr:hover td { background: var(--surface2); }
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
 
+/* ── API key banner ───────────────────────────────────────────────────────── */
+.api-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: rgba(210, 153, 34, 0.08);
+  border: 1px solid rgba(210, 153, 34, 0.4);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin: 0 2rem 1rem;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+.api-banner-icon { color: var(--orange); font-size: 1.1rem; line-height: 1; padding-top: 2px; }
+.api-banner-text { line-height: 1.5; }
+.api-banner-text strong { color: var(--orange); }
+.api-banner-text code {
+  background: var(--surface2); padding: 1px 5px; border-radius: 3px;
+  font-size: 0.85em; font-family: ui-monospace, 'SFMono-Regular', monospace;
+}
+
+/* ── Empty state ──────────────────────────────────────────────────────────── */
+.empty-state {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+.empty-state-title { font-size: 1.4rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+.empty-state-sub   { color: var(--text-muted); margin-bottom: 1.75rem; }
+.empty-state-grid  {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.empty-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.15s;
+  font-family: inherit;
+  color: var(--text);
+}
+.empty-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.empty-card-icon  { font-size: 1.5rem; }
+.empty-card-title { font-weight: 600; font-size: 1rem; }
+.empty-card-desc  { color: var(--text-muted); font-size: 0.85rem; line-height: 1.4; }
+
 /* ── Toast ────────────────────────────────────────────────────────────────── */
 .toast {
   position: fixed;

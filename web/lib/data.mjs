@@ -41,11 +41,13 @@ export function initUserData(userId, rootPath) {
 }
 
 export function getSetupStatus(userPath) {
+  const apiKey = process.env.ANTHROPIC_API_KEY || '';
   return {
     cv: existsSync(join(userPath, 'cv.md')),
     profile: existsSync(join(userPath, 'config', 'profile.yml')),
     profileMd: existsSync(join(userPath, 'modes', '_profile.md')),
-    applications: existsSync(join(userPath, 'data', 'applications.md'))
+    applications: existsSync(join(userPath, 'data', 'applications.md')),
+    aiEnabled: apiKey.startsWith('sk-ant-') && apiKey.length > 20
   };
 }
 

@@ -80,7 +80,7 @@ function showScreen(id) {
   ['auth-screen', 'onboarding-screen', 'app-screen'].forEach(s => {
     const el = $(s);
     if (!el) return;
-    el.style.display = s === id ? 'flex' : 'none';
+    el.classList.toggle('hidden', s !== id);
   });
 }
 
@@ -128,6 +128,7 @@ $('logout-btn').addEventListener('click', async () => {
 async function afterLogin() {
   setText('sidebar-username', currentUser.username);
   const status = await api('GET', '/api/setup-status');
+  $('api-key-banner').classList.toggle('hidden', !!status.aiEnabled);
   if (!status.cv) { await startOnboarding(); }
   else { showScreen('app-screen'); switchTab('dashboard'); loadDashboard(); }
 }
@@ -193,6 +194,11 @@ function switchTab(tab) {
 async function loadDashboard() {
   const { applications, stats } = await api('GET', '/api/applications');
   allApplications = applications;
+  const isEmpty = applications.length === 0;
+  $('dashboard-empty').classList.toggle('hidden', !isEmpty);
+  $('dashboard-tracker').classList.toggle('hidden', isEmpty);
+  $('stats-row').classList.toggle('hidden', isEmpty);
+  if (isEmpty) return;
   setHtml('stats-row', [
     stat(stats.total, 'Total'), stat(stats.active, 'Active'),
     stat(stats.interviews, 'Interviews'), stat(stats.offers, 'Offers'),

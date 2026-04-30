@@ -889,3 +889,120 @@ tracked_companies:
     scan_query: '"Maxim AI" OR "getmaxim" careers "engineer" OR "product"'
     notes: "AI evaluation and observability platform. Bangalore-based, mostly on-site."
     enabled: true
+
+  # ── Indian unicorns + AI startups (verified APIs as of 2026-04-30) ──────────
+  - name: Postman
+    careers_url: https://www.postman.com/company/careers/
+    api: https://boards-api.greenhouse.io/v1/boards/postman/jobs
+    notes: "Bangalore-HQ API platform. Engineering, AI, Product. Greenhouse."
+    enabled: true
+
+  - name: InMobi
+    careers_url: https://www.inmobi.com/company/careers
+    api: https://boards-api.greenhouse.io/v1/boards/inmobi/jobs
+    notes: "Bangalore HQ. Mobile ads + AI/ML platform. Greenhouse."
+    enabled: true
+
+  - name: PhonePe
+    careers_url: https://www.phonepe.com/careers/
+    api: https://boards-api.greenhouse.io/v1/boards/phonepe/jobs
+    notes: "Bangalore HQ. Fintech, payments. Engineering + AI. Greenhouse."
+    enabled: true
+
+  - name: Glance
+    careers_url: https://glance.com/careers
+    api: https://boards-api.greenhouse.io/v1/boards/glance/jobs
+    notes: "Bangalore-HQ lock-screen content + AI personalization. Greenhouse."
+    enabled: true
+
+  - name: Zenoti
+    careers_url: https://www.zenoti.com/careers
+    api: https://boards-api.greenhouse.io/v1/boards/zenoti/jobs
+    notes: "Hyderabad-HQ SaaS for spas/salons/medspas. Greenhouse."
+    enabled: true
+
+  - name: Observe.AI
+    careers_url: https://www.observe.ai/careers
+    api: https://boards-api.greenhouse.io/v1/boards/observeai/jobs
+    notes: "Bangalore + SF. Contact-center AI. Forward-Deployed + AI roles."
+    enabled: true
+
+  - name: Sarvam AI
+    careers_url: https://jobs.ashbyhq.com/sarvam
+    notes: "Bangalore-HQ Indic-LLM lab. Founding/Applied AI roles. Ashby."
+    enabled: true
+
+  - name: Atlan
+    careers_url: https://jobs.ashbyhq.com/atlan
+    notes: "New Delhi/remote. Data catalog + AI. Engineering + GTM. Ashby."
+    enabled: true
+
+  - name: Kiwi
+    careers_url: https://jobs.ashbyhq.com/kiwi
+    notes: "Bangalore + remote. Credit-on-UPI fintech. Ashby."
+    enabled: true
+
+  - name: Nutanix
+    careers_url: https://jobs.ashbyhq.com/nutanix
+    notes: "Bangalore + global. Hybrid-cloud platform. Engineering + SE. Ashby."
+    enabled: true
+
+  - name: Meesho
+    careers_url: https://jobs.lever.co/meesho
+    notes: "Bangalore HQ. Social commerce. Engineering, Data, AI. Lever."
+    enabled: true
+
+  - name: CRED
+    careers_url: https://jobs.lever.co/cred
+    notes: "Bangalore HQ. Premium fintech. Engineering, Design, AI. Lever."
+    enabled: true
+
+  - name: Plivo
+    careers_url: https://jobs.lever.co/plivo
+    notes: "Bangalore + SF. Communications platform (CPaaS). Lever."
+    enabled: true
+
+  - name: Mindtickle
+    careers_url: https://jobs.lever.co/mindtickle
+    notes: "Pune + SF. Sales-readiness platform. Engineering, Product. Lever."
+    enabled: true
+
+  - name: Freshworks
+    careers_url: https://jobs.lever.co/freshworks
+    notes: "Chennai HQ. CRM + ITSM. Engineering, Product, AI. Lever."
+    enabled: true
+
+  - name: Paytm
+    careers_url: https://jobs.lever.co/paytm
+    notes: "Noida HQ. Fintech. Engineering, Product, Data. Lever."
+    enabled: true
+
+  # ── Globally-strong tech employers previously missing ──────────────────────
+  - name: GitLab
+    careers_url: https://about.gitlab.com/jobs/
+    api: https://boards-api.greenhouse.io/v1/boards/gitlab/jobs
+    notes: "Remote-first DevOps platform. Engineering + DevRel. Greenhouse."
+    enabled: true
+
+  - name: Figma
+    careers_url: https://www.figma.com/careers/
+    api: https://boards-api.greenhouse.io/v1/boards/figma/jobs
+    notes: "Design tool. Engineering, AI, Product. Greenhouse."
+    enabled: true
+
+  - name: Databricks
+    careers_url: https://www.databricks.com/company/careers
+    api: https://boards-api.greenhouse.io/v1/boards/databricks/jobs
+    notes: "Data + AI lakehouse. Engineering, FDE, Solutions. Greenhouse."
+    enabled: true
+
+  - name: Carta
+    careers_url: https://carta.com/careers/
+    api: https://boards-api.greenhouse.io/v1/boards/carta/jobs
+    notes: "Cap-table + private-markets platform. Engineering, AI. Greenhouse."
+    enabled: true
+
+  - name: Confluent
+    careers_url: https://jobs.ashbyhq.com/confluent
+    notes: "Streaming data platform. Engineering, Solutions, DevRel. Ashby."
+    enabled: true

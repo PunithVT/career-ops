@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>career-ops</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="style.css">
   <script src="marked.min.js" defer></script>
   <script src="app.js" defer></script>
@@ -256,17 +259,61 @@
       <div class="page-header">
         <h1>Portal Scanner</h1>
         <div style="display:flex;gap:.5rem">
-          <button class="btn btn-ghost btn-sm" onclick="savePorts()">Save portals.yml</button>
           <button id="scan-btn" class="btn btn-primary btn-sm" onclick="runScan()">📡 Run scan</button>
         </div>
       </div>
       <div class="scanner-layout">
         <div class="scanner-portals-col">
+
           <div class="card">
-            <div class="card-header">portals.yml — companies to scan</div>
-            <p class="card-hint">Configure companies and search queries. Save first, then run the scan.</p>
-            <textarea id="portals-editor" rows="30" class="code-editor"></textarea>
+            <div class="card-header"><span>Filters</span><button class="btn btn-primary btn-sm" onclick="saveFilters()">Save filters</button></div>
+            <p class="card-hint">Pick what you want — the scanner only keeps jobs matching all enabled filters.</p>
+
+            <div class="filter-group">
+              <label class="filter-label">Target keywords <span class="filter-hint">(at least one must appear in the title)</span></label>
+              <div id="chips-title-positive" class="chip-input" data-placeholder="Add keyword (e.g. AI Engineer)"></div>
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label">Avoid keywords <span class="filter-hint">(skip jobs whose title contains any of these)</span></label>
+              <div id="chips-title-negative" class="chip-input" data-placeholder="Add keyword (e.g. Manager)"></div>
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label">Experience level <span class="filter-hint">(skip jobs whose title doesn't match any of these — leave empty for no constraint)</span></label>
+              <div class="exp-grid">
+                <label class="exp-option"><input type="checkbox" data-exp="Junior"> Junior</label>
+                <label class="exp-option"><input type="checkbox" data-exp="Mid"> Mid</label>
+                <label class="exp-option"><input type="checkbox" data-exp="Senior"> Senior</label>
+                <label class="exp-option"><input type="checkbox" data-exp="Staff"> Staff</label>
+                <label class="exp-option"><input type="checkbox" data-exp="Principal"> Principal</label>
+                <label class="exp-option"><input type="checkbox" data-exp="Lead"> Lead</label>
+                <label class="exp-option"><input type="checkbox" data-exp="Head of"> Head of</label>
+                <label class="exp-option"><input type="checkbox" data-exp="Director"> Director</label>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label">Locations <span class="filter-hint">(at least one must appear in the job's location — leave empty to allow any location)</span></label>
+              <label class="exp-option" style="margin-bottom:.5rem"><input type="checkbox" id="filter-allow-remote"> Allow remote (matches "remote", "anywhere", "WFH")</label>
+              <div id="chips-location-positive" class="chip-input" data-placeholder="Add city or region (e.g. Berlin, EU, India)"></div>
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label">Avoid locations <span class="filter-hint">(skip jobs in these places)</span></label>
+              <div id="chips-location-negative" class="chip-input" data-placeholder="Add city or region to avoid"></div>
+            </div>
           </div>
+
+          <details class="advanced-yaml" style="margin-top:1rem">
+            <summary>Advanced — edit raw portals.yml (full company list, search queries, comments)</summary>
+            <div class="card" style="margin-top:.75rem">
+              <div class="card-header"><span>portals.yml</span><button class="btn btn-ghost btn-sm" onclick="savePorts()">Save raw YAML</button></div>
+              <p class="card-hint">Saving filters above rewrites the file using a normalized form (comments are dropped). Edit raw if you need to keep them or change companies / queries.</p>
+              <textarea id="portals-editor" rows="20" class="code-editor"></textarea>
+            </div>
+          </details>
+
         </div>
         <div class="scanner-output-col">
           <div class="card">

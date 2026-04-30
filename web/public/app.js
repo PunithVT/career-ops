@@ -389,10 +389,96 @@ async function runTool(triggerBtn) {
 }
 
 /* ── Scanner ───────────────────────────────────────────────────────────────── */
-async function loadScanner() {
-  const { content } = await api('GET', '/api/portals');
-  $('portals-editor').value = content || '';
+function setupChipInput(containerId) {
+  const el = $(containerId);
+  if (el._chipReady) return;
+  el._chipReady = true;
+  el._values = el._values || [];
+
+  const input = document.createElement('input');
+  input.className = 'chip-entry';
+  input.type = 'text';
+  input.placeholder = el.dataset.placeholder || 'Add…';
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ',') {
+      e.preventDefault();
+      const v = input.value.trim().replace(/,$/, '');
+      if (v && !el._values.includes(v)) {
+        el._values.push(v);
+        renderChips(el);
+      }
+      input.value = '';
+    } else if (e.key === 'Backspace' && !input.value && el._values.length) {
+      el._values.pop();
+      renderChips(el);
+    }
+  });
+  el.addEventListener('click', () => input.focus());
+  el._input = input;
+  renderChips(el);
 }
+
+function renderChips(el) {
+  el.innerHTML = '';
+  for (const v of el._values) {
+    const chip = document.createElement('span');
+    chip.className = 'chip';
+    chip.innerHTML = `${esc(v)}<span class="chip-x">×</span>`;
+    chip.querySelector('.chip-x').addEventListener('click', () => {
+      el._values = el._values.filter(x => x !== v);
+      renderChips(el);
+    });
+    el.appendChild(chip);
+  }
+  el.appendChild(el._input);
+}
+
+function setChipValues(containerId, values) {
+  const el = $(containerId);
+  el._values = Array.isArray(values) ? [...values] : [];
+  renderChips(el);
+}
+
+function getChipValues(containerId) {
+  return $(containerId)._values || [];
+}
+
+async function loadScanner() {
+  ['chips-title-positive', 'chips-title-negative', 'chips-location-positive', 'chips-location-negative']
+    .forEach(setupChipInput);
+  const [{ content }, filters] = await Promise.all([
+    api('GET', '/api/portals'),
+    api('GET', '/api/filters')
+  ]);
+  $('portals-editor').value = content || '';
+  setChipValues('chips-title-positive',    filters.title_positive);
+  setChipValues('chips-title-negative',    filters.title_negative);
+  setChipValues('chips-location-positive', filters.location_positive);
+  setChipValues('chips-location-negative', filters.location_negative);
+  $('filter-allow-remote').checked = !!filters.allow_remote;
+  document.querySelectorAll('.exp-option input[data-exp]').forEach(cb => {
+    cb.checked = filters.experience_levels.some(l => l.toLowerCase() === cb.dataset.exp.toLowerCase());
+  });
+}
+
+window.saveFilters = async function() {
+  const experience_levels = Array.from(document.querySelectorAll('.exp-option input[data-exp]:checked'))
+    .map(cb => cb.dataset.exp);
+  try {
+    await api('PUT', '/api/filters', {
+      title_positive:    getChipValues('chips-title-positive'),
+      title_negative:    getChipValues('chips-title-negative'),
+      location_positive: getChipValues('chips-location-positive'),
+      location_negative: getChipValues('chips-location-negative'),
+      allow_remote:      $('filter-allow-remote').checked,
+      experience_levels
+    });
+    // Refresh raw editor so it reflects the rewritten YAML
+    const { content } = await api('GET', '/api/portals');
+    $('portals-editor').value = content || '';
+    showToast('Filters saved');
+  } catch (e) { showToast(e.message, 'error'); }
+};
 
 window.savePorts = async function() {
   await api('PUT', '/api/portals', { content: $('portals-editor').value });

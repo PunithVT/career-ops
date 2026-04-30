@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { spawn } from 'child_process';
 import { existsSync, readFileSync, writeFileSync, copyFileSync, createReadStream } from 'fs';
+import yaml from 'js-yaml';
 import * as users from './lib/users.mjs';
 import * as data from './lib/data.mjs';
 import { evaluateJob, runMode, fetchUrl, generatePDF } from './lib/evaluate.mjs';
@@ -156,6 +157,58 @@ app.get('/api/portals', requireAuth, (req, res) => {
 
 app.put('/api/portals', requireAuth, (req, res) => {
   data.writeFile(req.userDataPath, 'portals.yml', req.body.content ?? '');
+  res.json({ ok: true });
+});
+
+function loadPortalsConfig(userPath) {
+  let content = data.readFile(userPath, 'portals.yml');
+  if (!content) {
+    const example = join(ROOT, 'templates', 'portals.example.yml');
+    if (existsSync(example)) content = readFileSync(example, 'utf8');
+  }
+  try { return { content, parsed: yaml.load(content) || {} }; }
+  catch (e) { return { content, parsed: {}, parseError: e.message }; }
+}
+
+app.get('/api/filters', requireAuth, (req, res) => {
+  const { parsed, parseError } = loadPortalsConfig(req.userDataPath);
+  if (parseError) return res.status(500).json({ error: `portals.yml parse error: ${parseError}` });
+  res.json({
+    title_positive:    parsed.title_filter?.positive    || [],
+    title_negative:    parsed.title_filter?.negative    || [],
+    location_positive: parsed.location_filter?.positive || [],
+    location_negative: parsed.location_filter?.negative || [],
+    allow_remote:      !!parsed.location_filter?.allow_remote,
+    experience_levels: parsed.experience_filter?.levels || []
+  });
+});
+
+function sanitizeList(v) {
+  if (!Array.isArray(v)) return [];
+  return v.map(s => String(s).trim()).filter(Boolean);
+}
+
+app.put('/api/filters', requireAuth, (req, res) => {
+  const userPath = req.userDataPath;
+  const portalsPath = join(userPath, 'portals.yml');
+  const { content, parsed, parseError } = loadPortalsConfig(userPath);
+  if (parseError) return res.status(500).json({ error: `portals.yml parse error: ${parseError}` });
+
+  const cfg = parsed;
+  cfg.title_filter ??= {};
+  cfg.title_filter.positive = sanitizeList(req.body?.title_positive);
+  cfg.title_filter.negative = sanitizeList(req.body?.title_negative);
+  cfg.location_filter ??= {};
+  cfg.location_filter.positive = sanitizeList(req.body?.location_positive);
+  cfg.location_filter.negative = sanitizeList(req.body?.location_negative);
+  cfg.location_filter.allow_remote = !!req.body?.allow_remote;
+  cfg.experience_filter ??= {};
+  cfg.experience_filter.levels = sanitizeList(req.body?.experience_levels);
+
+  // First save: ensure tracked_companies is preserved by writing the full parsed config
+  // (this drops comments — acceptable since we offer the raw editor for advanced use)
+  const out = yaml.dump(cfg, { lineWidth: 100, noRefs: true });
+  data.writeFile(userPath, 'portals.yml', out);
   res.json({ ok: true });
 });
 

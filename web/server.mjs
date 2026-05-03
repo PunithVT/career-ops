@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { spawn } from 'child_process';
 import { existsSync, readFileSync, writeFileSync, copyFileSync, createReadStream } from 'fs';
+import { randomBytes } from 'crypto';
 import yaml from 'js-yaml';
 import * as users from './lib/users.mjs';
 import * as data from './lib/data.mjs';
@@ -11,15 +12,26 @@ import { evaluateJob, runMode, fetchUrl, generatePDF } from './lib/evaluate.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
+const IS_PROD = process.env.NODE_ENV === 'production';
+
+function resolveSessionSecret() {
+  if (process.env.SESSION_SECRET) return process.env.SESSION_SECRET;
+  if (IS_PROD) {
+    console.error('[FATAL] SESSION_SECRET is required when NODE_ENV=production. Set it in web/.env');
+    process.exit(1);
+  }
+  console.warn('[WARNING] SESSION_SECRET not set — generating an ephemeral secret. Sessions will not survive restarts. Set SESSION_SECRET in web/.env to fix.');
+  return randomBytes(32).toString('hex');
+}
 
 const app = express();
 app.use(express.json({ limit: '10mb' }));
 app.use(express.static(join(__dirname, 'public')));
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'career-ops-change-this-secret',
+  secret: resolveSessionSecret(),
   resave: false,
   saveUninitialized: false,
-  cookie: { maxAge: 7 * 24 * 60 * 60 * 1000, sameSite: 'lax' }
+  cookie: { maxAge: 7 * 24 * 60 * 60 * 1000, sameSite: 'lax', secure: IS_PROD }
 }));
 
 function requireAuth(req, res, next) {

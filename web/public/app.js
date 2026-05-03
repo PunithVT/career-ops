@@ -591,7 +591,7 @@ function renderFollowupCards({ overdue = [], upcoming = [] }) {
     return;
   }
 
-  container.innerHTML = all.map(a => `
+  container.innerHTML = all.map((a, i) => `
     <div class="followup-card ${a.urgency}">
       <div class="followup-card-header">
         <span class="followup-company">${esc(a.company || a.Company || '—')}</span>
@@ -599,13 +599,17 @@ function renderFollowupCards({ overdue = [], upcoming = [] }) {
       </div>
       <div class="followup-role">${esc(a.role || a.Role || '')}</div>
       <div class="followup-meta">Status: ${esc(a.status || a.Status || '—')} · Applied: ${esc(a.date || a.Date || '—')}</div>
-      <button class="btn btn-ghost btn-sm" onclick="draftFollowup(${JSON.stringify(esc(JSON.stringify(a)))})">✉ Draft message</button>
+      <button class="btn btn-ghost btn-sm" data-followup-idx="${i}">✉ Draft message</button>
     </div>
   `).join('');
+
+  container.querySelectorAll('[data-followup-idx]').forEach(btn => {
+    const idx = Number(btn.dataset.followupIdx);
+    btn.addEventListener('click', () => draftFollowup(all[idx]));
+  });
 }
 
-window.draftFollowup = async function(escapedJson) {
-  const appCtx = JSON.parse(escapedJson.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>'));
+async function draftFollowup(appCtx) {
   showToast('Generating follow-up draft…');
 
   const res = await fetch('/api/followup-draft', {
@@ -628,10 +632,9 @@ window.draftFollowup = async function(escapedJson) {
       if (evt.chunk) raw += evt.chunk;
     }
   }
-  // Show in a simple modal / append to editor
   $('followups-md-editor').value += `\n\n---\n\n${raw}`;
   showToast('Draft added to the log below');
-};
+}
 
 window.saveFollowupsMd = async function() {
   await api('PUT', '/api/followups-md', { content: $('followups-md-editor').value });

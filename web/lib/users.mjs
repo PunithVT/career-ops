@@ -9,7 +9,14 @@ const USERS_FILE = join(__dirname, '..', 'users.json');
 
 function readUsers() {
   if (!existsSync(USERS_FILE)) return [];
-  return JSON.parse(readFileSync(USERS_FILE, 'utf8'));
+  const raw = readFileSync(USERS_FILE, 'utf8');
+  try {
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) throw new Error('expected an array');
+    return parsed;
+  } catch (e) {
+    throw new Error(`users.json is corrupted (${e.message}). Inspect ${USERS_FILE} or restore from a backup before continuing.`);
+  }
 }
 
 function writeUsers(users) {

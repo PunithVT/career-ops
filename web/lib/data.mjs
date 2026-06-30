@@ -77,7 +77,9 @@ export function parseApplications(userPath) {
         trimmed.startsWith('| #') ||
         trimmed.startsWith('| ---')) continue;
 
-    const fields = trimmed.split('|').map(f => f.trim()).filter(Boolean);
+    // Drop only the empty strings produced by the leading/trailing pipes —
+    // NOT empty middle cells (filter(Boolean) would shift every later column).
+    const fields = trimmed.split('|').slice(1, -1).map(f => f.trim());
     if (fields.length < 7) continue;
 
     const scoreMatch = (fields[4] || '').match(/(\d+\.?\d*)/);

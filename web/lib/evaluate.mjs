@@ -3,6 +3,8 @@ import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { spawn } from 'child_process';
+import dns from 'dns/promises';
+import net from 'net';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -146,8 +148,44 @@ function slugify(s) {
 
 // ── URL fetcher ────────────────────────────────────────────────────────────────
 
+// SSRF guard: reject loopback / private / link-local / metadata addresses so a
+// user-supplied JD URL can't be used to probe internal services.
+function isPrivateIp(ip) {
+  if (net.isIPv4(ip)) {
+    const [a, b] = ip.split('.').map(Number);
+    if (a === 0 || a === 127 || a === 10) return true;
+    if (a === 172 && b >= 16 && b <= 31) return true;
+    if (a === 192 && b === 168) return true;
+    if (a === 169 && b === 254) return true; // link-local + cloud metadata
+    return false;
+  }
+  if (net.isIPv6(ip)) {
+    const lower = ip.toLowerCase();
+    if (lower === '::1' || lower === '::') return true;
+    if (lower.startsWith('fe80') || lower.startsWith('fc') || lower.startsWith('fd')) return true;
+    const mapped = lower.match(/::ffff:(\d+\.\d+\.\d+\.\d+)$/);
+    if (mapped) return isPrivateIp(mapped[1]);
+    return false;
+  }
+  return false;
+}
+
+async function isUrlSafe(rawUrl) {
+  let u;
+  try { u = new URL(rawUrl); } catch { return false; }
+  if (u.protocol !== 'http:' && u.protocol !== 'https:') return false;
+  const host = u.hostname;
+  if (/^(localhost|.*\.localhost)$/i.test(host)) return false;
+  if (net.isIP(host)) return !isPrivateIp(host);
+  try {
+    const addrs = await dns.lookup(host, { all: true });
+    return addrs.length > 0 && addrs.every(a => !isPrivateIp(a.address));
+  } catch { return false; }
+}
+
 export async function fetchUrl(url) {
   try {
+    if (!(await isUrlSafe(url))) return null;
     const res = await fetch(url, {
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; career-ops-bot/1.0)' },
       signal: AbortSignal.timeout(10000)

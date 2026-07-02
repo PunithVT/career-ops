@@ -34,6 +34,34 @@ app.use(session({
   cookie: { maxAge: 7 * 24 * 60 * 60 * 1000, sameSite: 'lax', secure: IS_PROD }
 }));
 
+// Fixed-window in-memory rate limiter for auth endpoints (brute-force guard).
+// Self-hosted single instance, so in-process state is sufficient.
+const AUTH_WINDOW_MS = 15 * 60 * 1000;
+const AUTH_MAX_ATTEMPTS = 10;
+const authAttempts = new Map(); // ip -> { count, windowStart }
+
+function authRateLimit(req, res, next) {
+  const ip = req.ip || req.socket.remoteAddress || 'unknown';
+  const now = Date.now();
+  const rec = authAttempts.get(ip);
+  if (!rec || now - rec.windowStart > AUTH_WINDOW_MS) {
+    authAttempts.set(ip, { count: 1, windowStart: now });
+    return next();
+  }
+  rec.count++;
+  if (rec.count > AUTH_MAX_ATTEMPTS) {
+    const retryMin = Math.ceil((rec.windowStart + AUTH_WINDOW_MS - now) / 60000);
+    return res.status(429).json({ error: `Too many attempts. Try again in ~${retryMin} min.` });
+  }
+  next();
+}
+
+// Prune stale rate-limit entries so the map can't grow unbounded.
+setInterval(() => {
+  const cutoff = Date.now() - AUTH_WINDOW_MS;
+  for (const [ip, rec] of authAttempts) if (rec.windowStart < cutoff) authAttempts.delete(ip);
+}, AUTH_WINDOW_MS).unref();
+
 function requireAuth(req, res, next) {
   if (!req.session.userId) return res.status(401).json({ error: 'Unauthorized' });
   const user = users.getUser(req.session.userId);
@@ -61,7 +89,7 @@ function sseSetup(res) {
 
 // ─── Auth ─────────────────────────────────────────────────────────────────────
 
-app.post('/auth/register', async (req, res) => {
+app.post('/auth/register', authRateLimit, async (req, res) => {
   try {
     const { username, password } = req.body ?? {};
     if (!username || username.length < 3) return res.status(400).json({ error: 'Username must be 3+ characters' });
@@ -73,7 +101,7 @@ app.post('/auth/register', async (req, res) => {
   } catch (e) { res.status(400).json({ error: e.message }); }
 });
 
-app.post('/auth/login', async (req, res) => {
+app.post('/auth/login', authRateLimit, async (req, res) => {
   try {
     const { username, password } = req.body ?? {};
     const user = await users.authenticate(username?.trim(), password);

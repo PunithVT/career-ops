@@ -41,6 +41,11 @@ function statusClass(s) {
 function esc(s) {
   return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
+// All AI/markdown output goes through DOMPurify — model output is untrusted
+// (a JD could instruct the model to emit <script>/<img onerror> payloads).
+function renderMd(raw) {
+  return DOMPurify.sanitize(marked.parse(raw));
+}
 
 /* ── SSE stream reader ─────────────────────────────────────────────────────── */
 async function streamRequest(path, body, { onChunk, onDone, onError }) {
@@ -263,7 +268,7 @@ window.runEvaluation = async function() {
   let raw = '';
   try {
     await streamRequest('/api/evaluate', { jd }, {
-      onChunk: chunk => { raw += chunk; output.innerHTML = marked.parse(raw); output.scrollTop = output.scrollHeight; },
+      onChunk: chunk => { raw += chunk; output.innerHTML = renderMd(raw); output.scrollTop = output.scrollHeight; },
       onDone: evt => {
         lastReportIds.eval = evt.reportId;
         statusEl.textContent = 'Done — report saved.';
@@ -377,7 +382,7 @@ async function runTool(triggerBtn) {
   let raw = '';
   try {
     await streamRequest(`/api/ai/${mode}`, { input, extraContext }, {
-      onChunk: chunk => { raw += chunk; output.innerHTML = marked.parse(raw); output.scrollTop = output.scrollHeight; },
+      onChunk: chunk => { raw += chunk; output.innerHTML = renderMd(raw); output.scrollTop = output.scrollHeight; },
       onDone: evt => {
         lastReportIds.tool = evt.reportId;
         if (statusEl) statusEl.textContent = 'Done.';
@@ -558,7 +563,7 @@ window.runPatterns = async function() {
   let raw = '';
   try {
     await streamRequest('/api/patterns', {}, {
-      onChunk: chunk => { raw += chunk; output.innerHTML = marked.parse(raw); output.scrollTop = output.scrollHeight; },
+      onChunk: chunk => { raw += chunk; output.innerHTML = renderMd(raw); output.scrollTop = output.scrollHeight; },
       onDone: () => {}
     });
   } catch (e) {
@@ -702,7 +707,7 @@ async function selectReport(id) {
   try {
     const { content } = await api('GET', `/api/reports/${encodeURIComponent(id)}`);
     setText('report-title', id);
-    setHtml('report-content', marked.parse(content));
+    setHtml('report-content', renderMd(content));
     $('report-content').className = 'markdown-body';
     $('report-content').scrollTop = 0;
   } catch { setText('report-content', 'Could not load report.'); }

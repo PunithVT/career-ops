@@ -23,9 +23,14 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = __dirname;
 
-const CANONICAL_REPO = 'https://github.com/santifer/career-ops.git';
-const RAW_VERSION_URL = 'https://raw.githubusercontent.com/santifer/career-ops/main/VERSION';
-const RELEASES_API = 'https://api.github.com/repos/santifer/career-ops/releases/latest';
+// This fork has diverged significantly from upstream (santifer/career-ops):
+// multi-user web app, different package.json, custom docs. Pulling upstream's
+// system files would clobber that work, so the updater tracks THIS repo.
+// To resync with upstream instead, change these three URLs back and review
+// the diff carefully before applying.
+const CANONICAL_REPO = 'https://github.com/PunithVT/career-ops.git';
+const RAW_VERSION_URL = 'https://raw.githubusercontent.com/PunithVT/career-ops/main/VERSION';
+const RELEASES_API = 'https://api.github.com/repos/PunithVT/career-ops/releases/latest';
 
 // System layer paths — ONLY these files get updated
 const SYSTEM_PATHS = [

@@ -1,0 +1,281 @@
+# All Career Links — Master List
+
+> Every careers/jobs link known to this system, consolidated. Generated 2026-07-02.
+> Sources: the Bangalore IT companies research (430 companies classified, links HTTP-verified)
+> and the portal scanner configuration (113 tracked companies).
+
+## 1. Live job boards from the Bangalore PDF list (auto-scanned)
+
+The only 4 companies from the 430-company list with open ATS boards — `node scan.mjs` pulls these automatically:
+
+- **[Capco](https://job-boards.greenhouse.io/capco)** — ~51 Bengaluru + Pune roles live
+- **[Valtech](https://job-boards.greenhouse.io/valtech)** — ~21 Bengaluru roles live
+- **[Thoughtworks](https://job-boards.greenhouse.io/thoughtworks)** — Bangalore roles live
+- **[Azul Systems](https://jobs.lever.co/azul)** — Bangalore/Mumbai roles live
+
+## 2. Bangalore PDF list — all verified careers pages (137 employers)
+
+Every surviving/acquired employer from the list with an HTTP-verified careers link, deduplicated
+(multiple old companies often merged into one acquirer). Sorted alphabetically.
+
+- [ABB Ltd](https://careers.abb/global/en/home)
+- [Access Automation Pvt Ltd](https://www.aaplweb.com/careers.php)
+- [Accord Software & Systems Pvt Ltd](https://www.accord-soft.com/career.php)
+- [Actalent (Allegis Group)](https://careers-actalentservices.icims.com/)
+- [Adarsh Solutions Pvt Ltd](http://www.adarshsolutions.com/careers)
+- [Agni Software Pvt Ltd](http://agnisoft.com/careers/careers.asp)
+- [AI Soft Technologies Pvt Ltd](http://www.aisofttech.com/careers.html)
+- [Aithent](https://www.aithent.com/about-us/careers/)
+- [Algonomy](https://www.algonomy.com/careers/)
+- [Allegis Group (Allegis Services India / TEKsystems)](https://careers.smartrecruiters.com/allegisglobalsolutions)
+- [Amazon (Amazon Development Centre India Pvt Ltd)](https://www.amazon.jobs/)
+- [AMD (Advanced Micro Devices)](https://careers.amd.com/careers-home/jobs)
+- [ANZ (ANZ Operations and Technology Pvt Ltd)](https://careers.anz.com/)
+- [Aptean (Aptean India Pvt Ltd)](https://careers.aptean.com/jobs)
+- [Aptiv (Wind River)](https://www.windriver.com/careers)
+- [ArisGlobal](https://careers.arisglobal.com/)
+- [Arm (Arm Embedded Technologies Pvt Ltd)](https://careers.arm.com/)
+- [Artech Infosystems Pvt Ltd](https://www.artech.com/careers/)
+- [Ascendum (Ascendum Solutions)](https://www.ascendum.com/careers)
+- [ASM Technologies Ltd](https://asmltd.com/current-openings/)
+- [AspenTech (Aspen Technology, Inc.)](https://www.aspentech.com/en/careers)
+- [Autodesk](https://autodesk.wd1.myworkdayjobs.com/Ext)
+- [AXA (AXA Global Business Services / AXA Technologies Shared Services)](https://careers.axa.com/careers-home/jobs)
+- [Azul Systems](https://www.azul.com/careers/)
+- [BAeHAL Software Ltd](https://www.baehal.com/current vacancies.aspx)
+- [Bangalore Softsell Ltd](https://bangaloresoftsell.com/careers-bangalore-softsell/)
+- [Bangalore Software Services Pvt Ltd](https://www.bangalorestrategic.com/careers)
+- [Birlasoft Limited](https://jobs.birlasoft.com/)
+- [BrightSword Technologies](https://www.expertia.ai/brightsword)
+- [Bristlecone (Mahindra Group)](https://iaagiz.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/bristlecone-careers)
+- [Broadcom](https://www.broadcom.com/company/careers)
+- [Broadcom Inc.](https://www.broadcom.com/company/careers)
+- [Cadence Design Systems](https://www.cadence.com/en_US/home/company/life-at-cadence/careers.html)
+- [Cambridge Technology Enterprises Ltd (CTE)](https://www.ctepl.com/careers/)
+- [Capgemini](https://www.capgemini.com/careers/)
+- [Capgemini (Capgemini Engineering)](https://www.capgemini.com/in-en/careers/)
+- [CCE Software Pvt Ltd](https://ccesoft.com/carrer/)
+- [Celstream Technologies Pvt Ltd](https://www.celstream.com/job-openings.html)
+- [Cerulean Information Technology Pvt Ltd](https://www.ceruleaninfotech.com/career.php)
+- [CGI](https://www.cgi.com/en/careers)
+- [CGI Inc.](https://www.cgi.com/en/careers)
+- [Cisco](https://jobs.cisco.com/)
+- [Cisco Systems](https://careers.cisco.com/global/en/india/)
+- [Cloud Software Group](https://careers.cloud.com/)
+- [Cloud Software Group (Citrix R&D India renamed Cloud Software Group India Pvt Ltd)](https://careers.cloud.com/)
+- [CMS Computers Ltd](https://www.cms.co.in/career.php)
+- [Cognizant](https://careers.cognizant.com/india-en/)
+- [Cranes Software International Ltd](https://www.cranessoftware.com/careers.php)
+- [CrimsonLogic India Pvt Ltd (part of CrimsonLogic Pte Ltd / PSA Group)](https://www.crimsonlogic.com/career-portal)
+- [Dassault Systemes](https://www.3ds.com/careers/jobs)
+- [Dassault Systemes (BIOVIA)](https://www.3ds.com/careers)
+- [Dell Technologies](https://jobs.dell.com/)
+- [Dell Technologies (Dell India Pvt Ltd / Dell International Services India Pvt Ltd)](https://jobs.dell.com/en)
+- [Digicom Systems (Bangalore) Pvt Ltd](https://www.dgcomweb.com/career.php)
+- [Dover Corporation (Dover India Pvt Ltd)](https://careers.dovercorporation.com/)
+- [DXC Technology](https://careers.dxc.com/)
+- [EchoStar (DISH)](https://careers.dish.com/)
+- [Ekinops](https://www.ekinops.com/careers)
+- [Entrust Corporation](https://www.entrust.com/company/careers)
+- [Envision Financial Systems](https://enfs.com/careers/)
+- [Epigon Media Technologies](https://epigon.in/html/career.html)
+- [ESI Software (India) / Keysight Technologies](https://careers.keysight.com/location-india)
+- [Etisalat / e& (Emirates Telecommunications)](https://www.eand.com/en/careers/careers.html)
+- [Evolving Systems Networks India](https://apply.workable.com/evolving-systems/)
+- [First American (India) / Cognizant](https://www.firstam.co.in/job-opening/)
+- [FIS (Fidelity National Information Services)](https://careers.fisglobal.com/)
+- [GE Power India (GE Vernova)](https://careers.gevernova.com/)
+- [Genpact](https://www.genpact.com/careers)
+- [GlobalEdge Software (GlobalLogic / Hitachi group)](https://www.globaledgesoft.com/careers/)
+- [Google (Alphabet)](https://www.google.com/about/careers/applications/)
+- [HARMAN (Samsung) - Harman Connected Services](https://jobsearch.harman.com/en_US/careers/SearchJobs)
+- [HCL Technologies](https://careers.hcltech.com/)
+- [HCL Technologies Limited (HCLTech)](https://www.hcltech.com/careers)
+- [HCLTech (HCL Technologies)](https://www.hcltech.com/careers)
+- [Honeywell (Honeywell Technology Solutions Lab)](https://careers.honeywell.com/)
+- [HTC Global Services](https://www.htcinc.com/careers/)
+- [Huawei Technologies India](https://career.huawei.com/)
+- [IBM](https://www.ibm.com/careers/)
+- [IBM India Private Limited](https://www.ibm.com/careers/)
+- [Impelsys](https://www.impelsys.com/careers/)
+- [Infineon Technologies India Pvt Ltd](https://www.infineon.com/cms/en/careers/)
+- [Infosys Limited](https://www.infosys.com/careers/)
+- [Intuit India (Intuit India Product Development Centre Pvt Ltd)](https://www.intuit.com/careers/)
+- [IonIdea Interactive Private Limited](https://www.ionidea.com/)
+- [IQVIA](https://jobs.iqvia.com/)
+- [Ittiam Systems Private Limited](https://www.ittiam.com/careers/)
+- [KPIT Technologies / Birlasoft](https://www.kpit.com/careers/)
+- [Light & Wonder](https://www.lnw.com/careers)
+- [LTIMindtree](https://careers.ltimindtree.com/)
+- [LTIMindtree (rebranding to LTM Limited)](https://www.ltimindtree.com/careers)
+- [Manhattan Associates (India) Development Centre Pvt Ltd](https://www.manh.com/careers)
+- [Marvell Technology](https://marvell.wd1.myworkdayjobs.com/MarvellCareers)
+- [Mastek Limited](https://www.mastek.com/careers/)
+- [Merative](https://merative.wd12.myworkdayjobs.com/External_Career_Site)
+- [Microsoft Corporation (India) Pvt Ltd](https://careers.microsoft.com/)
+- [Molbio Diagnostics](https://www.molbiodiagnostics.com/careers/)
+- [Mphasis](https://careers.mphasis.com/)
+- [Mphasis Limited](https://careers.mphasis.com/)
+- [NetApp](https://www.netapp.com/careers/)
+- [Nokia](https://www.nokia.com/about-us/careers/)
+- [NTT DATA](https://www.nttdata.com/global/en/careers/)
+- [OnMobile Global Limited](https://www.onmobile.com/)
+- [Oracle](https://careers.oracle.com/en/sites/jobsearch/jobs)
+- [Peoplefluent](https://www.peoplefluent.com/careers/)
+- [Philips (Philips Innovation Campus / Philips India)](https://www.careers.philips.com/)
+- [Publicis Sapient (Publicis Groupe)](https://careers.publicissapient.com/)
+- [PwC (delivery center) / BearingPoint](https://bearingpointindia.teamtailor.com/jobs)
+- [Quest Global](https://careers.quest-global.com/)
+- [Quinnox (Everforth Quinnox)](https://www.quinnox.com/careers/)
+- [Red Hat (IBM)](https://www.redhat.com/en/jobs)
+- [Robert Bosch (RBEI / Bosch Global Software Technologies)](https://www.bosch.in/careers/)
+- [Samsung R&D Institute India - Bangalore (Samsung)](https://www.samsung.com/in/about-us/careers/)
+- [SAP](https://jobs.sap.com/)
+- [SAP (SAP Ariba)](https://jobs.sap.com/)
+- [SAP Labs India (SAP SE)](https://jobs.sap.com/)
+- [Sapiens](https://careers.sapiens.com/)
+- [Sasken Technologies Ltd](https://www.sasken.com/careers)
+- [Softtek](https://jobs.softtek.com/careers)
+- [SOLIZE India Technologies Pvt Ltd (SOLIZE Group)](https://www.solize.com/india/recruit/)
+- [Solventum (3M Health Information Systems)](https://www.solventum.com/en-us/home/our-company/careers/)
+- [Sonata Software Ltd](https://www.sonata-software.com/careers)
+- [Subex Ltd](https://www.subex.com/careers/)
+- [Synaptics](https://careers.synaptics.com/search/jobs)
+- [Synopsys](https://www.synopsys.com/careers.html)
+- [Tally Solutions Pvt Ltd](https://tallysolutions.com/careers/)
+- [Tata Consultancy Services](https://www.tcs.com/careers)
+- [Tata Consultancy Services (TCS)](https://www.tcs.com/careers)
+- [Tata Elxsi Limited](https://www.tataelxsi.com/careers)
+- [Tavant Technologies India Pvt Ltd](https://www.tavant.com/careers)
+- [Tech Mahindra](https://careers.techmahindra.com/)
+- [Tejas Networks (Tata Group)](https://www.tejasnetworks.com/careers)
+- [Tesco Bengaluru Private Limited](https://www.tescobengaluru.com/careers)
+- [Torry Harris Business Solutions (Torry Harris Integration Solutions)](https://www.torryharris.com/careers/)
+- [Trigent Software](https://www.trigent.com/careers/)
+- [Wipro (Capco)](https://www.capco.com/careers/job-search)
+- [Wipro Limited](https://careers.wipro.com/)
+- [Xerox](https://www.xerox.com/en-us/jobs)
+
+## 3. Scanner-tracked companies — India & Bengaluru focus (16)
+
+Modern companies in `portals.yml` with India presence (these produced most of the 577 India openings in the last scan):
+
+- [Postman](https://www.postman.com/company/careers/) — Bangalore-HQ API platform
+- [InMobi](https://www.inmobi.com/company/careers) — Bangalore HQ
+- [PhonePe](https://www.phonepe.com/careers/) — Bangalore HQ
+- [Glance](https://glance.com/careers) — Bangalore-HQ lock-screen content + AI personalization
+- [Zenoti](https://www.zenoti.com/careers) — Hyderabad-HQ SaaS for spas/salons/medspas
+- [Observe.AI](https://www.observe.ai/careers) — Bangalore + SF
+- [Sarvam AI](https://jobs.ashbyhq.com/sarvam) — Bangalore-HQ Indic-LLM lab
+- [Kiwi](https://jobs.ashbyhq.com/kiwi) — Bangalore + remote
+- [Nutanix](https://jobs.ashbyhq.com/nutanix) — Bangalore + global
+- [Meesho](https://jobs.lever.co/meesho) — Bangalore HQ
+- [CRED](https://jobs.lever.co/cred) — Bangalore HQ
+- [Plivo](https://jobs.lever.co/plivo) — Bangalore + SF
+- [Mindtickle](https://jobs.lever.co/mindtickle) — Pune + SF
+- [Freshworks](https://jobs.lever.co/freshworks) — Chennai HQ
+- [Paytm](https://jobs.lever.co/paytm) — Noida HQ
+- [Thoughtworks](https://job-boards.greenhouse.io/thoughtworks) — Global software consultancy, large India presence
+
+## 4. Scanner-tracked companies — global (97)
+
+- [Anthropic](https://job-boards.greenhouse.io/anthropic)
+- [OpenAI](https://openai.com/careers)
+- [PolyAI](https://job-boards.eu.greenhouse.io/polyai) — UK
+- [Parloa](https://job-boards.eu.greenhouse.io/parloa) — Berlin EMEA
+- [Intercom](https://job-boards.greenhouse.io/intercom) — Dublin EMEA
+- [Hume AI](https://job-boards.greenhouse.io/humeai) — NYC
+- [ElevenLabs](https://jobs.ashbyhq.com/elevenlabs) — Voice AI TTS leader
+- [Deepgram](https://jobs.ashbyhq.com/deepgram) — STT/TTS APIs
+- [Vapi](https://jobs.ashbyhq.com/vapi) — Voice AI infrastructure
+- [Bland AI](https://jobs.ashbyhq.com/bland) — Voice phone agents
+- [Retool](https://retool.com/careers) — London
+- [Airtable](https://job-boards.greenhouse.io/airtable) — No-code + AI platform
+- [Vercel](https://job-boards.greenhouse.io/vercel) — AI SDK, v0
+- [Temporal](https://job-boards.greenhouse.io/temporal) — Workflow orchestration
+- [Arize AI](https://job-boards.greenhouse.io/arizeai) — LLMOps / AI observability
+- [RunPod](https://job-boards.greenhouse.io/runpod) — GPU cloud for AI
+- [Glean](https://job-boards.greenhouse.io/gleanwork) — Enterprise AI search
+- [Ada](https://job-boards.greenhouse.io/ada) — Toronto + remote
+- [LivePerson](https://liveperson.com/company/careers) — Remote EMEA
+- [Sierra](https://jobs.ashbyhq.com/sierra) — Bret Taylor (ex-CEO Salesforce)
+- [Decagon](https://jobs.ashbyhq.com/decagon) — AI customer support agents
+- [Talkdesk](https://www.talkdesk.com/careers) — Lisbon
+- [Twilio](https://www.twilio.com/en-us/company/jobs) — Voice/messaging infrastructure
+- [Dialpad](https://www.dialpad.com/careers) — Voice AI for business comms
+- [Gong](https://www.gong.io/careers) — Revenue intelligence with voice AI
+- [Genesys](https://www.genesys.com/careers) — Contact center cloud + AI
+- [Salesforce](https://careers.salesforce.com) — Agentforce = AI agents platform
+- [Langfuse](https://langfuse.com/careers) — Berlin
+- [Lindy](https://jobs.ashbyhq.com/lindy) — AI agent management platform
+- [Cognigy](https://careers.cognigy.com) — Dusseldorf EMEA
+- [Speechmatics](https://job-boards.greenhouse.io/speechmatics) — Cambridge UK
+- [n8n](https://jobs.ashbyhq.com/n8n) — Berlin + remote EU/US
+- [Zapier](https://jobs.ashbyhq.com/zapier) — Remote-first
+- [Make.com (Celonis)](https://www.make.com/en/careers) — Celonis parent company
+- [Cohere](https://jobs.ashbyhq.com/cohere) — AI/LLM provider
+- [LangChain](https://jobs.ashbyhq.com/langchain) — LangChain/LangSmith framework
+- [Pinecone](https://jobs.ashbyhq.com/pinecone) — Vector database
+- [Mistral AI](https://jobs.lever.co/mistral) — Paris
+- [Weights & Biases](https://jobs.lever.co/wandb) — MLOps platform
+- [Palantir](https://jobs.lever.co/palantir) — FDE roles
+- [Factorial](https://job-boards.greenhouse.io/factorial) — Barcelona
+- [Attio](https://jobs.ashbyhq.com/attio) — Remote EU
+- [Tinybird](https://jobs.ashbyhq.com/tinybird) — Remote
+- [Clarity AI](https://jobs.lever.co/clarity-ai) — Madrid/Remote
+- [Travelperk](https://jobs.ashbyhq.com/travelperk) — Barcelona
+- [Aleph Alpha](https://jobs.ashbyhq.com/AlephAlpha) — Heidelberg DE
+- [DeepL](https://jobs.ashbyhq.com/DeepL) — Cologne DE
+- [Black Forest Labs](https://job-boards.greenhouse.io/blackforestlabs) — Freiburg DE / SF
+- [Helsing](https://job-boards.greenhouse.io/helsing) — Munich / Berlin / London / Paris
+- [Celonis](https://job-boards.greenhouse.io/celonis) — Munich / NYC
+- [Contentful](https://job-boards.greenhouse.io/contentful) — Berlin / Denver
+- [GetYourGuide](https://job-boards.greenhouse.io/getyourguide) — Berlin
+- [HelloFresh](https://job-boards.greenhouse.io/hellofresh) — Berlin
+- [N26](https://job-boards.greenhouse.io/n26) — Berlin / Barcelona
+- [Trade Republic](https://job-boards.greenhouse.io/traderepublicbank) — Berlin / London / Paris
+- [SumUp](https://job-boards.greenhouse.io/sumup) — Berlin / London
+- [Qonto](https://jobs.lever.co/qonto) — Paris / Berlin / Barcelona / Milan
+- [Forto](https://jobs.lever.co/forto) — Berlin DE
+- [Lakera](https://jobs.ashbyhq.com/lakera.ai) — Zurich CH / SF
+- [Scandit](https://job-boards.greenhouse.io/scandit) — Zurich CH
+- [Cradle](https://jobs.ashbyhq.com/cradlebio) — Zurich CH / Amsterdam
+- [Hugging Face](https://apply.workable.com/huggingface/) — Paris / NYC / Remote
+- [Photoroom](https://jobs.ashbyhq.com/photoroom) — Paris FR
+- [Pigment](https://jobs.lever.co/pigment) — Paris FR / NYC / London
+- [Wayve](https://job-boards.greenhouse.io/wayve) — London UK
+- [Isomorphic Labs](https://job-boards.greenhouse.io/isomorphiclabs) — London / Lausanne / Cambridge MA
+- [PhysicsX](https://job-boards.greenhouse.io/physicsx) — London UK
+- [Stability AI](https://job-boards.greenhouse.io/stabilityai) — London / SF
+- [Synthesia](https://jobs.ashbyhq.com/synthesia) — London UK
+- [Faculty](https://jobs.ashbyhq.com/faculty) — London UK
+- [Causaly](https://jobs.ashbyhq.com/causaly) — London / Athens
+- [Lovable](https://jobs.ashbyhq.com/lovable) — Stockholm SE
+- [Legora](https://jobs.ashbyhq.com/legora) — Stockholm SE / NYC / London
+- [Spotify](https://jobs.lever.co/spotify) — Stockholm SE / NYC / London
+- [Vinted](https://jobs.lever.co/vinted) — Vilnius LT / Berlin
+- [Amplemarket](https://job-boards.greenhouse.io/amplemarket) — Lisbon PT / Remote
+- [Perplexity](https://jobs.ashbyhq.com/perplexity) — AI-native search and enterprise AI platform
+- [Clay Labs](https://jobs.ashbyhq.com/claylabs) — AI-native GTM and workflow automation platform
+- [Runway](https://job-boards.greenhouse.io/runwayml) — Generative AI video and creative tooling platform
+- [Hightouch](https://job-boards.greenhouse.io/hightouch) — Data activation platform with AI agents and solutions engineering roles
+- [WorkOS](https://jobs.ashbyhq.com/workos) — Developer tools and enterprise-ready auth/platform APIs
+- [Supabase](https://jobs.ashbyhq.com/supabase) — Open-source Firebase alternative
+- [Resend](https://jobs.ashbyhq.com/resend) — Email API for developers
+- [Clerk](https://jobs.ashbyhq.com/clerk) — Auth & user management for developers
+- [Inngest](https://jobs.ashbyhq.com/inngest) — Durable workflow engine for serverless
+- [PlanetScale](https://job-boards.greenhouse.io/planetscale) — Serverless MySQL platform
+- [Zep AI](https://www.getzep.com/careers) — Context engineering platform for AI agents
+- [Maxim AI](https://www.getmaxim.ai/careers) — AI evaluation and observability platform
+- [Atlan](https://jobs.ashbyhq.com/atlan) — New Delhi/remote
+- [GitLab](https://about.gitlab.com/jobs/) — Remote-first DevOps platform
+- [Figma](https://www.figma.com/careers/) — Design tool
+- [Databricks](https://www.databricks.com/company/careers) — Data + AI lakehouse
+- [Carta](https://carta.com/careers/) — Cap-table + private-markets platform
+- [Confluent](https://jobs.ashbyhq.com/confluent) — Streaming data platform
+- [Capco](https://job-boards.greenhouse.io/capco) — Global tech/management consultancy
+- [Valtech](https://job-boards.greenhouse.io/valtech) — Global digital agency
+- [Azul Systems](https://jobs.lever.co/azul) — Java/JVM runtime company
+
+---
+_Companies without a live careers link (defunct/untraceable) are listed in [bangalore-it-companies.md](bangalore-it-companies.md) Tier 3._

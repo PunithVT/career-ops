@@ -46,3 +46,4 @@ web/users.json
 web/.env
 web/node_modules/
 web/package-lock.json
+career-links.xlsx

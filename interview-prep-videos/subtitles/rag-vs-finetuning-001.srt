@@ -1,0 +1,239 @@
+1
+00:00:00,350 --> 00:00:03,280
+Tumhari company ke 2,000 internal
+
+2
+00:00:03,280 --> 00:00:05,840
+docs har week badalte hain
+
+3
+00:00:06,080 --> 00:00:07,520
+Employee chatbot
+
+4
+00:00:07,600 --> 00:00:09,520
+RAG ya fine-tuning?
+
+5
+00:00:09,600 --> 00:00:10,300
+Kya karoge?
+
+6
+00:00:10,640 --> 00:00:11,600
+Socho
+
+7
+00:00:11,600 --> 00:00:13,200
+teen do
+
+8
+00:00:13,200 --> 00:00:13,920
+ek
+
+9
+00:00:14,160 --> 00:00:16,060
+Zyaadatar freshers bolte hain
+
+10
+00:00:16,060 --> 00:00:17,815
+fine-tune kar do
+
+11
+00:00:17,895 --> 00:00:19,660
+Yahin interview gaya
+
+12
+00:00:19,975 --> 00:00:20,775
+Kyun?
+
+13
+00:00:20,855 --> 00:00:23,095
+Fine-tuning matlab exam se pehle
+
+14
+00:00:23,095 --> 00:00:23,895
+ratta
+
+15
+00:00:24,055 --> 00:00:26,375
+RAG matlab open-book exam
+
+16
+00:00:26,695 --> 00:00:27,895
+Policy badli?
+
+17
+00:00:27,895 --> 00:00:29,415
+Bas naya page daalo
+
+18
+00:00:29,415 --> 00:00:30,535
+index se dhoondo
+
+19
+00:00:31,020 --> 00:00:32,780
+Docs ko chunks mein todo
+
+20
+00:00:32,780 --> 00:00:34,060
+embeddings banao
+
+21
+00:00:34,060 --> 00:00:35,340
+index mein rakho
+
+22
+00:00:35,420 --> 00:00:36,700
+Question aaya?
+
+23
+00:00:36,700 --> 00:00:38,300
+Top-k chunks retrieve
+
+24
+00:00:38,300 --> 00:00:39,340
+prompt mein daalo
+
+25
+00:00:39,340 --> 00:00:41,340
+LLM answer deta hai
+
+26
+00:00:41,500 --> 00:00:42,700
+Update aaya?
+
+27
+00:00:42,700 --> 00:00:44,060
+Fine-tuning mein nayi training
+
+28
+00:00:44,060 --> 00:00:44,375
+RAG mein bas re-index
+
+29
+00:00:44,375 --> 00:00:45,575
+Ab trap
+
+30
+00:00:45,895 --> 00:00:48,215
+Log sochte hain fine-tuning naye
+
+31
+00:00:48,215 --> 00:00:49,735
+facts sikhata hai
+
+32
+00:00:49,895 --> 00:00:51,015
+Microsoft study
+
+33
+00:00:51,015 --> 00:00:53,975
+facts ke liye RAG ne unsupervised
+
+34
+00:00:53,975 --> 00:00:55,975
+fine-tuning ko consistently beat
+
+35
+00:00:55,975 --> 00:00:56,425
+kiya
+
+36
+00:00:56,850 --> 00:00:59,410
+Rule knowledge badle toh RAG
+
+37
+00:00:59,650 --> 00:01:01,970
+Tone ya format badle aur prompting
+
+38
+00:01:01,970 --> 00:01:02,770
+kaafi nahi
+
+39
+00:01:02,770 --> 00:01:03,720
+toh fine-tune
+
+40
+00:01:04,210 --> 00:01:05,490
+RAG laga diya
+
+41
+00:01:05,490 --> 00:01:07,090
+phir bhi galat answers
+
+42
+00:01:07,410 --> 00:01:08,690
+Ab kya karoge?
+
+43
+00:01:08,690 --> 00:01:10,370
+Pehle retrieval check karo
+
+44
+00:01:10,370 --> 00:01:12,130
+sahi chunk top-k mein aaya?
+
+45
+00:01:12,130 --> 00:01:14,105
+Ye recall@k hai
+
+46
+00:01:14,185 --> 00:01:15,145
+Nahi aaya?
+
+47
+00:01:15,145 --> 00:01:17,465
+Chunking reranking fix karo
+
+48
+00:01:17,465 --> 00:01:17,945
+Aaya?
+
+49
+00:01:17,945 --> 00:01:19,785
+Toh answer ki faithfulness check
+
+50
+00:01:19,785 --> 00:01:20,235
+karo
+
+51
+00:01:20,265 --> 00:01:22,025
+Interview mein bolna
+
+52
+00:01:22,105 --> 00:01:24,345
+badalti knowledge ke liye RAG
+
+53
+00:01:24,505 --> 00:01:26,345
+Tone ya format ke liye pehle
+
+54
+00:01:26,345 --> 00:01:28,830
+prompting kaafi nahi toh fine-tune
+
+55
+00:01:28,910 --> 00:01:29,550
+Dono?
+
+56
+00:01:29,550 --> 00:01:30,750
+Stack karo
+
+57
+00:01:30,750 --> 00:01:31,630
+Follow karo
+
+58
+00:01:31,630 --> 00:01:32,830
+Agle episode
+
+59
+00:01:32,910 --> 00:01:35,390
+AI Agents vs Chatbots
+
+60
+00:01:35,470 --> 00:01:36,280
+same hi hain na?

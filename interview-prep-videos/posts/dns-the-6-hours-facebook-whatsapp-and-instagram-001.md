@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Category | CS Fundamentals |
-| Duration | 111.0 s |
+| Duration | 84.2 s |
 | Video | [dns-the-6-hours-facebook-whatsapp-and-instagram-001.mp4](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/videos/dns-the-6-hours-facebook-whatsapp-and-instagram-001.mp4) |
 | Cover / thumbnail | [dns-the-6-hours-facebook-whatsapp-and-instagram-001.jpg](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/covers/dns-the-6-hours-facebook-whatsapp-and-instagram-001.jpg) |
 | Subtitles | [dns-the-6-hours-facebook-whatsapp-and-instagram-001.srt](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/subtitles/dns-the-6-hours-facebook-whatsapp-and-instagram-001.srt) |
@@ -14,9 +14,9 @@
 ```
 EP 08 · In 2021, WhatsApp's servers were powered ON, but the internet couldn't find them or reach them. How?
 
-This is a real interview question. 'The servers crashed' gets you rejected. The machines were running. During maintenance, a command took down Facebook's backbone links between data centres. Its DNS servers then withdrew their own BGP routes, and every resolver on the planet returned SERVFAIL.
+This is a real interview question. 'The servers crashed' gets you rejected. The machines were running. During maintenance, a command took down Facebook's backbone links between data centres, and a bug in the audit tool failed to stop it. Its DNS servers then withdrew their own BGP routes, and resolvers returned SERVFAIL.
 
-You'll also learn the full DNS lookup chain (browser cache, OS cache, resolver, root, .com, authoritative) and the TTL trick to use before any IP migration.
+Simple rule: DNS gives the address, BGP gives the route. And no, a saved IP would not have helped.
 
 Save this for your next networking or system design round. Comment 'DNS' if you knew about the BGP part.
 
@@ -34,9 +34,9 @@ Animated emoji: Noto Emoji Animation by Google, CC BY 4.0 (creativecommons.org/l
 ```
 EP 08 · In 2021, WhatsApp's servers were powered ON, but the internet couldn't find them or reach them. How?
 
-This is a real interview question. 'The servers crashed' gets you rejected. The machines were running. During maintenance, a command took down Facebook's backbone links between data centres. Its DNS servers then withdrew their own BGP routes, and every resolver on the planet returned SERVFAIL.
+This is a real interview question. 'The servers crashed' gets you rejected. The machines were running. During maintenance, a command took down Facebook's backbone links between data centres, and a bug in the audit tool failed to stop it. Its DNS servers then withdrew their own BGP routes, and resolvers returned SERVFAIL.
 
-You'll also learn the full DNS lookup chain (browser cache, OS cache, resolver, root, .com, authoritative) and the TTL trick to use before any IP migration.
+Simple rule: DNS gives the address, BGP gives the route. And no, a saved IP would not have helped.
 
 Save this for your next networking or system design round. Comment 'DNS' if you knew about the BGP part.
 

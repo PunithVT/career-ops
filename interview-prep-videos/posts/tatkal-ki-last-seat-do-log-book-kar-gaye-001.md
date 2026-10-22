@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Category | Databases & SQL |
-| Duration | 97.2 s |
+| Duration | 82.9 s |
 | Video | [tatkal-ki-last-seat-do-log-book-kar-gaye-001.mp4](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/videos/tatkal-ki-last-seat-do-log-book-kar-gaye-001.mp4) |
 | Cover / thumbnail | [tatkal-ki-last-seat-do-log-book-kar-gaye-001.jpg](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/covers/tatkal-ki-last-seat-do-log-book-kar-gaye-001.jpg) |
 | Subtitles | [tatkal-ki-last-seat-do-log-book-kar-gaye-001.srt](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/subtitles/tatkal-ki-last-seat-do-log-book-kar-gaye-001.srt) |

@@ -1,267 +1,243 @@
 1
-00:00:00,400 --> 00:00:02,480
+00:00:00,120 --> 00:00:01,840
 Tatkal 10 AM
 
 2
-00:00:02,640 --> 00:00:03,760
+00:00:01,840 --> 00:00:02,880
 Last seat
 
 3
-00:00:03,760 --> 00:00:04,800
-two servers
+00:00:02,880 --> 00:00:04,880
+do users ne same millisecond pe
 
 4
-00:00:04,880 --> 00:00:06,160
-same millisecond
+00:00:04,880 --> 00:00:05,760
+Book dabaya
 
 5
-00:00:06,240 --> 00:00:07,680
-Code SELECT
+00:00:05,760 --> 00:00:07,200
+Code SELECT karta hai
 
 6
-00:00:07,680 --> 00:00:08,880
+00:00:07,200 --> 00:00:08,000
 phir UPDATE
 
 7
-00:00:09,040 --> 00:00:10,320
-Dono confirmed
+00:00:08,000 --> 00:00:09,520
+aur dono confirmed
 
 8
-00:00:10,400 --> 00:00:12,380
-Kaise fix karoge?
+00:00:09,520 --> 00:00:10,880
+Fix kaise karoge?
 
 9
-00:00:12,380 --> 00:00:13,005
-Socho
+00:00:10,880 --> 00:00:12,000
+Freshers bolte hain
 
 10
-00:00:13,005 --> 00:00:14,045
-teen do
+00:00:12,000 --> 00:00:13,200
+DB ACID hai
 
 11
-00:00:14,045 --> 00:00:14,765
-ek
+00:00:13,200 --> 00:00:14,720
+ya synchronized laga do
 
 12
-00:00:14,925 --> 00:00:16,685
-Zyaadatar freshers bolte hain
+00:00:14,720 --> 00:00:15,980
+Yahin pakde jaate ho
 
 13
-00:00:16,685 --> 00:00:17,645
-check first
+00:00:15,980 --> 00:00:17,065
+Station socho
 
 14
-00:00:17,645 --> 00:00:19,245
-DB is ACID
+00:00:17,065 --> 00:00:18,185
+Do counters
 
 15
-00:00:19,405 --> 00:00:20,925
-Yahin interview gaya
+00:00:18,185 --> 00:00:19,305
+do clerks
 
 16
-00:00:20,925 --> 00:00:23,005
-Ya add synchronized
+00:00:19,305 --> 00:00:21,065
+aur ek chart jismein last berth
 
 17
-00:00:23,165 --> 00:00:25,165
-Rejected servers do hain
+00:00:21,065 --> 00:00:21,945
+khaali hai
 
 18
-00:00:25,165 --> 00:00:25,615
-Kyun?
+00:00:22,025 --> 00:00:24,025
+Dono clerks chart dekhte hain
 
 19
-00:00:25,790 --> 00:00:27,550
-Do railway counters
+00:00:24,025 --> 00:00:25,385
+berth free hai
 
 20
-00:00:27,550 --> 00:00:28,590
-ek chart
+00:00:25,465 --> 00:00:27,145
+Yeh tumhara SELECT hai
 
 21
-00:00:28,830 --> 00:00:30,350
-Dono clerks dekhte
+00:00:27,145 --> 00:00:28,825
+Phir dono ticket print kar dete
 
 22
-00:00:30,350 --> 00:00:31,630
-1 berth free
+00:00:28,825 --> 00:00:29,305
+hain
 
 23
-00:00:31,710 --> 00:00:32,990
-Both print tickets
+00:00:29,305 --> 00:00:29,945
+Ek berth
 
 24
-00:00:33,150 --> 00:00:34,990
-Checked par hold nahi hua
+00:00:30,080 --> 00:00:31,040
+do tickets
 
 25
-00:00:35,070 --> 00:00:36,270
-Code mein same
+00:00:31,120 --> 00:00:32,480
+Isko kehte hain check-then-act
 
 26
-00:00:36,270 --> 00:00:37,470
-A reads 1
+00:00:32,480 --> 00:00:33,200
+race
 
 27
-00:00:37,470 --> 00:00:38,910
-B reads 1
+00:00:33,200 --> 00:00:34,800
+Hold kisi ne nahi kiya
 
 28
-00:00:38,910 --> 00:00:39,710
-Check-then-act race
+00:00:34,800 --> 00:00:37,040
+Default isolation pe ACID isse
 
 29
-00:00:40,055 --> 00:00:41,175
-A updates
+00:00:37,040 --> 00:00:37,840
+nahi rokta
 
 30
-00:00:41,175 --> 00:00:41,975
-B waits
+00:00:37,840 --> 00:00:39,760
+synchronized sirf apne counter ko
 
 31
-00:00:41,975 --> 00:00:42,425
-then subtracts
+00:00:39,760 --> 00:00:40,720
+lock karta hai
 
 32
-00:00:42,439 --> 00:00:42,889
-minus one
+00:00:40,720 --> 00:00:41,920
+chart toh shared hai
 
 33
-00:00:43,095 --> 00:00:45,495
-Fix wahan karo jo sab share
+00:00:42,245 --> 00:00:44,645
+Fix rule chart pe hi likho
 
 34
-00:00:45,495 --> 00:00:47,415
-karte database
+00:00:44,645 --> 00:00:46,485
+Naam tabhi likho jab box khaali
 
 35
-00:00:47,495 --> 00:00:48,855
-Conditional UPDATE
+00:00:46,485 --> 00:00:47,045
+ho
 
 36
-00:00:49,175 --> 00:00:51,015
-B ka UPDATE re-check karta
+00:00:47,125 --> 00:00:48,325
+Clerk A likh deta hai
 
 37
-00:00:51,015 --> 00:00:52,055
-zero rows
+00:00:48,325 --> 00:00:50,485
+Clerk B ka update zero rows
 
 38
-00:00:52,055 --> 00:00:52,935
-sold out
+00:00:50,485 --> 00:00:51,045
+laata hai
 
 39
-00:00:53,095 --> 00:00:54,775
-Same transaction as booking
+00:00:51,045 --> 00:00:51,925
+sold out
 
 40
-00:00:54,775 --> 00:00:56,730
-Ya FOR UPDATE
+00:00:51,925 --> 00:00:53,365
+Ya clerk chart haath mein pakad
 
 41
-00:00:56,730 --> 00:00:58,160
-plus CHECK safety net
+00:00:53,365 --> 00:00:54,885
+le yeh FOR UPDATE hai
 
 42
-00:00:58,460 --> 00:00:59,530
-Ab trap
+00:00:54,885 --> 00:00:56,245
+Doosra wait karta hai
 
 43
-00:00:59,610 --> 00:01:00,790
-ACID race-free nahi
+00:00:56,245 --> 00:00:57,285
+Bas ek condition
 
 44
-00:01:00,790 --> 00:01:03,610
-Default pe dono commit
+00:00:57,410 --> 00:00:59,330
+available > 0
 
 45
-00:01:03,770 --> 00:01:05,210
-SERIALIZABLE pakadta
+00:00:59,330 --> 00:01:01,170
+Twist optimistic locking kyun
 
 46
-00:01:05,210 --> 00:01:06,490
-with retries
+00:01:01,170 --> 00:01:01,730
+nahi?
 
 47
-00:01:06,985 --> 00:01:08,965
-Follow-up optimistic ya
+00:01:01,730 --> 00:01:03,410
+Optimistic matlab conflict pe
 
 48
-00:01:08,965 --> 00:01:10,745
-pessimistic locking?
+00:01:03,410 --> 00:01:04,050
+retry
 
 49
-00:01:11,225 --> 00:01:13,065
-Optimistic matlab retry
+00:01:04,050 --> 00:01:05,650
+10 AM pe yeh retry storm
 
 50
-00:01:13,065 --> 00:01:14,505
-10 AM pe?
+00:01:05,650 --> 00:01:06,370
+ban jaata hai
 
 51
-00:01:14,665 --> 00:01:15,945
-Retry storm
+00:01:06,370 --> 00:01:08,290
+isliye guarded UPDATE better
 
 52
-00:01:16,105 --> 00:01:17,705
-Guarded UPDATE wins
-
-53
-00:01:17,705 --> 00:01:18,580
-plus queue
-
-54
-00:01:18,880 --> 00:01:20,840
+00:01:08,450 --> 00:01:10,105
 Interview mein bolna
 
+53
+00:01:10,105 --> 00:01:11,465
+check-then-act race hai
+
+54
+00:01:11,465 --> 00:01:13,385
+Rule database mein enforce karo
+
 55
-00:01:20,840 --> 00:01:22,200
-check-then-act race
+00:01:13,385 --> 00:01:15,065
+Hot row pe lock chhota rakho
 
 56
-00:01:22,200 --> 00:01:23,320
-DB guarantee
+00:01:15,065 --> 00:01:16,105
+queue lagao
 
 57
-00:01:23,320 --> 00:01:24,280
-hope nahi
-
-58
-00:01:24,280 --> 00:01:25,160
-Hot row
-
-59
-00:01:25,160 --> 00:01:26,200
-tiny lock
-
-60
-00:01:26,200 --> 00:01:26,840
-queue
-
-61
-00:01:26,920 --> 00:01:27,960
+00:01:16,105 --> 00:01:16,745
 Follow karo
 
-62
-00:01:27,960 --> 00:01:29,160
+58
+00:01:16,745 --> 00:01:17,625
 Agle episode
 
-63
-00:01:29,160 --> 00:01:30,760
-India vs Pakistan
+59
+00:01:17,625 --> 00:01:19,945
+India vs Pakistan pe cache key
 
-64
-00:01:30,760 --> 00:01:31,880
-2 lakh requests
-
-65
-00:01:31,880 --> 00:01:33,853
-ek cache key
-
-66
-00:01:33,853 --> 00:01:34,733
+60
+00:01:19,945 --> 00:01:20,585
 expire
 
-67
-00:01:34,813 --> 00:01:35,810
+61
+00:01:20,585 --> 00:01:21,470
 Database bachega?

@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Category | Cloud & DevOps |
-| Duration | 99.4 s |
+| Duration | 86.1 s |
 | Video | [how-one-update-crashed-8-5-million-pcs-canary-de-001.mp4](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/videos/how-one-update-crashed-8-5-million-pcs-canary-de-001.mp4) |
 | Cover / thumbnail | [how-one-update-crashed-8-5-million-pcs-canary-de-001.jpg](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/covers/how-one-update-crashed-8-5-million-pcs-canary-de-001.jpg) |
 | Subtitles | [how-one-update-crashed-8-5-million-pcs-canary-de-001.srt](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/subtitles/how-one-update-crashed-8-5-million-pcs-canary-de-001.srt) |
@@ -12,11 +12,11 @@
 
 ## Instagram caption
 ```
-EP 10 · One update. About 8.5 million blue screens. And it had passed validation.
+EP 10 · One update. About 8.5 million Windows machines crashed. And it had passed validation.
 
-On 19 July 2024, a faulty CrowdStrike content update (a config file, not new code) reached Windows PCs at the same time. The validator itself had a bug. The lesson for your interview: testing is necessary but not enough. Limit who gets a change first with a metric-gated canary (1% → 5% → 25% → 100%) and automatic rollback. Config changes need canaries too.
+On 19 July 2024, a faulty CrowdStrike content update (a config file, not new code) passed a validator that itself had a bug, and reached Windows PCs everywhere at the same time. Think of a wedding halwai who changes only the masala, gets a thumbs-up from a taster with a cold, and serves all 500 plates at once.
 
-The trap most candidates miss: rollback brings back old code, not old data. Rename a column and switching back breaks the old version too. Use expand-and-contract so both versions work at every step: keep writing the old column until the old version is fully retired, then stop writing it and drop it. For payments, make transactions idempotent and make rollback fire within minutes.
+The interview answer: a metric-gated canary. Serve one table first, compare its error rate and latency with the old version, then widen 1% → 5% → 25% → 100%. Metrics worse? Automatic rollback, and only one table is hurt. And yes, config changes need canaries too.
 
 Save this for your next system design round, and comment the deploy strategy your team uses.
 
@@ -32,11 +32,11 @@ Animated emoji: Noto Emoji Animation by Google, CC BY 4.0 (creativecommons.org/l
 
 **Description:**
 ```
-EP 10 · One update. About 8.5 million blue screens. And it had passed validation.
+EP 10 · One update. About 8.5 million Windows machines crashed. And it had passed validation.
 
-On 19 July 2024, a faulty CrowdStrike content update (a config file, not new code) reached Windows PCs at the same time. The validator itself had a bug. The lesson for your interview: testing is necessary but not enough. Limit who gets a change first with a metric-gated canary (1% → 5% → 25% → 100%) and automatic rollback. Config changes need canaries too.
+On 19 July 2024, a faulty CrowdStrike content update (a config file, not new code) passed a validator that itself had a bug, and reached Windows PCs everywhere at the same time. Think of a wedding halwai who changes only the masala, gets a thumbs-up from a taster with a cold, and serves all 500 plates at once.
 
-The trap most candidates miss: rollback brings back old code, not old data. Rename a column and switching back breaks the old version too. Use expand-and-contract so both versions work at every step: keep writing the old column until the old version is fully retired, then stop writing it and drop it. For payments, make transactions idempotent and make rollback fire within minutes.
+The interview answer: a metric-gated canary. Serve one table first, compare its error rate and latency with the old version, then widen 1% → 5% → 25% → 100%. Metrics worse? Automatic rollback, and only one table is hurt. And yes, config changes need canaries too.
 
 Save this for your next system design round, and comment the deploy strategy your team uses.
 

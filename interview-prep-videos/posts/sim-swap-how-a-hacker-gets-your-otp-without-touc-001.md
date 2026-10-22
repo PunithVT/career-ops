@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Category | Cybersecurity |
-| Duration | 91.8 s |
+| Duration | 84.7 s |
 | Video | [sim-swap-how-a-hacker-gets-your-otp-without-touc-001.mp4](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/videos/sim-swap-how-a-hacker-gets-your-otp-without-touc-001.mp4) |
 | Cover / thumbnail | [sim-swap-how-a-hacker-gets-your-otp-without-touc-001.jpg](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/covers/sim-swap-how-a-hacker-gets-your-otp-without-touc-001.jpg) |
 | Subtitles | [sim-swap-how-a-hacker-gets-your-otp-without-touc-001.srt](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/subtitles/sim-swap-how-a-hacker-gets-your-otp-without-touc-001.srt) |
@@ -16,7 +16,7 @@ EP 09 · Phone in your hand. OTP with the hacker. How?
 
 A SIM swap doesn't intercept your OTP. The attacker convinces or bribes a telecom store into putting YOUR number on HIS SIM. Your phone shows 'No Service', and every OTP and password reset goes straight to him. Whoever controls the number controls everything that trusts the number.
 
-In interviews, don't say 'the user shared the OTP'. Say: SMS OTP proves the number, not the device. Add SIM-change checks and cooling-off for high-value actions, and move to passkeys, the only phishing-resistant option. (The Rs 4 lakh case is an illustrative scenario.)
+In interviews, don't say 'the user shared the OTP'. Say: SMS OTP proves the number, not the device. Add SIM-change checks and cooling-off for high-value actions, and move to passkeys, the only phishing-resistant option.
 
 Save this for your next security round, and comment which 2FA your bank uses.
 
@@ -36,7 +36,7 @@ EP 09 · Phone in your hand. OTP with the hacker. How?
 
 A SIM swap doesn't intercept your OTP. The attacker convinces or bribes a telecom store into putting YOUR number on HIS SIM. Your phone shows 'No Service', and every OTP and password reset goes straight to him. Whoever controls the number controls everything that trusts the number.
 
-In interviews, don't say 'the user shared the OTP'. Say: SMS OTP proves the number, not the device. Add SIM-change checks and cooling-off for high-value actions, and move to passkeys, the only phishing-resistant option. (The Rs 4 lakh case is an illustrative scenario.)
+In interviews, don't say 'the user shared the OTP'. Say: SMS OTP proves the number, not the device. Add SIM-change checks and cooling-off for high-value actions, and move to passkeys, the only phishing-resistant option.
 
 Save this for your next security round, and comment which 2FA your bank uses.
 

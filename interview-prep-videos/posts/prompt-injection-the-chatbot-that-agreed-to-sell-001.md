@@ -3,11 +3,10 @@
 | | |
 |---|---|
 | Category | Generative AI |
-| Duration | 102.2 s |
+| Duration | 85.0 s |
 | Video | [prompt-injection-the-chatbot-that-agreed-to-sell-001.mp4](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/videos/prompt-injection-the-chatbot-that-agreed-to-sell-001.mp4) |
 | Cover / thumbnail | [prompt-injection-the-chatbot-that-agreed-to-sell-001.jpg](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/covers/prompt-injection-the-chatbot-that-agreed-to-sell-001.jpg) |
 | Subtitles | [prompt-injection-the-chatbot-that-agreed-to-sell-001.srt](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/subtitles/prompt-injection-the-chatbot-that-agreed-to-sell-001.srt) |
-| Animation | Motion v2 |
 
 ![cover](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/covers/prompt-injection-the-chatbot-that-agreed-to-sell-001.jpg)
 
@@ -47,7 +46,7 @@ Animated emoji: Noto Emoji Animation by Google, CC BY 4.0 (creativecommons.org/l
 
 #PromptInjection #GenerativeAI #LLMSecurity #AIInterview #TechInterview #AIEngineering #InterviewTrapAI #Shorts
 ```
-**Tags:** PromptInjection, GenerativeAI, LLMSecurity, AIInterview, TechInterview, AIEngineering, InterviewTrapAI, interview preparation, tech interview, Shorts  
+**Tags:** PromptInjection, GenerativeAI, LLMSecurity, AIInterview, TechInterview, AIEngineering, InterviewTrapAI, interview preparation, tech interview, Shorts
 **Category:** Education · **AI voice disclosed:** yes · **Made for kids:** no
 
 ## Cover text

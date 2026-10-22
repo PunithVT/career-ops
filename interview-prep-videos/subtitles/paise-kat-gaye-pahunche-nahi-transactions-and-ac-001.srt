@@ -1,0 +1,263 @@
+1
+00:00:00,480 --> 00:00:03,360
+Rahul ne Priya ko 500 bheje
+
+2
+00:00:03,360 --> 00:00:05,520
+Debited never credited
+
+3
+00:00:05,680 --> 00:00:07,360
+Paisa gaya kahan?
+
+4
+00:00:07,360 --> 00:00:08,400
+Debit ran
+
+5
+00:00:08,400 --> 00:00:09,600
+server crashed
+
+6
+00:00:09,600 --> 00:00:10,880
+credit never ran
+
+7
+00:00:11,040 --> 00:00:12,000
+Kya karoge?
+
+8
+00:00:12,000 --> 00:00:13,740
+Socho
+
+9
+00:00:13,740 --> 00:00:14,035
+teen do
+
+10
+00:00:14,035 --> 00:00:14,675
+ek
+
+11
+00:00:14,915 --> 00:00:16,755
+Zyaadatar freshers bolte hain
+
+12
+00:00:16,755 --> 00:00:18,995
+run both UPDATEs back to back
+
+13
+00:00:19,155 --> 00:00:21,395
+Or refund it in a try-catch
+
+14
+00:00:21,555 --> 00:00:22,710
+Yahin interview gaya
+
+15
+00:00:23,075 --> 00:00:23,795
+Kyun?
+
+16
+00:00:24,035 --> 00:00:25,475
+ATM socho
+
+17
+00:00:25,475 --> 00:00:26,515
+500 kata
+
+18
+00:00:26,515 --> 00:00:27,635
+cash nahi nikla
+
+19
+00:00:27,860 --> 00:00:29,160
+Should be all or nothing
+
+20
+00:00:29,540 --> 00:00:30,580
+One database?
+
+21
+00:00:30,580 --> 00:00:31,860
+Use a transaction
+
+22
+00:00:31,940 --> 00:00:33,220
+BEGIN debit
+
+23
+00:00:33,220 --> 00:00:34,340
+credit COMMIT
+
+24
+00:00:34,420 --> 00:00:35,860
+Crash before COMMIT?
+
+25
+00:00:35,860 --> 00:00:37,540
+Kuch bhi count nahi hota
+
+26
+00:00:37,540 --> 00:00:39,620
+COMMIT flushes the WAL to disk
+
+27
+00:00:39,620 --> 00:00:40,260
+first
+
+28
+00:00:40,340 --> 00:00:40,980
+Crash?
+
+29
+00:00:41,060 --> 00:00:42,180
+Restart replays it
+
+30
+00:00:42,465 --> 00:00:44,625
+CHECK blocks negative balance
+
+31
+00:00:44,625 --> 00:00:45,665
+Read-check-write code?
+
+32
+00:00:45,665 --> 00:00:46,900
+SELECT FOR UPDATE lagao
+
+33
+00:00:47,200 --> 00:00:48,305
+Ab trap
+
+34
+00:00:48,625 --> 00:00:51,621
+Try-catch refund sirf memory mein
+
+35
+00:00:51,621 --> 00:00:51,985
+hai
+
+36
+00:00:51,985 --> 00:00:53,905
+Crash OOM kill
+
+37
+00:00:53,905 --> 00:00:55,745
+deploy refund gone
+
+38
+00:00:56,065 --> 00:00:57,825
+Compensation tabhi safe jab
+
+39
+00:00:57,825 --> 00:00:59,830
+durable PENDING likho
+
+40
+00:00:59,910 --> 00:01:01,530
+worker retries or reverses
+
+41
+00:01:01,910 --> 00:01:03,590
+Rahul SBI mein
+
+42
+00:01:03,590 --> 00:01:05,350
+Priya HDFC mein
+
+43
+00:01:05,350 --> 00:01:07,190
+Ab one transaction kaise?
+
+44
+00:01:07,190 --> 00:01:08,950
+Two-phase commit exists
+
+45
+00:01:08,950 --> 00:01:11,410
+but coordinator dies toh sab
+
+46
+00:01:11,410 --> 00:01:11,635
+blocked
+
+47
+00:01:11,635 --> 00:01:12,915
+Banks avoid it
+
+48
+00:01:13,075 --> 00:01:14,915
+UPI is saga-style
+
+49
+00:01:14,995 --> 00:01:16,755
+SBI debits as PENDING
+
+50
+00:01:16,915 --> 00:01:18,275
+NPCI routes
+
+51
+00:01:18,355 --> 00:01:19,715
+HDFC credits
+
+52
+00:01:19,715 --> 00:01:20,995
+settle or reverse
+
+53
+00:01:20,995 --> 00:01:22,595
+Aur RBI rule
+
+54
+00:01:22,595 --> 00:01:24,250
+failed debit reversed by T+1
+
+55
+00:01:24,485 --> 00:01:26,370
+warna 100 rupees per day
+
+56
+00:01:26,810 --> 00:01:28,170
+Interview mein bolna
+
+57
+00:01:28,170 --> 00:01:29,770
+one transaction
+
+58
+00:01:30,010 --> 00:01:31,690
+WAL makes it durable
+
+59
+00:01:31,930 --> 00:01:34,570
+Catch-block refund dies on crash
+
+60
+00:01:34,890 --> 00:01:36,490
+Cross-bank saga
+
+61
+00:01:36,570 --> 00:01:37,770
+idempotency keys
+
+62
+00:01:38,217 --> 00:01:39,337
+Follow karo
+
+63
+00:01:39,497 --> 00:01:40,937
+Agle episode mein
+
+64
+00:01:40,937 --> 00:01:42,137
+context window
+
+65
+00:01:42,137 --> 00:01:43,737
+1 lakh tokens
+
+66
+00:01:43,737 --> 00:01:45,340
+phir bhi middle kyun bhool gaya?

@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Category | System Design & Scaling |
-| Duration | 102.5 s |
+| Duration | 86.0 s |
 | Video | [india-vs-pakistan-cache-expires-the-thundering-h-001.mp4](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/videos/india-vs-pakistan-cache-expires-the-thundering-h-001.mp4) |
 | Cover / thumbnail | [india-vs-pakistan-cache-expires-the-thundering-h-001.jpg](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/covers/india-vs-pakistan-cache-expires-the-thundering-h-001.jpg) |
 | Subtitles | [india-vs-pakistan-cache-expires-the-thundering-h-001.srt](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/subtitles/india-vs-pakistan-cache-expires-the-thundering-h-001.srt) |

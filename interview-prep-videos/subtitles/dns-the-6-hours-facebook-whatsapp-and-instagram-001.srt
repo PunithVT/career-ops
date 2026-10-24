@@ -1,223 +1,227 @@
 1
-00:00:00,160 --> 00:00:01,440
-Interviewer ne pucha
+00:00:00,120 --> 00:00:01,360
+Crash ya hack?
 
 2
-00:00:01,440 --> 00:00:03,200
-Facebook WhatsApp
+00:00:01,360 --> 00:00:02,640
+Interview wahin khatam
 
 3
-00:00:03,280 --> 00:00:05,120
-Instagram six hours gayab
+00:00:02,640 --> 00:00:04,320
+Facebook WhatsApp
 
 4
-00:00:05,120 --> 00:00:06,320
-par servers ON the
+00:00:04,320 --> 00:00:06,400
+Instagram six hours gayab
 
 5
-00:00:06,320 --> 00:00:07,040
-Kaise?
+00:00:06,400 --> 00:00:07,680
+par servers ON the
 
 6
-00:00:07,040 --> 00:00:08,880
-Zyaadatar freshers bolte hain
+00:00:07,680 --> 00:00:09,200
+Kaise?
 
 7
-00:00:08,880 --> 00:00:10,240
-server crash ya hack
+00:00:09,200 --> 00:00:09,680
+Socho
 
 8
-00:00:10,240 --> 00:00:11,840
-Yahi pakde jaate ho
+00:00:09,680 --> 00:00:10,880
+teen do
 
 9
-00:00:11,840 --> 00:00:13,340
-Food delivery socho
+00:00:10,880 --> 00:00:11,440
+ek
 
 10
-00:00:13,340 --> 00:00:14,995
-Rider ke paas sirf naam hai
+00:00:11,520 --> 00:00:12,560
+Freshers bolte hain
 
 11
-00:00:14,995 --> 00:00:16,355
-Instagram Cafe
+00:00:12,560 --> 00:00:14,080
+server crash ya hack
 
 12
-00:00:16,355 --> 00:00:17,315
-Naam domain hai
+00:00:14,080 --> 00:00:16,220
+Yahi pakde jaate ho
 
 13
-00:00:17,315 --> 00:00:18,195
-address IP
+00:00:16,220 --> 00:00:17,595
+Food delivery socho
 
 14
-00:00:18,195 --> 00:00:19,875
-Rider nukkad ke chaiwale se
+00:00:17,595 --> 00:00:19,515
+Rider ke paas sirf naam hai
 
 15
-00:00:19,875 --> 00:00:20,915
-poochta hai
+00:00:19,515 --> 00:00:21,515
+Instagram Cafe
 
 16
-00:00:20,995 --> 00:00:21,955
-Yeh resolver hai
+00:00:21,515 --> 00:00:22,555
+Naam domain hai
 
 17
-00:00:21,955 --> 00:00:23,395
-aur uski yaaddasht cache
+00:00:22,555 --> 00:00:23,755
+address IP
 
 18
-00:00:23,555 --> 00:00:25,155
-Chaiwale ko nahi pata
+00:00:23,755 --> 00:00:25,435
+Rider nukkad ke chaiwale se
 
 19
-00:00:25,155 --> 00:00:26,595
-toh mall ke enquiry desk ko
+00:00:25,435 --> 00:00:26,395
+poochta hai
 
 20
-00:00:26,595 --> 00:00:27,315
-call karta hai
+00:00:26,395 --> 00:00:27,435
+Yeh resolver
 
 21
-00:00:27,315 --> 00:00:28,355
-Meta ka nameserver
+00:00:27,435 --> 00:00:28,955
+uski yaaddasht cache
 
 22
-00:00:28,870 --> 00:00:30,550
-Maintenance ki ek command ne saare
+00:00:28,955 --> 00:00:30,720
+Chaiwale ko nahi pata
 
 23
-00:00:30,550 --> 00:00:31,910
-corridors kaat diye
+00:00:30,720 --> 00:00:32,240
+toh mall ke enquiry desk ko
 
 24
-00:00:31,990 --> 00:00:33,110
-Yahi backbone tha
+00:00:32,240 --> 00:00:33,360
+call karta hai
 
 25
-00:00:33,110 --> 00:00:34,790
-Audit tool ke bug ne roka
+00:00:33,360 --> 00:00:35,200
+Meta ka nameserver
 
 26
-00:00:34,790 --> 00:00:35,270
-nahi
+00:00:35,200 --> 00:00:37,120
+Maintenance ki ek command ne saare
 
 27
-00:00:35,270 --> 00:00:35,990
-Desk ka rule
+00:00:37,120 --> 00:00:38,800
+corridors kaat diye
 
 28
-00:00:35,990 --> 00:00:37,910
-kitchens se contact nahi
+00:00:38,800 --> 00:00:39,440
+backbone
 
 29
-00:00:37,910 --> 00:00:39,910
-toh apna board map se hatao
+00:00:39,440 --> 00:00:41,200
+Audit tool ke bug ne roka
 
 30
-00:00:39,910 --> 00:00:41,990
-Yeh hai BGP routes withdraw karna
+00:00:41,200 --> 00:00:41,680
+nahi
 
 31
-00:00:42,185 --> 00:00:44,185
-Ab chaiwala desk tak pahunch hi
+00:00:41,680 --> 00:00:43,420
+Desk ka rule
 
 32
-00:00:44,185 --> 00:00:45,065
-nahi paata
+00:00:43,420 --> 00:00:44,105
+kitchens unreachable
 
 33
-00:00:45,065 --> 00:00:47,225
-aur jawab aata hai SERVFAIL
+00:00:44,105 --> 00:00:45,865
+toh board map se hatao
 
 34
-00:00:47,465 --> 00:00:48,405
-Kitchens ON
+00:00:45,865 --> 00:00:48,025
+BGP routes withdraw karna
 
 35
-00:00:48,405 --> 00:00:49,305
-company gayab
+00:00:48,025 --> 00:00:49,705
+Chaiwala desk tak pahunch hi nahi
 
 36
-00:00:49,305 --> 00:00:50,265
-Simple rule
+00:00:49,705 --> 00:00:50,985
+paata SERVFAIL
 
 37
-00:00:50,345 --> 00:00:52,665
-DNS batata hai address kya hai
+00:00:51,065 --> 00:00:52,345
+Kitchens ON
 
 38
-00:00:52,665 --> 00:00:55,225
-BGP batata hai wahan pahunchne ka
+00:00:52,345 --> 00:00:53,305
+company gayab
 
 39
-00:00:55,225 --> 00:00:55,705
-raasta
+00:00:53,305 --> 00:00:55,065
+DNS batata hai address
 
 40
-00:00:55,940 --> 00:00:58,340
-Ab interviewer twist dega
+00:00:55,065 --> 00:00:57,225
+BGP batata hai wahan pahunchne ka
 
 41
-00:00:58,340 --> 00:01:00,260
-IP pehle se saved ho
+00:00:57,225 --> 00:00:57,785
+raasta
 
 42
-00:01:00,260 --> 00:01:01,780
-toh kaam karega?
+00:00:57,785 --> 00:01:00,400
+Twist IP pehle se saved ho
 
 43
-00:01:01,780 --> 00:01:04,420
-Nahi kyunki corridors hi kate the
+00:01:00,400 --> 00:01:01,760
+toh kaam karega?
 
 44
-00:01:04,420 --> 00:01:06,340
-Kitchen tak raasta hi nahi tha
+00:01:01,760 --> 00:01:03,920
+Nahi corridors hi kate the
 
 45
-00:01:06,580 --> 00:01:08,020
-Interview mein bolna
+00:01:03,920 --> 00:01:05,680
+Kitchen tak raasta hi nahi tha
 
 46
-00:01:08,020 --> 00:01:10,500
-DNS naam ko IP banata hai
+00:01:05,680 --> 00:01:08,240
+Bolna DNS naam ko IP banata
 
 47
-00:01:10,500 --> 00:01:11,915
-Backbone kata
+00:01:08,240 --> 00:01:08,640
+hai
 
 48
-00:01:11,915 --> 00:01:13,515
-toh DNS ne apne BGP routes
+00:01:08,640 --> 00:01:10,160
+Backbone kata
 
 49
-00:01:13,515 --> 00:01:14,315
-hata liye
+00:01:10,160 --> 00:01:11,920
+toh DNS ne BGP routes hata
 
 50
-00:01:14,315 --> 00:01:16,155
-DNS ko alag failure domain mein
+00:01:11,920 --> 00:01:12,480
+liye
 
 51
-00:01:16,155 --> 00:01:16,715
-rakho
+00:01:12,480 --> 00:01:14,320
+Ise alag failure domain mein rakho
 
 52
-00:01:16,715 --> 00:01:17,595
-Follow karo
+00:01:14,505 --> 00:01:15,945
+Dost ko bhejo
 
 53
-00:01:17,595 --> 00:01:19,115
-Agle episode mein
+00:01:15,945 --> 00:01:16,505
+follow karo
 
 54
-00:01:19,115 --> 00:01:19,675
-SIM swap
+00:01:16,505 --> 00:01:17,785
+Agle episode
 
 55
-00:01:19,675 --> 00:01:20,955
-Phone haath mein
+00:01:17,865 --> 00:01:18,745
+SIM swap
 
 56
-00:01:20,955 --> 00:01:22,850
+00:01:18,745 --> 00:01:20,025
+Phone haath mein
+
+57
+00:01:20,025 --> 00:01:22,040
 par OTP stranger ko kaise gaya?

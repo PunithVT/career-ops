@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Category | CS Fundamentals |
-| Duration | 84.2 s |
+| Duration | 83.4 s |
 | Video | [dns-the-6-hours-facebook-whatsapp-and-instagram-001.mp4](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/videos/dns-the-6-hours-facebook-whatsapp-and-instagram-001.mp4) |
 | Cover / thumbnail | [dns-the-6-hours-facebook-whatsapp-and-instagram-001.jpg](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/covers/dns-the-6-hours-facebook-whatsapp-and-instagram-001.jpg) |
 | Subtitles | [dns-the-6-hours-facebook-whatsapp-and-instagram-001.srt](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/subtitles/dns-the-6-hours-facebook-whatsapp-and-instagram-001.srt) |

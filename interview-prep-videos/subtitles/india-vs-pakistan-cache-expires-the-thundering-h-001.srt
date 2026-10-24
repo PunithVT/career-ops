@@ -1,239 +1,239 @@
 1
-00:00:00,240 --> 00:00:01,760
-India-Pakistan match
+00:00:00,120 --> 00:00:01,920
+TTL badha do?
 
 2
-00:00:01,760 --> 00:00:03,760
-2 lakh requests per second
+00:00:01,920 --> 00:00:03,680
+Interview wahin khatam
 
 3
-00:00:03,840 --> 00:00:05,920
-Score ki cache key expire hui
+00:00:03,680 --> 00:00:05,040
+India-Pakistan match
 
 4
-00:00:05,920 --> 00:00:07,440
-rebuild aadha second
+00:00:05,040 --> 00:00:07,200
+2 lakh requests per second
 
 5
-00:00:07,520 --> 00:00:08,800
-database mar gaya
+00:00:07,200 --> 00:00:09,040
+Cache key expire hui
 
 6
-00:00:08,800 --> 00:00:09,760
-Kaise rokoge?
+00:00:09,040 --> 00:00:10,960
+rebuild aadha second
 
 7
-00:00:09,760 --> 00:00:11,520
-Zyaadatar freshers bolte hain
+00:00:10,960 --> 00:00:12,160
+database mar gaya
 
 8
-00:00:11,520 --> 00:00:12,560
-TTL badha do
+00:00:12,160 --> 00:00:13,360
+Kaise rokoge?
 
 9
-00:00:12,560 --> 00:00:13,840
-replicas laga do
+00:00:13,360 --> 00:00:15,020
+Socho
 
 10
-00:00:13,840 --> 00:00:15,340
-Yahi pakde jaate ho
+00:00:15,020 --> 00:00:15,575
+teen do
 
 11
-00:00:15,340 --> 00:00:17,275
-Stadium ka chai stall socho
+00:00:15,575 --> 00:00:16,135
+ek
 
 12
-00:00:17,275 --> 00:00:18,395
-Counter pe flask
+00:00:16,135 --> 00:00:17,655
+Freshers bolte hain
 
 13
-00:00:18,395 --> 00:00:19,355
-yeh cache
+00:00:17,975 --> 00:00:19,175
+TTL badha do
 
 14
-00:00:19,355 --> 00:00:20,475
-Andar kitchen
+00:00:19,175 --> 00:00:20,535
+replicas laga do
 
 15
-00:00:20,475 --> 00:00:21,595
-yeh database
+00:00:20,535 --> 00:00:21,815
+Yahin pakde jaate ho
 
 16
-00:00:21,595 --> 00:00:22,795
-Paanch second hue
+00:00:21,815 --> 00:00:23,095
+Chai stall socho
 
 17
-00:00:22,795 --> 00:00:23,995
-TTL khatam
+00:00:23,095 --> 00:00:24,535
+counter pe flask
 
 18
-00:00:23,995 --> 00:00:24,875
-flask khaali
+00:00:24,535 --> 00:00:25,495
+yeh cache
 
 19
-00:00:24,875 --> 00:00:26,955
-Har fan seedha kitchen mein ghusa
+00:00:25,495 --> 00:00:26,615
+Andar kitchen
 
 20
-00:00:26,955 --> 00:00:28,475
-Aadhe second mein ek lakh
+00:00:26,615 --> 00:00:27,495
+yeh database
 
 21
-00:00:28,475 --> 00:00:29,835
-identical orders
+00:00:27,740 --> 00:00:28,780
+TTL khatam
 
 22
-00:00:30,090 --> 00:00:31,370
-Chef slow
+00:00:28,780 --> 00:00:29,660
+flask khaali
 
 23
-00:00:31,370 --> 00:00:32,490
-line lambi
+00:00:29,660 --> 00:00:31,740
+Har fan seedha kitchen mein ghusa
 
 24
-00:00:32,490 --> 00:00:33,770
-thundering herd
+00:00:31,740 --> 00:00:33,420
+Aadhe second mein ek lakh
 
 25
-00:00:33,770 --> 00:00:35,130
-Bada TTL?
+00:00:33,420 --> 00:00:34,700
+identical orders
 
 26
-00:00:35,210 --> 00:00:37,050
-Flask der se khaali hoga
+00:00:34,700 --> 00:00:35,820
+Chef slow
 
 27
-00:00:37,050 --> 00:00:38,330
-par hoga zaroor
+00:00:35,900 --> 00:00:37,260
+thundering herd
 
 28
-00:00:38,330 --> 00:00:39,450
-Doosra kitchen?
+00:00:37,260 --> 00:00:38,700
+Bada TTL?
 
 29
-00:00:39,450 --> 00:00:40,490
-Bheed bategi
+00:00:38,700 --> 00:00:40,460
+Flask der se khaali hoga
 
 30
-00:00:40,490 --> 00:00:41,370
-order wahi
+00:00:40,460 --> 00:00:41,100
+par hoga
 
 31
-00:00:41,370 --> 00:00:43,530
-Fix sirf ek waiter token lekar
+00:00:41,465 --> 00:00:42,745
+Doosra kitchen?
 
 32
-00:00:43,530 --> 00:00:44,470
-kitchen jaata hai
+00:00:42,745 --> 00:00:43,785
+Bheed bategi
 
 33
-00:00:44,470 --> 00:00:45,665
-single-flight lock
+00:00:43,785 --> 00:00:44,665
+order wahi
 
 34
-00:00:45,665 --> 00:00:47,105
-expiry ke saath
+00:00:44,665 --> 00:00:46,585
+Sirf ek waiter token lekar kitchen
 
 35
-00:00:47,105 --> 00:00:48,225
-Flask phenko mat
+00:00:46,585 --> 00:00:48,665
+jaata single-flight lock
 
 36
-00:00:48,225 --> 00:00:49,905
-Baaki fans ko purani chai milti
+00:00:48,665 --> 00:00:50,265
+expiry ke saath
 
 37
-00:00:49,905 --> 00:00:51,425
-hai par site zinda
+00:00:50,265 --> 00:00:52,265
+Flask se baaki fans ko purani
 
 38
-00:00:51,425 --> 00:00:52,625
-soft TTL
+00:00:52,265 --> 00:00:54,025
+chai par site zinda
 
 39
-00:00:52,705 --> 00:00:54,545
-Smart stall pehle hi refill karta
+00:00:54,120 --> 00:00:55,320
+soft TTL
 
 40
-00:00:54,545 --> 00:00:56,065
-hai early refresh
+00:00:55,320 --> 00:00:57,080
+Smart stall pehle hi refill karta
 
 41
-00:00:56,065 --> 00:00:56,945
-Simple rule
+00:00:57,080 --> 00:00:58,840
+hai early refresh
 
 42
-00:00:56,945 --> 00:00:58,545
-ek request rebuild kare
+00:00:58,840 --> 00:01:00,760
+Ek request rebuild kare
 
 43
-00:00:58,545 --> 00:01:00,080
-baaki sab stale padhein
+00:01:00,760 --> 00:01:02,120
+baaki stale padhein
 
 44
-00:01:00,080 --> 00:01:02,720
-Twist deploy pe 1,000 keys same
+00:01:02,120 --> 00:01:03,960
+Deploy pe 1,000 keys
 
 45
-00:01:02,720 --> 00:01:04,000
-TTL ke saath
+00:01:03,960 --> 00:01:05,000
+same TTL
 
 46
-00:01:04,000 --> 00:01:05,520
+00:01:05,000 --> 00:01:06,440
 sab ek saath expire
 
 47
-00:01:05,520 --> 00:01:05,920
+00:01:06,685 --> 00:01:07,085
 Phir?
 
 48
-00:01:05,920 --> 00:01:07,920
-TTL mein random jitter daalo
+00:01:07,085 --> 00:01:08,685
+Random jitter daalo
 
 49
-00:01:07,920 --> 00:01:09,600
-60 plus-minus 10
+00:01:08,685 --> 00:01:10,125
+expiries phail jaayengi
 
 50
-00:01:09,600 --> 00:01:11,120
-expiry phail jaayegi
+00:01:10,125 --> 00:01:12,445
+Bolna hot key expiry herd banati
 
 51
-00:01:11,120 --> 00:01:12,320
-Interview mein bolna
+00:01:12,445 --> 00:01:12,845
+hai
 
 52
-00:01:12,320 --> 00:01:14,400
-hot key expiry herd banati hai
+00:01:12,845 --> 00:01:14,205
+Single-flight lock
 
 53
-00:01:14,400 --> 00:01:16,595
-Fix single-flight lock
-
-54
-00:01:16,595 --> 00:01:17,875
+00:01:14,205 --> 00:01:15,325
 soft TTL
 
-55
-00:01:17,875 --> 00:01:19,555
+54
+00:01:15,325 --> 00:01:17,165
 jitter early refresh
 
+55
+00:01:17,165 --> 00:01:18,285
+Dost ko bhejo
+
 56
-00:01:19,555 --> 00:01:20,355
-Follow karo
+00:01:18,285 --> 00:01:19,085
+follow karo
 
 57
-00:01:20,355 --> 00:01:21,395
-Agle episode mein
+00:01:19,085 --> 00:01:20,205
+Agle episode
 
 58
-00:01:21,395 --> 00:01:22,275
+00:01:20,205 --> 00:01:21,865
 DNS
 
 59
-00:01:22,275 --> 00:01:24,195
+00:01:21,865 --> 00:01:22,991
 Facebook chhe ghante gaayab
 
 60
-00:01:24,195 --> 00:01:24,645
+00:01:22,991 --> 00:01:23,441
 Kaise?

@@ -1,219 +1,223 @@
 1
-00:00:00,160 --> 00:00:01,120
-Ek update
+00:00:00,240 --> 00:00:02,160
+Staging phir sab pe deploy?
 
 2
-00:00:01,120 --> 00:00:03,120
-aur lagbhag 85 lakh Windows
+00:00:02,160 --> 00:00:03,200
+Yahin reject
 
 3
-00:00:03,120 --> 00:00:05,360
-machines blue screen pe atak gayi
+00:00:03,200 --> 00:00:04,960
+Ek update se lagbhag 85 lakh
 
 4
-00:00:05,360 --> 00:00:07,040
-Woh bhi validate hone ke baad!
+00:00:04,960 --> 00:00:07,072
+Windows machines blue screen pe
 
 5
-00:00:07,040 --> 00:00:09,120
-Tumhare 500 payment servers hain
+00:00:07,072 --> 00:00:08,880
+atki validate hone ke baad!
 
 6
-00:00:09,120 --> 00:00:10,880
-Naya update kaise bhejoge?
+00:00:08,880 --> 00:00:11,120
+Tumhare 500 payment servers hain
 
 7
-00:00:10,880 --> 00:00:13,020
-Zyaadatar freshers bolte hain
+00:00:11,120 --> 00:00:12,720
+Naya update kaise bhejoge?
 
 8
-00:00:13,020 --> 00:00:14,435
-staging mein test karo
+00:00:12,720 --> 00:00:13,280
+Socho
 
 9
-00:00:14,435 --> 00:00:16,195
-phir raat ko sab pe deploy
+00:00:13,280 --> 00:00:15,260
+teen do
 
 10
-00:00:16,195 --> 00:00:17,715
-Yahin pakde jaate ho
+00:00:15,260 --> 00:00:15,300
+ek
 
 11
-00:00:17,715 --> 00:00:19,235
-Shaadi ka khaana socho
+00:00:15,300 --> 00:00:16,255
+Freshers bolte hain
 
 12
-00:00:19,235 --> 00:00:21,315
-Halwai ne recipe wahi rakhi
+00:00:16,255 --> 00:00:17,135
+staging mein test
 
 13
-00:00:21,315 --> 00:00:22,675
-bas masala badla
+00:00:17,135 --> 00:00:18,415
+phir sab pe deploy
 
 14
-00:00:22,675 --> 00:00:24,515
-Taster ne chakha aur bola
+00:00:18,415 --> 00:00:20,095
+Yahin pakde jaate ho
 
 15
-00:00:24,515 --> 00:00:25,315
-perfect!
+00:00:20,095 --> 00:00:21,775
+Shaadi ka khaana socho
 
 16
-00:00:25,315 --> 00:00:25,765
-Problem?
+00:00:21,775 --> 00:00:23,535
+Halwai ne recipe wahi rakhi
 
 17
-00:00:26,000 --> 00:00:27,680
-Taster ko zukaam tha
+00:00:23,535 --> 00:00:24,975
+bas masala badla
 
 18
-00:00:27,680 --> 00:00:29,600
-usse kuch taste hi nahi hua
+00:00:24,975 --> 00:00:25,855
+Taster ne chakha
 
 19
-00:00:29,680 --> 00:00:32,080
-CrowdStrike ka validator bhi aisa
+00:00:25,855 --> 00:00:26,655
+perfect!
 
 20
-00:00:32,080 --> 00:00:33,200
-hi buggy tha
+00:00:26,655 --> 00:00:28,175
+Taster ko zukaam tha
 
 21
-00:00:33,200 --> 00:00:35,280
-Phir naya paneer ek saath saari
+00:00:28,175 --> 00:00:29,295
+kuch taste hi nahi hua
 
 22
-00:00:35,280 --> 00:00:36,720
-500 plates mein gaya
+00:00:29,460 --> 00:00:31,460
+CrowdStrike ka validator bhi buggy
 
 23
-00:00:36,720 --> 00:00:38,560
-aur poori shaadi bathroom ki line
+00:00:31,460 --> 00:00:32,260
+tha
 
 24
-00:00:38,560 --> 00:00:38,800
-mein!
+00:00:32,260 --> 00:00:34,180
+Naya paneer ek saath saari plates
 
 25
-00:00:38,800 --> 00:00:40,785
-Smart halwai naya paneer pehle
+00:00:34,180 --> 00:00:36,100
+mein aur poori shaadi bathroom ki
 
 26
-00:00:40,785 --> 00:00:42,465
-sirf ek table ko deta hai
+00:00:36,100 --> 00:00:36,740
+line mein!
 
 27
-00:00:42,465 --> 00:00:44,225
-Is table ko canary bolte hain
+00:00:36,740 --> 00:00:38,580
+Smart halwai naya paneer pehle
 
 28
-00:00:44,225 --> 00:00:46,305
-Ab dono tables compare karo
+00:00:38,580 --> 00:00:40,020
+sirf ek table ko deta hai
 
 29
-00:00:46,385 --> 00:00:48,145
-error rate aur latency
+00:00:40,020 --> 00:00:40,980
+yeh canary hai
 
 30
-00:00:48,145 --> 00:00:49,105
-Sab theek
+00:00:41,715 --> 00:00:43,475
+Dono tables compare karo
 
 31
-00:00:49,105 --> 00:00:50,305
-toh 5%
+00:00:43,475 --> 00:00:44,115
+error rate
 
 32
-00:00:50,305 --> 00:00:51,585
-phir 25%
+00:00:44,115 --> 00:00:45,075
+latency
 
 33
-00:00:51,585 --> 00:00:52,385
-phir sab
+00:00:45,075 --> 00:00:45,955
+Sab theek
 
 34
-00:00:52,385 --> 00:00:54,065
-Agar table 1 ka munh bana
+00:00:45,955 --> 00:00:47,103
+toh 5%
 
 35
-00:00:54,065 --> 00:00:55,745
-toh turant purana paneer wapas
+00:00:47,461 --> 00:00:48,675
+25% phir sab
 
 36
-00:00:56,110 --> 00:00:57,790
-Yeh hai auto rollback
+00:00:48,675 --> 00:00:49,715
+Table 1 ka munh bana
 
 37
-00:00:57,870 --> 00:00:59,790
-nuksaan sirf ek table ka
+00:00:49,715 --> 00:00:51,715
+toh turant purana paneer wapas
 
 38
-00:00:59,790 --> 00:01:01,790
-Ab interviewer twist dega
+00:00:51,715 --> 00:00:53,395
+auto rollback
 
 39
-00:01:01,870 --> 00:01:03,870
-woh toh sirf config file thi
+00:00:53,395 --> 00:00:55,315
+Nuksaan sirf ek table ka
 
 40
-00:01:03,870 --> 00:01:04,590
-code nahi
+00:00:55,315 --> 00:00:57,840
+Twist woh sirf config file thi
 
 41
-00:01:04,590 --> 00:01:05,950
-Uske liye bhi canary?
+00:00:57,840 --> 00:00:58,880
+code nahi
 
 42
-00:01:05,950 --> 00:01:06,350
-Haan!
+00:00:58,880 --> 00:01:00,240
+Uske liye bhi canary?
 
 43
-00:01:06,350 --> 00:01:08,190
-CrowdStrike ka update bhi config
+00:01:00,240 --> 00:01:01,120
+Haan!
 
 44
-00:01:08,190 --> 00:01:08,830
-hi tha
+00:01:01,120 --> 00:01:02,880
+CrowdStrike ka update bhi config
 
 45
-00:01:08,830 --> 00:01:09,790
-Masala badla
+00:01:02,880 --> 00:01:03,360
+tha
 
 46
-00:01:09,790 --> 00:01:11,445
-toh recipe badli
+00:01:03,360 --> 00:01:04,400
+Masala badla
 
 47
-00:01:11,445 --> 00:01:12,725
-Interview mein bolna
+00:01:04,400 --> 00:01:05,840
+toh recipe badli
 
 48
-00:01:12,725 --> 00:01:14,405
-metric-gated canary
+00:01:05,840 --> 00:01:07,920
+Bolna metric-gated canary
 
 49
-00:01:14,405 --> 00:01:15,525
+00:01:07,920 --> 00:01:09,200
 1% se shuru
 
 50
-00:01:15,753 --> 00:01:18,153
+00:01:09,425 --> 00:01:11,665
 Metrics bigde toh auto rollback
 
 51
-00:01:18,153 --> 00:01:19,833
+00:01:11,665 --> 00:01:13,265
 Config bhi stages mein
 
 52
-00:01:19,833 --> 00:01:20,793
-Follow karo
+00:01:13,265 --> 00:01:14,305
+Dost ko bhejo
 
 53
-00:01:20,793 --> 00:01:22,393
-Agle episode mein
+00:01:14,305 --> 00:01:15,025
+follow karo
 
 54
-00:01:22,393 --> 00:01:24,313
-ChatGPT strawberry ke r kyun nahi
+00:01:15,025 --> 00:01:16,145
+Agle episode
 
 55
-00:01:24,313 --> 00:01:24,763
+00:01:16,145 --> 00:01:18,625
+ChatGPT strawberry ke r kyun nahi
+
+56
+00:01:18,625 --> 00:01:19,100
 gin paaya?

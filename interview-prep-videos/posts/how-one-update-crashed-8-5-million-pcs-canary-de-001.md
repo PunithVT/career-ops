@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Category | Cloud & DevOps |
-| Duration | 86.1 s |
+| Duration | 80.5 s |
 | Video | [how-one-update-crashed-8-5-million-pcs-canary-de-001.mp4](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/videos/how-one-update-crashed-8-5-million-pcs-canary-de-001.mp4) |
 | Cover / thumbnail | [how-one-update-crashed-8-5-million-pcs-canary-de-001.jpg](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/covers/how-one-update-crashed-8-5-million-pcs-canary-de-001.jpg) |
 | Subtitles | [how-one-update-crashed-8-5-million-pcs-canary-de-001.srt](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/subtitles/how-one-update-crashed-8-5-million-pcs-canary-de-001.srt) |

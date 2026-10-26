@@ -1,231 +1,231 @@
 1
-00:00:00,240 --> 00:00:01,600
-Interviewer ne pucha
+00:00:00,160 --> 00:00:02,000
+User ne OTP share kiya?
 
 2
-00:00:01,600 --> 00:00:03,040
-phone user ke haath mein
+00:00:02,000 --> 00:00:03,200
+Yahin reject
 
 3
-00:00:03,040 --> 00:00:04,480
-OTP kisi ko bataya nahi
+00:00:03,200 --> 00:00:03,920
+Phone haath mein
 
 4
-00:00:04,480 --> 00:00:06,320
-phir bhi OTP hacker ke paas
+00:00:03,920 --> 00:00:05,200
+kisi ko nahi bataya
 
 5
-00:00:06,320 --> 00:00:07,040
-Kaise?
+00:00:05,200 --> 00:00:06,720
+phir bhi hacker ke paas
 
 6
-00:00:07,040 --> 00:00:08,880
-Zyaadatar freshers bolte hain
+00:00:06,720 --> 00:00:07,760
+Kaise?
 
 7
-00:00:08,880 --> 00:00:10,640
-OTP share kiya hoga
+00:00:07,760 --> 00:00:08,240
+Socho
 
 8
-00:00:10,640 --> 00:00:12,080
-Yahi pakde jaate ho
+00:00:08,240 --> 00:00:09,040
+teen do
 
 9
-00:00:12,080 --> 00:00:13,580
-Mobile store socho
+00:00:09,040 --> 00:00:09,600
+ek
 
 10
-00:00:13,580 --> 00:00:15,585
-Hacker fake Aadhaar leke aata hai
+00:00:09,600 --> 00:00:10,640
+Freshers bolte hain
 
 11
-00:00:15,585 --> 00:00:16,865
-bhaiya phone kho gaya
+00:00:10,640 --> 00:00:12,000
+OTP share kiya hoga
 
 12
-00:00:16,865 --> 00:00:17,985
-naya SIM do
+00:00:12,000 --> 00:00:13,200
+Yahi pakde jaate ho
 
 13
-00:00:17,985 --> 00:00:19,585
-Clerk ne ID dekha
+00:00:13,200 --> 00:00:15,360
+Mobile store socho
 
 14
-00:00:19,585 --> 00:00:20,865
-verify nahi kiya
+00:00:15,360 --> 00:00:16,545
+Hacker fake Aadhaar leke aata hai
 
 15
-00:00:20,865 --> 00:00:22,705
-aur tumhara number naye SIM pe
+00:00:16,705 --> 00:00:17,585
+phone kho gaya
 
 16
-00:00:22,705 --> 00:00:23,505
-activate
+00:00:17,585 --> 00:00:18,545
+naya SIM do
 
 17
-00:00:23,585 --> 00:00:24,865
-Yeh hai SIM swap
+00:00:18,545 --> 00:00:19,745
+Clerk ne ID dekha
 
 18
-00:00:24,945 --> 00:00:26,465
-Tumhare phone pe No Service
+00:00:19,745 --> 00:00:21,025
+verify nahi kiya
 
 19
-00:00:26,670 --> 00:00:28,590
-Tum sochte ho network issue hai
+00:00:21,025 --> 00:00:22,625
+tumhara number naye SIM pe
 
 20
-00:00:28,590 --> 00:00:29,710
-so jaate ho
+00:00:22,625 --> 00:00:23,505
+activate
 
 21
-00:00:29,710 --> 00:00:31,470
-India mein swap ke baad SMS
+00:00:23,505 --> 00:00:24,705
+Yeh hai SIM swap
 
 22
-00:00:31,470 --> 00:00:33,150
-24 ghante band rehta hai
+00:00:24,705 --> 00:00:26,065
+Phone pe No Service
 
 23
-00:00:33,150 --> 00:00:34,430
-par yeh bas delay hai
+00:00:26,065 --> 00:00:28,525
+Tum sochte ho network issue
 
 24
-00:00:34,430 --> 00:00:35,550
-Friday swap
+00:00:28,525 --> 00:00:29,010
+so jaate ho
 
 25
-00:00:35,550 --> 00:00:36,670
-Sunday attack
+00:00:29,010 --> 00:00:30,770
+India mein swap ke baad SMS
 
 26
-00:00:36,670 --> 00:00:38,750
-Ab bank OTP bhejta hai tumhare
+00:00:30,770 --> 00:00:32,130
+24 ghante band
 
 27
-00:00:38,750 --> 00:00:39,550
-number pe
+00:00:32,130 --> 00:00:33,490
+par yeh bas delay
 
 28
-00:00:39,550 --> 00:00:40,750
-aur woh number uska hai
+00:00:33,490 --> 00:00:34,530
+Friday swap
 
 29
-00:00:41,115 --> 00:00:43,195
-OTP seedha uske SIM pe land
+00:00:34,530 --> 00:00:35,650
+Sunday attack
 
 30
-00:00:43,195 --> 00:00:44,155
-Simple rule
+00:00:35,650 --> 00:00:37,650
+Bank OTP bhejta hai tumhare number
 
 31
-00:00:44,235 --> 00:00:46,475
-SMS OTP number prove karta hai
+00:00:37,650 --> 00:00:39,650
+pe seedha uske SIM pe
 
 32
-00:00:46,475 --> 00:00:47,595
-insaan nahi
+00:00:39,650 --> 00:00:41,730
+SMS OTP number prove karta hai
 
 33
-00:00:47,595 --> 00:00:48,555
-Jiska number
+00:00:41,730 --> 00:00:43,710
+insaan nahi
 
 34
-00:00:48,555 --> 00:00:49,595
-uska account
+00:00:43,710 --> 00:00:43,790
+Jiska number
 
 35
-00:00:49,595 --> 00:00:52,555
-2019 mein Jack Dorsey ka Twitter
+00:00:43,790 --> 00:00:44,445
+uska account
 
 36
-00:00:52,555 --> 00:00:53,595
-aise hi gaya
+00:00:44,445 --> 00:00:47,165
+2019 mein Jack Dorsey ka Twitter
 
 37
-00:00:53,595 --> 00:00:55,275
-Ab interviewer twist dega
+00:00:47,165 --> 00:00:48,205
+aise hi gaya
 
 38
-00:00:55,490 --> 00:00:57,890
-SMS hata ke authenticator app laga
+00:00:48,205 --> 00:00:50,205
+Twist SMS hata ke authenticator
 
 39
-00:00:57,890 --> 00:00:58,370
-do
+00:00:50,205 --> 00:00:51,325
+app laga do
 
 40
-00:00:58,370 --> 00:00:59,170
+00:00:51,325 --> 00:00:52,125
 Ab safe?
 
 41
-00:00:59,250 --> 00:01:00,610
+00:00:52,125 --> 00:00:53,485
 SIM swap se bachoge
 
 42
-00:01:00,610 --> 00:01:02,610
+00:00:53,485 --> 00:00:55,245
 par fake login site code live
 
 43
-00:01:02,610 --> 00:01:03,970
+00:00:55,245 --> 00:00:56,445
 relay kar sakti hai
 
 44
-00:01:03,970 --> 00:01:06,050
-Sirf passkeys domain se bound hain
+00:00:56,445 --> 00:00:58,235
+Sirf passkeys domain-bound hain
 
 45
-00:01:06,050 --> 00:01:07,330
+00:00:58,281 --> 00:00:59,450
 phish nahi hote
 
 46
-00:01:07,330 --> 00:01:08,530
-Interview mein bolna
+00:00:59,450 --> 00:01:02,250
+Bolna SMS number prove karta hai
 
 47
-00:01:08,675 --> 00:01:10,835
-SMS number prove karta hai
-
-48
-00:01:10,835 --> 00:01:11,795
+00:01:02,250 --> 00:01:03,290
 device nahi
 
-49
-00:01:11,795 --> 00:01:13,475
+48
+00:01:03,290 --> 00:01:05,210
 Payout pe SIM-change check aur
 
-50
-00:01:13,475 --> 00:01:14,035
+49
+00:01:05,210 --> 00:01:07,030
 cooling-off
 
-51
-00:01:14,435 --> 00:01:15,155
+50
+00:01:07,030 --> 00:01:07,325
 Real fix
 
-52
-00:01:15,155 --> 00:01:16,195
+51
+00:01:07,325 --> 00:01:08,365
 passkeys
 
+52
+00:01:08,365 --> 00:01:09,645
+Dost ko bhejo
+
 53
-00:01:16,195 --> 00:01:16,915
-Follow karo
+00:01:09,645 --> 00:01:10,365
+follow karo
 
 54
-00:01:16,915 --> 00:01:17,955
-Agle episode mein
+00:01:10,365 --> 00:01:11,245
+Agle episode
 
 55
-00:01:17,955 --> 00:01:20,035
+00:01:11,245 --> 00:01:14,125
 ek update ne 85 lakh PCs
 
 56
-00:01:20,035 --> 00:01:21,075
+00:01:14,125 --> 00:01:15,085
 crash kiye
 
 57
-00:01:21,075 --> 00:01:22,755
+00:01:15,085 --> 00:01:16,205
 checks pass karke
 
 58
-00:01:22,755 --> 00:01:23,280
+00:01:16,205 --> 00:01:16,655
 Kaise?

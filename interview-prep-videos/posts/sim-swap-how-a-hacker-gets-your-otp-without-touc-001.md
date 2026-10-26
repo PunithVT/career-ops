@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Category | Cybersecurity |
-| Duration | 84.7 s |
+| Duration | 77.8 s |
 | Video | [sim-swap-how-a-hacker-gets-your-otp-without-touc-001.mp4](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/videos/sim-swap-how-a-hacker-gets-your-otp-without-touc-001.mp4) |
 | Cover / thumbnail | [sim-swap-how-a-hacker-gets-your-otp-without-touc-001.jpg](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/covers/sim-swap-how-a-hacker-gets-your-otp-without-touc-001.jpg) |
 | Subtitles | [sim-swap-how-a-hacker-gets-your-otp-without-touc-001.srt](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/subtitles/sim-swap-how-a-hacker-gets-your-otp-without-touc-001.srt) |

@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Category | Databases & SQL |
-| Duration | 106.7 s |
+| Duration | 82.5 s |
 | Video | [paise-kat-gaye-pahunche-nahi-transactions-and-ac-001.mp4](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/videos/paise-kat-gaye-pahunche-nahi-transactions-and-ac-001.mp4) |
 | Cover / thumbnail | [paise-kat-gaye-pahunche-nahi-transactions-and-ac-001.jpg](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/covers/paise-kat-gaye-pahunche-nahi-transactions-and-ac-001.jpg) |
 | Subtitles | [paise-kat-gaye-pahunche-nahi-transactions-and-ac-001.srt](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/subtitles/paise-kat-gaye-pahunche-nahi-transactions-and-ac-001.srt) |
@@ -14,17 +14,17 @@
 ```
 EP 13 · Rs 500 debited. Never credited. Where did the money go?
 
-The server crashed between the debit and the credit. Most candidates say 'run both UPDATEs' or 'refund it in a try-catch'. Both fail: a catch-block refund dies with the process. One transaction gives you all-or-nothing, and the WAL makes every COMMIT survive a crash.
+The server crashed between the debit and the credit. 'Refund it in a try-catch' gets you rejected: that undo lives only in app memory and dies with the crash. Put both UPDATEs in one transaction for all-or-nothing. With default settings, the WAL makes every COMMIT survive a crash: the commit record is flushed before the database says success, the data pages are written later, and on restart committed work is replayed while anything without a commit record is discarded.
 
-The twist: what if Rahul is in SBI and Priya in HDFC? No bank holds locks waiting for another bank, so 2PC is out. You need a durable, saga-style flow: pending state first, idempotent IDs, settle or reverse.
+The twist: Rahul is in SBI, Priya in HDFC. Banks generally avoid two-phase commit across organisations: if the coordinator fails, a bank that already said yes is stuck holding the money. Use a durable, saga-style flow instead: write PENDING first, send the credit with a transaction ID, settle or reverse your own debit, and let that ID make a retried request do nothing. (In India, RBI rules say a failed UPI/IMPS debit must be reversed by T+1.)
 
-Save this for your next backend interview, and comment your answer to the follow-up: how do you stop Priya getting paid twice on a retry?
+Send this to a friend who has a backend interview coming up.
 
 Follow @interviewtrap.ai for daily interview traps.
 
 Animated emoji: Noto Emoji Animation by Google, CC BY 4.0 (creativecommons.org/licenses/by/4.0). Modified (resized/re-timed).
 
-#SQL #ACID #DatabaseTransactions #SystemDesign #UPI #BackendInterview #TechInterview #InterviewTrapAI
+#SQL #ACID #DatabaseTransactions #SystemDesign #BackendInterview #TechInterview #InterviewTrapAI
 ```
 
 ## YouTube Shorts
@@ -34,20 +34,20 @@ Animated emoji: Noto Emoji Animation by Google, CC BY 4.0 (creativecommons.org/l
 ```
 EP 13 · Rs 500 debited. Never credited. Where did the money go?
 
-The server crashed between the debit and the credit. Most candidates say 'run both UPDATEs' or 'refund it in a try-catch'. Both fail: a catch-block refund dies with the process. One transaction gives you all-or-nothing, and the WAL makes every COMMIT survive a crash.
+The server crashed between the debit and the credit. 'Refund it in a try-catch' gets you rejected: that undo lives only in app memory and dies with the crash. Put both UPDATEs in one transaction for all-or-nothing. With default settings, the WAL makes every COMMIT survive a crash: the commit record is flushed before the database says success, the data pages are written later, and on restart committed work is replayed while anything without a commit record is discarded.
 
-The twist: what if Rahul is in SBI and Priya in HDFC? No bank holds locks waiting for another bank, so 2PC is out. You need a durable, saga-style flow: pending state first, idempotent IDs, settle or reverse.
+The twist: Rahul is in SBI, Priya in HDFC. Banks generally avoid two-phase commit across organisations: if the coordinator fails, a bank that already said yes is stuck holding the money. Use a durable, saga-style flow instead: write PENDING first, send the credit with a transaction ID, settle or reverse your own debit, and let that ID make a retried request do nothing. (In India, RBI rules say a failed UPI/IMPS debit must be reversed by T+1.)
 
-Save this for your next backend interview, and comment your answer to the follow-up: how do you stop Priya getting paid twice on a retry?
+Send this to a friend who has a backend interview coming up.
 
 Follow @interviewtrap.ai for daily interview traps.
 
 Animated emoji: Noto Emoji Animation by Google, CC BY 4.0 (creativecommons.org/licenses/by/4.0). Modified (resized/re-timed).
 
-#SQL #ACID #DatabaseTransactions #SystemDesign #UPI #BackendInterview #TechInterview #InterviewTrapAI #Shorts
+#SQL #ACID #DatabaseTransactions #SystemDesign #BackendInterview #TechInterview #InterviewTrapAI #Shorts
 ```
-**Tags:** SQL, ACID, DatabaseTransactions, SystemDesign, UPI, BackendInterview, TechInterview, InterviewTrapAI, interview preparation, tech interview, Shorts
+**Tags:** SQL, ACID, DatabaseTransactions, SystemDesign, BackendInterview, TechInterview, InterviewTrapAI, interview preparation, tech interview, Shorts
 **Category:** Education · **AI voice disclosed:** yes · **Made for kids:** no
 
 ## Cover text
-DEBITED, NEVER CREDITED
+WHERE DID RS 500 GO?

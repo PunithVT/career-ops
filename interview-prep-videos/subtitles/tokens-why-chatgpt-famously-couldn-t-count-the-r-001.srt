@@ -1,0 +1,215 @@
+1
+00:00:00,120 --> 00:00:01,680
+AI maths mein weak?
+
+2
+00:00:01,680 --> 00:00:02,480
+Yahin reject
+
+3
+00:00:02,480 --> 00:00:04,400
+Code likhne wala AI strawberry ke
+
+4
+00:00:04,400 --> 00:00:05,680
+r's count nahi kar paaya
+
+5
+00:00:05,680 --> 00:00:07,440
+aur Hindi mein bill jump
+
+6
+00:00:07,440 --> 00:00:08,480
+Culprit kaun?
+
+7
+00:00:08,480 --> 00:00:09,120
+Socho
+
+8
+00:00:09,120 --> 00:00:10,320
+teen do
+
+9
+00:00:10,320 --> 00:00:10,880
+ek
+
+10
+00:00:10,880 --> 00:00:12,000
+Freshers bolte hain
+
+11
+00:00:12,000 --> 00:00:13,360
+AI is bad at maths
+
+12
+00:00:13,625 --> 00:00:15,065
+Yahin pakde jaate ho
+
+13
+00:00:15,065 --> 00:00:16,425
+Kirana store socho
+
+14
+00:00:16,425 --> 00:00:18,825
+Slip pe likha hai strawberry
+
+15
+00:00:18,825 --> 00:00:20,345
+packer packets bharta hai
+
+16
+00:00:20,345 --> 00:00:22,265
+aur shopkeeper wait karta hai
+
+17
+00:00:22,265 --> 00:00:25,145
+GPT-4's fixed catalog cuts the
+
+18
+00:00:25,145 --> 00:00:26,585
+slip into three packets
+
+19
+00:00:26,585 --> 00:00:28,965
+Packer is the tokenizer
+
+20
+00:00:28,965 --> 00:00:29,890
+each packet a token
+
+21
+00:00:29,890 --> 00:00:31,170
+The shopkeeper
+
+22
+00:00:31,170 --> 00:00:31,810
+the model
+
+23
+00:00:31,810 --> 00:00:33,810
+only sees packet numbers
+
+24
+00:00:33,810 --> 00:00:35,170
+yaani token IDs
+
+25
+00:00:35,170 --> 00:00:37,170
+Letters stay sealed inside
+
+26
+00:00:37,170 --> 00:00:38,530
+Ask how many r's
+
+27
+00:00:38,610 --> 00:00:40,130
+the model only roughly knows the
+
+28
+00:00:40,130 --> 00:00:42,990
+letters so he guesses do
+
+29
+00:00:42,990 --> 00:00:43,190
+The real trap is Hindi
+
+30
+00:00:43,190 --> 00:00:45,055
+Devanagari code points are 3 bytes
+
+31
+00:00:45,055 --> 00:00:46,975
+each aur catalog mein Hindi
+
+32
+00:00:46,975 --> 00:00:47,855
+packets kam hain
+
+33
+00:00:47,855 --> 00:00:48,655
+Same meaning
+
+34
+00:00:48,655 --> 00:00:49,775
+more packets
+
+35
+00:00:49,775 --> 00:00:51,135
+so the bill goes up
+
+36
+00:00:51,135 --> 00:00:53,615
+pricing context aur speed sab
+
+37
+00:00:53,615 --> 00:00:54,975
+tokens pe chalte hain
+
+38
+00:00:54,975 --> 00:00:57,190
+Twist toh letters reliably kaise
+
+39
+00:00:57,190 --> 00:00:58,310
+count karwaoge?
+
+40
+00:00:58,310 --> 00:00:59,990
+Model makes a tool call
+
+41
+00:00:59,990 --> 00:01:01,750
+a helper counts raw letters in
+
+42
+00:01:01,750 --> 00:01:03,990
+Python so the count is exact
+
+43
+00:01:03,990 --> 00:01:04,870
+3
+
+44
+00:01:04,870 --> 00:01:06,310
+Models read tokens
+
+45
+00:01:06,310 --> 00:01:07,430
+not letters
+
+46
+00:01:07,430 --> 00:01:09,190
+Hindi often needs more tokens
+
+47
+00:01:09,255 --> 00:01:11,495
+so measure with the real tokenizer
+
+48
+00:01:11,495 --> 00:01:12,615
+For exact counts
+
+49
+00:01:12,615 --> 00:01:13,895
+use a tool call
+
+50
+00:01:13,895 --> 00:01:15,095
+Dost ko bhejo
+
+51
+00:01:15,095 --> 00:01:15,815
+follow karo
+
+52
+00:01:15,815 --> 00:01:17,255
+Agle episode
+
+53
+00:01:17,255 --> 00:01:18,375
+idempotency keys
+
+54
+00:01:18,375 --> 00:01:20,350
+500 rupees teen baar kaise kate?

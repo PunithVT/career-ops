@@ -1,0 +1,227 @@
+1
+00:00:00,120 --> 00:00:00,800
+Fit ho gaya
+
+2
+00:00:00,800 --> 00:00:01,920
+toh sab yaad?
+
+3
+00:00:01,920 --> 00:00:03,200
+Yahin reject
+
+4
+00:00:03,200 --> 00:00:05,840
+AI ne page 100 miss kiya
+
+5
+00:00:05,840 --> 00:00:07,520
+document window mein fit tha
+
+6
+00:00:07,520 --> 00:00:09,280
+Page 1 aur 200 sahi the
+
+7
+00:00:09,280 --> 00:00:11,040
+ChatGPT old messages kaise
+
+8
+00:00:11,040 --> 00:00:12,080
+remember karta?
+
+9
+00:00:12,080 --> 00:00:14,060
+Socho
+
+10
+00:00:14,060 --> 00:00:14,175
+teen do
+
+11
+00:00:14,175 --> 00:00:14,815
+ek
+
+12
+00:00:14,815 --> 00:00:16,095
+Freshers bolte
+
+13
+00:00:16,095 --> 00:00:16,895
+if it fits
+
+14
+00:00:16,895 --> 00:00:18,735
+it uses everything equally
+
+15
+00:00:18,735 --> 00:00:20,415
+memory model ke andar hai
+
+16
+00:00:20,415 --> 00:00:21,295
+Pakde gaye
+
+17
+00:00:21,295 --> 00:00:23,135
+Sarkari babu socho
+
+18
+00:00:23,135 --> 00:00:24,255
+memory zero hai
+
+19
+00:00:24,255 --> 00:00:26,015
+har visit pe full file dobara
+
+20
+00:00:26,015 --> 00:00:26,575
+lao
+
+21
+00:00:26,575 --> 00:00:29,035
+LLM bhi stateless
+
+22
+00:00:29,035 --> 00:00:30,580
+App har turn full history bhejta
+
+23
+00:00:30,580 --> 00:00:32,180
+Memory notes model ke outside
+
+24
+00:00:32,180 --> 00:00:32,820
+rehte
+
+25
+00:00:32,820 --> 00:00:34,660
+Tray hi context window hai
+
+26
+00:00:34,660 --> 00:00:36,420
+prompt history
+
+27
+00:00:36,420 --> 00:00:37,780
+documents aur reply
+
+28
+00:00:37,780 --> 00:00:39,540
+sab isme fit hone chahiye
+
+29
+00:00:39,540 --> 00:00:40,260
+Tray full?
+
+30
+00:00:40,260 --> 00:00:42,340
+Old messages drop ya summarize
+
+31
+00:00:42,340 --> 00:00:44,325
+hote name bhi ja sakta hai
+
+32
+00:00:44,325 --> 00:00:46,245
+Babu saare pages padhta
+
+33
+00:00:46,245 --> 00:00:47,045
+par first
+
+34
+00:00:47,045 --> 00:00:48,725
+last pe zyada focus
+
+35
+00:00:48,725 --> 00:00:50,405
+middle aksar blur ho jaata
+
+36
+00:00:50,405 --> 00:00:52,405
+Lost in the Middle study
+
+37
+00:00:52,405 --> 00:00:53,605
+naye benchmarks
+
+38
+00:00:53,605 --> 00:00:55,045
+window is capacity
+
+39
+00:00:55,045 --> 00:00:56,645
+not guaranteed recall
+
+40
+00:00:56,645 --> 00:00:59,360
+Twist 1 million token model lo
+
+41
+00:00:59,360 --> 00:01:00,720
+RAG skip karo?
+
+42
+00:01:00,720 --> 00:01:02,800
+Bada tray middle blur fix nahi
+
+43
+00:01:02,800 --> 00:01:04,880
+karta aur cost and latency badhti
+
+44
+00:01:04,880 --> 00:01:05,440
+hai
+
+45
+00:01:05,520 --> 00:01:07,520
+Peon sirf relevant pages laaye
+
+46
+00:01:07,520 --> 00:01:08,480
+yahi RAG
+
+47
+00:01:08,480 --> 00:01:10,720
+long context aur RAG complementary
+
+48
+00:01:10,720 --> 00:01:11,040
+hain
+
+49
+00:01:11,040 --> 00:01:13,405
+Bolna model stateless hai
+
+50
+00:01:13,405 --> 00:01:14,845
+window is capacity
+
+51
+00:01:14,845 --> 00:01:16,525
+not guaranteed recall
+
+52
+00:01:16,525 --> 00:01:18,365
+relevant chunks retrieve karo
+
+53
+00:01:18,365 --> 00:01:19,645
+Dost ko bhejo
+
+54
+00:01:19,645 --> 00:01:20,445
+follow karo
+
+55
+00:01:20,445 --> 00:01:22,125
+Next SQL injection
+
+56
+00:01:22,125 --> 00:01:23,165
+ek login box
+
+57
+00:01:23,165 --> 00:01:23,910
+poora database?

@@ -1,0 +1,203 @@
+1
+00:00:00,120 --> 00:00:01,440
+Quotes block kar do?
+
+2
+00:00:01,440 --> 00:00:02,400
+Yahin reject
+
+3
+00:00:02,400 --> 00:00:04,480
+College portal SQL strings jodke
+
+4
+00:00:04,480 --> 00:00:07,120
+banata ek line se login bypass
+
+5
+00:00:07,120 --> 00:00:08,320
+Email mein likha
+
+6
+00:00:08,320 --> 00:00:10,320
+quote OR 1=1
+
+7
+00:00:10,320 --> 00:00:11,360
+dash dash
+
+8
+00:00:11,360 --> 00:00:12,400
+Kya hoga?
+
+9
+00:00:12,400 --> 00:00:13,440
+Socho
+
+10
+00:00:13,440 --> 00:00:13,760
+teen
+
+11
+00:00:13,760 --> 00:00:14,240
+do
+
+12
+00:00:14,240 --> 00:00:15,820
+ek
+
+13
+00:00:15,820 --> 00:00:15,985
+Freshers bolte
+
+14
+00:00:15,985 --> 00:00:18,545
+block quotes and OR
+
+15
+00:00:18,545 --> 00:00:20,385
+Yahin pakde jaate ho
+
+16
+00:00:20,385 --> 00:00:22,145
+blacklists bypass hoti
+
+17
+00:00:22,145 --> 00:00:23,665
+Courier counter socho
+
+18
+00:00:23,665 --> 00:00:25,265
+boy customer ki baat slip pe
+
+19
+00:00:25,265 --> 00:00:27,025
+likhta storekeeper padhta
+
+20
+00:00:27,025 --> 00:00:28,705
+Customer wahi line bolta
+
+21
+00:00:28,705 --> 00:00:31,245
+counter boy paste kar deta
+
+22
+00:00:31,245 --> 00:00:32,070
+Condition hamesha true
+
+23
+00:00:32,070 --> 00:00:33,350
+baaki sab comment
+
+24
+00:00:33,350 --> 00:00:34,310
+PIN check gone
+
+25
+00:00:34,310 --> 00:00:36,550
+Storekeeper saare parcels le aata
+
+26
+00:00:36,550 --> 00:00:38,310
+login aksar first row se
+
+27
+00:00:38,310 --> 00:00:39,510
+kabhi admin
+
+28
+00:00:39,510 --> 00:00:41,430
+Data aur instructions ek slip mein
+
+29
+00:00:41,430 --> 00:00:42,550
+mix ho gaye
+
+30
+00:00:42,550 --> 00:00:44,390
+that is SQL injection
+
+31
+00:00:44,390 --> 00:00:46,005
+Fix printed form
+
+32
+00:00:46,005 --> 00:00:46,885
+rule fixed
+
+33
+00:00:46,885 --> 00:00:49,045
+customer ki baat sirf value hai
+
+34
+00:00:49,045 --> 00:00:51,285
+Storekeeper wahi line dhoondhta
+
+35
+00:00:51,285 --> 00:00:52,645
+koi match nahi
+
+36
+00:00:52,645 --> 00:00:53,525
+no login
+
+37
+00:00:53,525 --> 00:00:55,605
+ORM raw queries bhi injectable
+
+38
+00:00:55,605 --> 00:00:57,765
+hain least privilege sirf damage
+
+39
+00:00:57,765 --> 00:00:58,565
+kam karta
+
+40
+00:00:58,565 --> 00:01:01,000
+Follow-up sort column URL se aaye
+
+41
+00:01:01,000 --> 00:01:02,840
+prepared statement bachayega?
+
+42
+00:01:02,840 --> 00:01:05,000
+Nahi placeholders sirf values bind
+
+43
+00:01:05,000 --> 00:01:07,480
+karte column whitelist se map karo
+
+44
+00:01:07,480 --> 00:01:10,260
+Bolna parameterized queries
+
+45
+00:01:10,260 --> 00:01:11,689
+whitelist identifiers
+
+46
+00:01:11,689 --> 00:01:13,369
+email se user lao
+
+47
+00:01:13,369 --> 00:01:14,889
+hash app mein verify karo
+
+48
+00:01:14,889 --> 00:01:16,009
+Dost ko bhejo
+
+49
+00:01:16,009 --> 00:01:16,889
+follow karo
+
+50
+00:01:16,889 --> 00:01:18,809
+Next encrypt aur hash
+
+51
+00:01:18,809 --> 00:01:19,259
+same thing?

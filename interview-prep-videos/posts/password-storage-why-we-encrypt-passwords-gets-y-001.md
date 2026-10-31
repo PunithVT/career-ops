@@ -20,6 +20,8 @@ The trap: even Argon2id can't save 'India@123', because it's in every wordlist. 
 
 Send this to a friend who has a backend or security interview coming up.
 
+What would YOU answer in the interview? Comment below 👇
+
 Follow @interviewtrap.ai for daily interview traps.
 
 Animated emoji: Noto Emoji Animation by Google, CC BY 4.0 (creativecommons.org/licenses/by/4.0). Modified (resized/re-timed).
@@ -40,6 +42,8 @@ The trap: even Argon2id can't save 'India@123', because it's in every wordlist. 
 
 Send this to a friend who has a backend or security interview coming up.
 
+What would YOU answer in the interview? Comment below 👇
+
 Follow @interviewtrap.ai for daily interview traps.
 
 Animated emoji: Noto Emoji Animation by Google, CC BY 4.0 (creativecommons.org/licenses/by/4.0). Modified (resized/re-timed).
@@ -50,4 +54,4 @@ Animated emoji: Noto Emoji Animation by Google, CC BY 4.0 (creativecommons.org/l
 **Category:** Education · **AI voice disclosed:** yes · **Made for kids:** no
 
 ## Cover text
-ONE LINE. REJECTED.
+DATABASE LEAKED. NOW WHAT?

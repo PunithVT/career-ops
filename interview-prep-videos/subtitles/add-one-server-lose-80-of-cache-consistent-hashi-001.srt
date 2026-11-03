@@ -1,227 +1,207 @@
 1
-00:00:00,350 --> 00:00:01,600
-Ek naya server
+00:00:00,120 --> 00:00:02,080
+Sirf 20% keys move?
 
 2
-00:00:01,600 --> 00:00:03,920
-aur 80% cache bekaar
+00:00:02,080 --> 00:00:03,040
+Yahin reject
 
 3
-00:00:03,920 --> 00:00:05,120
-Abhi hash mod 4
+00:00:03,040 --> 00:00:04,240
+Ek server add kiya
 
 4
-00:00:05,520 --> 00:00:07,360
-5th server pe mod 5
+00:00:04,240 --> 00:00:05,920
+80% cache miss
 
 5
-00:00:07,360 --> 00:00:08,960
-Kitne percent keys move?
+00:00:05,920 --> 00:00:07,760
+Hash mod 4 ko mod 5
 
 6
-00:00:09,040 --> 00:00:09,840
-Socho
+00:00:07,760 --> 00:00:08,080
+kiya
 
 7
-00:00:09,840 --> 00:00:10,945
-teen do
+00:00:08,080 --> 00:00:09,760
+Kitni keys move hongi?
 
 8
-00:00:11,166 --> 00:00:11,520
-ek
+00:00:09,760 --> 00:00:10,160
+Socho
 
 9
-00:00:11,520 --> 00:00:13,120
-Zyaadatar freshers bolte hain
+00:00:10,160 --> 00:00:10,960
+teen do
 
 10
-00:00:13,120 --> 00:00:14,240
-sirf 20%
+00:00:10,960 --> 00:00:11,520
+ek
 
 11
-00:00:14,560 --> 00:00:16,700
-Yahin interview gaya
+00:00:11,520 --> 00:00:12,400
+Freshers bolte
 
 12
-00:00:16,700 --> 00:00:17,225
-Kyun?
+00:00:12,400 --> 00:00:13,715
+sirf 20%
 
 13
-00:00:17,225 --> 00:00:18,905
-Key tabhi rukti hai jab h
+00:00:13,715 --> 00:00:15,155
+Yahin pakde jaate ho
 
 14
-00:00:18,905 --> 00:00:21,145
-mod 4 equals h mod 5
+00:00:15,155 --> 00:00:15,955
+Colony socho
 
 15
-00:00:21,145 --> 00:00:22,905
-20 mein sirf 4 match
+00:00:15,955 --> 00:00:17,075
+four milkmen
 
 16
-00:00:22,985 --> 00:00:24,665
-Matlab 80% move
+00:00:17,075 --> 00:00:18,035
+same rule
 
 17
-00:00:24,745 --> 00:00:25,865
-Data safe hai
+00:00:18,035 --> 00:00:19,875
+House 7 ka order milkman 3
 
 18
-00:00:25,865 --> 00:00:27,625
-Par lookups galat server pe
+00:00:19,875 --> 00:00:20,755
+ki memory mein
 
 19
-00:00:27,625 --> 00:00:29,270
-miss sab DB pe
+00:00:20,755 --> 00:00:21,795
+yahi cache
 
 20
-00:00:29,270 --> 00:00:30,310
-Thundering herd!
+00:00:21,795 --> 00:00:23,395
+Fifth milkman joins
 
 21
-00:00:30,470 --> 00:00:31,430
-Exam hall
+00:00:23,395 --> 00:00:25,555
+ab every 20 mein 16 shift
 
 22
-00:00:31,430 --> 00:00:33,350
-room = roll mod 4
+00:00:25,555 --> 00:00:27,155
+Naye owners order nahi jaante
 
 23
-00:00:33,350 --> 00:00:34,470
-Mod 5 kiya?
+00:00:27,350 --> 00:00:29,190
+houses dairy ko call karte
 
 24
-00:00:34,470 --> 00:00:35,670
-Almost sab shift
+00:00:29,190 --> 00:00:30,950
+database pe stampede
 
 25
-00:00:35,670 --> 00:00:37,670
-Ab rooms circular corridor mein
+00:00:30,950 --> 00:00:33,510
+Fix milkmen ring road pe
 
 26
-00:00:37,670 --> 00:00:38,870
-Naya room E?
+00:00:33,510 --> 00:00:35,510
+every house walks clockwise
 
 27
-00:00:38,870 --> 00:00:40,470
-Sirf D-E beech wale shift
+00:00:35,510 --> 00:00:36,950
+pehla milkman owner
 
 28
-00:00:40,470 --> 00:00:42,230
-jo pehle A jaate the
+00:00:36,950 --> 00:00:37,910
+hash ring
 
 29
-00:00:42,230 --> 00:00:43,110
-Yahi hash ring
+00:00:37,910 --> 00:00:40,230
+Milkman 4 joins between 3 and
 
 30
-00:00:43,275 --> 00:00:45,035
-servers keys ek ring pe
+00:00:40,230 --> 00:00:40,790
+0?
 
 31
-00:00:45,035 --> 00:00:46,955
-Clockwise pehla server owner
+00:00:40,790 --> 00:00:42,995
+Sirf us stretch ke houses uspe
 
 32
-00:00:46,955 --> 00:00:48,075
-5th server?
+00:00:42,995 --> 00:00:44,595
+move average one-fifth
 
 33
-00:00:48,075 --> 00:00:49,755
-Sirf uske arc ki keys
+00:00:44,595 --> 00:00:46,835
+Trap stretches uneven
 
 34
-00:00:49,755 --> 00:00:50,955
-roughly 1/5
+00:00:46,835 --> 00:00:48,675
+milkman 1 leave kare
 
 35
-00:00:50,955 --> 00:00:51,835
-Ab trap
+00:00:48,675 --> 00:00:50,355
+whole load milkman 2 pe
 
 36
-00:00:51,835 --> 00:00:53,035
-Sirf 5 points?
-
-37
-00:00:53,035 --> 00:00:54,795
-Ek server ka huge arc
-
-38
-00:00:54,795 --> 00:00:55,575
-Wo mara
-
-39
-00:00:55,575 --> 00:00:56,870
-sab ek neighbour pe
-
-40
-00:00:56,870 --> 00:00:58,470
+00:00:50,355 --> 00:00:52,195
 Fix virtual nodes
 
+37
+00:00:52,195 --> 00:00:54,515
+har milkman ke typically 100 to
+
+38
+00:00:54,515 --> 00:00:55,395
+200 spots
+
+39
+00:00:55,550 --> 00:00:57,550
+ab load sab mein bat jaata
+
+40
+00:00:57,550 --> 00:00:59,230
+Ek server ki RAM double
+
 41
-00:00:58,550 --> 00:01:00,230
-Har server 150 points pe
+00:00:59,230 --> 00:01:00,670
+zyada keys kaise?
 
 42
-00:01:00,230 --> 00:01:01,350
-load even
+00:01:00,670 --> 00:01:02,350
+Double virtual nodes do
 
 43
-00:01:01,590 --> 00:01:03,830
-Follow-up ek server pe double RAM
+00:01:02,350 --> 00:01:04,430
+vnodes capacity ke proportion mein
 
 44
-00:01:03,830 --> 00:01:05,350
-Zyada keys kaise doge?
+00:01:04,430 --> 00:01:06,430
+Bolo mod N pe N by
 
 45
-00:01:05,350 --> 00:01:07,110
-Simple double vnodes
+00:01:06,430 --> 00:01:08,190
+N+1 keys move
 
 46
-00:01:07,190 --> 00:01:08,870
-Vnodes capacity ke proportional
+00:01:08,190 --> 00:01:10,611
+ring pe average one by N+1
 
 47
-00:01:09,165 --> 00:01:10,365
-Interview mein bolna
+00:01:10,611 --> 00:01:12,371
+aur vnodes balance
 
 48
-00:01:10,365 --> 00:01:12,205
-mod N pe N by N+1
+00:01:12,371 --> 00:01:13,571
+Dost ko bhejo
 
 49
-00:01:12,205 --> 00:01:12,925
-remap
+00:01:13,571 --> 00:01:14,531
+follow karo
 
 50
-00:01:12,925 --> 00:01:15,085
-Ring pe sirf 1 by N+1
+00:01:14,531 --> 00:01:15,791
+Next hot key
 
 51
-00:01:15,085 --> 00:01:16,525
-Virtual nodes se balance
+00:01:15,791 --> 00:01:17,251
+Virat post kare toh ring
 
 52
-00:01:16,525 --> 00:01:17,565
-Follow karo
-
-53
-00:01:17,565 --> 00:01:18,685
-Agle episode
-
-54
-00:01:18,685 --> 00:01:19,645
-hot key
-
-55
-00:01:19,645 --> 00:01:20,685
-Virat post kare
-
-56
-00:01:20,685 --> 00:01:21,549
-sab same key maangein
-
-57
-00:01:21,581 --> 00:01:22,031
-ring bachayega?
+00:01:17,251 --> 00:01:17,730
+bachayega?

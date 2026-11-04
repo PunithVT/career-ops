@@ -1,0 +1,203 @@
+1
+00:00:00,120 --> 00:00:01,520
+More shards laga do?
+
+2
+00:00:01,520 --> 00:00:02,480
+Yahin reject
+
+3
+00:00:02,480 --> 00:00:03,760
+Ek celebrity post
+
+4
+00:00:03,760 --> 00:00:04,960
+shard melt ho gaya
+
+5
+00:00:04,960 --> 00:00:06,800
+Imagine a cricketer posts
+
+6
+00:00:06,800 --> 00:00:08,560
+one shard pe 5 lakh reads
+
+7
+00:00:08,560 --> 00:00:09,200
+a second
+
+8
+00:00:09,200 --> 00:00:10,080
+Kya karoge?
+
+9
+00:00:10,080 --> 00:00:10,720
+Socho
+
+10
+00:00:10,720 --> 00:00:11,825
+teen do
+
+11
+00:00:12,046 --> 00:00:12,400
+ek
+
+12
+00:00:12,400 --> 00:00:13,360
+Freshers bolte
+
+13
+00:00:13,360 --> 00:00:15,580
+more shards ya better hash
+
+14
+00:00:15,580 --> 00:00:16,885
+Yahin pakde jaate ho
+
+15
+00:00:16,885 --> 00:00:18,005
+Ganpati socho
+
+16
+00:00:18,005 --> 00:00:19,525
+map idol ko ek hi pandal
+
+17
+00:00:19,525 --> 00:00:22,005
+deta jaise hash key ko shard
+
+18
+00:00:22,005 --> 00:00:24,085
+Poori city famous idol ke pandal
+
+19
+00:00:24,085 --> 00:00:24,965
+pe aati
+
+20
+00:00:24,965 --> 00:00:26,085
+baaki normal hain
+
+21
+00:00:26,085 --> 00:00:27,685
+Chhote idols bhi stuck
+
+22
+00:00:27,685 --> 00:00:29,420
+shard ke saare users slow
+
+23
+00:00:29,420 --> 00:00:32,300
+bina timeouts aur load shedding
+
+24
+00:00:32,300 --> 00:00:33,580
+app-wide phail sakta
+
+25
+00:00:33,580 --> 00:00:35,900
+Pandal 51 ya naya hash?
+
+26
+00:00:35,900 --> 00:00:37,580
+Bheed idol ke saath jaati hai
+
+27
+00:00:37,660 --> 00:00:39,340
+sharding spreads keys
+
+28
+00:00:39,340 --> 00:00:40,300
+not traffic
+
+29
+00:00:40,300 --> 00:00:42,460
+Galiyon mein live screens lagao
+
+30
+00:00:42,460 --> 00:00:45,580
+yani short-TTL local cache
+
+31
+00:00:45,580 --> 00:00:46,735
+cache nodes pe key copies
+
+32
+00:00:46,735 --> 00:00:48,095
+gate pe CDN
+
+33
+00:00:48,095 --> 00:00:50,255
+Twist like counter pe 1 lakh
+
+34
+00:00:50,255 --> 00:00:51,535
+writes a second aaye toh?
+
+35
+00:00:51,535 --> 00:00:53,375
+Poori city ek donation box pe
+
+36
+00:00:53,375 --> 00:00:55,855
+khadi yeh write hotspot hai
+
+37
+00:00:55,855 --> 00:00:58,175
+Das boxes alag pandals mein rakho
+
+38
+00:00:58,175 --> 00:01:01,595
+donor random box mein daale
+
+39
+00:01:01,595 --> 00:01:01,675
+sum karo
+
+40
+00:01:01,675 --> 00:01:02,690
+sharded counter
+
+41
+00:01:02,690 --> 00:01:04,610
+Har read pe 10 lookups
+
+42
+00:01:04,610 --> 00:01:06,850
+toh sirf hot keys split karo
+
+43
+00:01:06,850 --> 00:01:09,170
+cached approx count dikhao
+
+44
+00:01:09,170 --> 00:01:11,330
+Bolo keys spread hoti
+
+45
+00:01:11,330 --> 00:01:12,990
+traffic nahi
+
+46
+00:01:12,990 --> 00:01:13,941
+hot reads cache
+
+47
+00:01:13,941 --> 00:01:15,461
+writes split karo
+
+48
+00:01:15,461 --> 00:01:16,821
+Dost ko bhejo
+
+49
+00:01:16,821 --> 00:01:17,701
+follow karo
+
+50
+00:01:17,701 --> 00:01:19,701
+Next 50 lakh se 2 crore
+
+51
+00:01:19,701 --> 00:01:21,540
+viewers autoscaling bachayega?

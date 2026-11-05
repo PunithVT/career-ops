@@ -1,287 +1,215 @@
 1
-00:00:00,350 --> 00:00:01,920
-India-Pakistan
+00:00:00,120 --> 00:00:01,920
+Autoscaling handle karega?
 
 2
-00:00:01,920 --> 00:00:03,280
-Kohli walks out
+00:00:01,920 --> 00:00:02,960
+Yahin reject
 
 3
-00:00:03,360 --> 00:00:05,440
-Viewers 50 lakh se 2 crore
+00:00:02,960 --> 00:00:03,600
+ON tha
 
 4
-00:00:05,440 --> 00:00:06,640
-3 minute mein
-
-5
-00:00:06,640 --> 00:00:08,080
-Autoscaling ON
-
-6
-00:00:08,080 --> 00:00:10,400
-CPU threshold 70%
-
-7
-00:00:10,400 --> 00:00:11,600
-Survive karega?
-
-8
-00:00:11,600 --> 00:00:12,640
-Kya karoge?
-
-9
-00:00:12,640 --> 00:00:13,440
-Socho
-
-10
-00:00:13,440 --> 00:00:14,358
-teen do
-
-11
-00:00:14,541 --> 00:00:14,835
-ek
-
-12
-00:00:14,835 --> 00:00:16,755
-Zyaadatar freshers bolte hain
-
-13
-00:00:16,755 --> 00:00:18,675
-autoscaling handle kar lega
-
-14
-00:00:18,675 --> 00:00:20,195
-Yahin interview gaya
-
-15
-00:00:20,195 --> 00:00:21,475
-Autoscaling ON
-
-16
-00:00:21,475 --> 00:00:22,595
+00:00:03,600 --> 00:00:04,880
 phir bhi crash
 
+5
+00:00:04,880 --> 00:00:07,360
+India-Pakistan viewers 50 lakh se
+
+6
+00:00:07,360 --> 00:00:08,000
+2 crore
+
+7
+00:00:08,000 --> 00:00:09,200
+3 minutes mein
+
+8
+00:00:09,200 --> 00:00:11,200
+rule CPU 70%
+
+9
+00:00:11,200 --> 00:00:12,160
+Survive?
+
+10
+00:00:12,160 --> 00:00:12,880
+Socho
+
+11
+00:00:13,225 --> 00:00:14,185
+teen do
+
+12
+00:00:14,185 --> 00:00:14,745
+ek
+
+13
+00:00:14,745 --> 00:00:15,705
+Freshers bolte
+
+14
+00:00:15,705 --> 00:00:18,025
+autoscaling sambhal lega
+
+15
+00:00:18,105 --> 00:00:19,545
+Yahin pakde jaate ho
+
+16
+00:00:19,545 --> 00:00:21,625
+Socho superstar ka first show
+
 17
-00:00:22,595 --> 00:00:23,315
-Kyun?
+00:00:21,625 --> 00:00:23,545
+two ticket windows open
 
 18
-00:00:23,395 --> 00:00:24,755
-Shaadi ka caterer
+00:00:23,545 --> 00:00:26,025
+Manager har 5 minutes line dekhta
 
 19
-00:00:24,755 --> 00:00:25,555
-Guests aaye
+00:00:26,025 --> 00:00:27,545
+alarm after bad checks
 
 20
-00:00:25,555 --> 00:00:26,835
-tab cooking start?
+00:00:27,920 --> 00:00:29,840
+New clerk ghar se aata
 
 21
-00:00:26,835 --> 00:00:28,275
-40 minute lagenge
+00:00:29,840 --> 00:00:31,520
+test VM boot
 
 22
-00:00:28,275 --> 00:00:30,480
-Reactive metric har 1 ya 5
-
-23
-00:00:30,480 --> 00:00:31,600
-minute alarm
-
-24
-00:00:31,600 --> 00:00:32,480
-VM boot
-
-25
-00:00:32,480 --> 00:00:33,280
+00:00:31,520 --> 00:00:32,320
 health check
 
+23
+00:00:32,320 --> 00:00:33,600
+Crowd seconds mein
+
+24
+00:00:33,600 --> 00:00:35,280
+window minutes mein khuli
+
+25
+00:00:35,280 --> 00:00:37,120
+fans errors lekar laut gaye
+
 26
-00:00:33,280 --> 00:00:34,480
-Spike seconds mein
+00:00:37,120 --> 00:00:38,080
+Date pata hai
 
 27
-00:00:34,480 --> 00:00:35,760
-Servers minutes mein
+00:00:38,080 --> 00:00:40,220
+windows open before the show
 
 28
-00:00:35,760 --> 00:00:37,040
-Tab tak errors
+00:00:40,220 --> 00:00:41,595
+staff reserved early
 
 29
-00:00:37,040 --> 00:00:38,000
-Smart caterer
+00:00:41,595 --> 00:00:42,795
+scheduled scaling
 
 30
-00:00:38,000 --> 00:00:39,360
-baraat 8 baje
+00:00:42,795 --> 00:00:44,955
+Trap film projector yaani CDN
 
 31
-00:00:39,360 --> 00:00:40,720
-cooking 4 baje se
+00:00:44,955 --> 00:00:47,115
+chalata load windows pe
 
 32
-00:00:40,720 --> 00:00:42,240
-800 plus extra
+00:00:47,115 --> 00:00:48,235
+API layer
 
 33
-00:00:42,320 --> 00:00:43,440
-Match time pata hai
+00:00:48,235 --> 00:00:49,755
+Clerks half idle
 
 34
-00:00:43,575 --> 00:00:45,575
-Toss se pehle scheduled scaling
-
-35
-00:00:45,575 --> 00:00:47,895
-cloud aur CDN capacity reserve
-
-36
-00:00:47,975 --> 00:00:49,255
-Predictive scaling?
-
-37
-00:00:49,255 --> 00:00:50,935
-Repeat patterns seekhta hai
-
-38
-00:00:50,935 --> 00:00:52,375
-one-off match nahi
-
-39
-00:00:52,375 --> 00:00:54,855
-Reportedly Hotstar ne yahi kiya
-
-40
-00:00:54,855 --> 00:00:55,795
-Ab trap
-
-41
-00:00:55,795 --> 00:00:57,410
-CPU sahi metric hai?
-
-42
-00:00:57,410 --> 00:00:58,770
-Video CDN se
-
-43
-00:00:58,770 --> 00:01:00,210
-Load API layer pe
-
-44
-00:01:00,210 --> 00:01:01,650
-login entitlement
-
-45
-00:01:01,650 --> 00:01:02,530
-home page
-
-46
-00:01:02,530 --> 00:01:03,810
+00:00:49,835 --> 00:00:51,675
 CPU 45%
 
-47
-00:01:03,970 --> 00:01:05,730
-par DB connections full
+35
+00:00:51,675 --> 00:00:54,615
+booking system stuck
 
-48
-00:01:05,890 --> 00:01:07,650
-Alarm fire hi nahi hoga
+36
+00:00:54,615 --> 00:00:54,880
+DB connections full
 
-49
-00:01:07,650 --> 00:01:09,170
+37
+00:00:54,880 --> 00:00:56,400
 Scale on concurrency
 
-50
-00:01:09,170 --> 00:01:10,850
-DB ko bhi pre-scale karo
+38
+00:00:56,480 --> 00:00:58,320
+connections pehle plan karo
 
-51
-00:01:10,850 --> 00:01:12,665
-Follow-up Kohli out!
+39
+00:00:58,320 --> 00:01:00,480
+warna extra windows worse karte
 
-52
-00:01:12,665 --> 00:01:14,265
-1 crore log ek saath back
+40
+00:01:00,480 --> 00:01:02,320
+Twist Kohli out
 
-53
-00:01:14,265 --> 00:01:15,225
-dabate hain
+41
+00:01:02,320 --> 00:01:04,240
+1 crore log home page pe
 
-54
-00:01:15,225 --> 00:01:15,705
+42
+00:01:04,240 --> 00:01:04,800
 Ab?
 
-55
-00:01:15,705 --> 00:01:16,905
-Spike ab home page pe
+43
+00:01:04,800 --> 00:01:06,720
+Pre-scale karo
 
-56
-00:01:16,905 --> 00:01:19,545
-Pre-scale CDN fallback page
+44
+00:01:06,720 --> 00:01:07,645
+cached fallback
 
-57
-00:01:19,545 --> 00:01:20,425
+45
+00:01:07,645 --> 00:01:08,605
 rate limit
 
-58
-00:01:20,425 --> 00:01:21,465
-Retries mein jitter
+46
+00:01:08,605 --> 00:01:09,965
+retries mein jitter
 
-59
-00:01:21,465 --> 00:01:23,625
-taaki sab same second pe na
+47
+00:01:09,965 --> 00:01:12,365
+Bolna reactive scaling takes
 
-60
-00:01:23,625 --> 00:01:23,785
-aayein
+48
+00:01:12,365 --> 00:01:14,365
+minutes so pre-scale
 
-61
-00:01:23,785 --> 00:01:25,125
-Interview mein bolna
+49
+00:01:14,365 --> 00:01:15,885
+scale on concurrency
 
-62
-00:01:25,125 --> 00:01:26,500
-pre-scale aur reserve
+50
+00:01:15,885 --> 00:01:17,325
+degrade gracefully
 
-63
-00:01:26,500 --> 00:01:27,940
-Scale on concurrency
+51
+00:01:17,325 --> 00:01:18,445
+Dost ko bhejo
 
-64
-00:01:28,020 --> 00:01:29,220
-Degrade gracefully
+52
+00:01:18,445 --> 00:01:19,485
+follow karo
 
-65
-00:01:29,220 --> 00:01:30,420
-jitter retries
+53
+00:01:19,485 --> 00:01:21,935
+Next stream late par call live
 
-66
-00:01:30,420 --> 00:01:31,300
-Follow karo
-
-67
-00:01:31,300 --> 00:01:32,420
-Agle episode
-
-68
-00:01:32,420 --> 00:01:33,700
-stream ~20 second late
-
-69
-00:01:33,700 --> 00:01:35,620
-par stadium se call live
-
-70
-00:01:35,620 --> 00:01:36,180
-Kyun?
-
-71
-00:01:36,180 --> 00:01:38,980
-Hint sirf TCP vs UDP nahi
-
-72
-00:01:38,980 --> 00:01:39,430
-hai
+54
+00:01:21,935 --> 00:01:22,385
+kyun?

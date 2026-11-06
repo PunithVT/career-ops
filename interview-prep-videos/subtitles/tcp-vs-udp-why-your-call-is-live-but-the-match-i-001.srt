@@ -1,0 +1,235 @@
+1
+00:00:00,120 --> 00:00:01,840
+Video matlab UDP?
+
+2
+00:00:01,840 --> 00:00:02,640
+Yahin reject
+
+3
+00:00:02,640 --> 00:00:03,920
+Call live
+
+4
+00:00:03,920 --> 00:00:05,840
+par match 20 seconds late
+
+5
+00:00:05,840 --> 00:00:06,880
+Same internet!
+
+6
+00:00:06,880 --> 00:00:08,560
+Commentators on video call
+
+7
+00:00:08,560 --> 00:00:10,320
+3 crore on stream
+
+8
+00:00:10,320 --> 00:00:11,680
+1% loss
+
+9
+00:00:11,680 --> 00:00:13,280
+TCP ya UDP?
+
+10
+00:00:13,280 --> 00:00:13,760
+Socho
+
+11
+00:00:13,760 --> 00:00:15,360
+teen do
+
+12
+00:00:15,360 --> 00:00:16,700
+ek
+
+13
+00:00:16,700 --> 00:00:17,025
+Freshers bolte hain
+
+14
+00:00:17,025 --> 00:00:18,785
+video matlab UDP
+
+15
+00:00:18,785 --> 00:00:20,065
+Yahin pakde jaate ho
+
+16
+00:00:20,065 --> 00:00:20,705
+Coaching class
+
+17
+00:00:20,705 --> 00:00:22,785
+Sir notes dictate karte hain
+
+18
+00:00:22,785 --> 00:00:24,385
+har word ek packet
+
+19
+00:00:24,385 --> 00:00:25,905
+Word 4 lost hua
+
+20
+00:00:25,905 --> 00:00:27,745
+TCP student aage sunta hai
+
+21
+00:00:27,745 --> 00:00:29,345
+par likhta tabhi jab woh repeat
+
+22
+00:00:29,345 --> 00:00:29,745
+ho
+
+23
+00:00:29,745 --> 00:00:30,865
+The whole line waits
+
+24
+00:00:30,950 --> 00:00:32,470
+head-of-line blocking
+
+25
+00:00:32,470 --> 00:00:34,150
+UDP pe koi rule nahi
+
+26
+00:00:34,150 --> 00:00:35,430
+the app decides
+
+27
+00:00:35,430 --> 00:00:36,310
+ask again
+
+28
+00:00:36,310 --> 00:00:37,350
+repair data
+
+29
+00:00:37,350 --> 00:00:38,150
+ya skip
+
+30
+00:00:38,310 --> 00:00:39,910
+Live call ko well under a
+
+31
+00:00:39,910 --> 00:00:40,870
+second chahiye
+
+32
+00:00:41,110 --> 00:00:42,630
+RTP over UDP
+
+33
+00:00:42,630 --> 00:00:44,775
+Trap stream typically 6-second
+
+34
+00:00:44,775 --> 00:00:45,815
+chunks mein aata hai
+
+35
+00:00:45,815 --> 00:00:47,735
+photocopy shop yaani CDN se
+
+36
+00:00:47,735 --> 00:00:49,175
+Player teen chunks
+
+37
+00:00:49,175 --> 00:00:50,855
+around 18 seconds
+
+38
+00:00:51,095 --> 00:00:52,375
+buffer karta hai
+
+39
+00:00:52,375 --> 00:00:53,815
+reprint usi buffer mein chhup
+
+40
+00:00:53,815 --> 00:00:54,375
+jaata
+
+41
+00:00:54,375 --> 00:00:56,295
+Delay zyada-tar buffering ka hai
+
+42
+00:00:56,295 --> 00:00:57,575
+TCP ka nahi
+
+43
+00:00:57,575 --> 00:01:00,170
+Twist toh HTTP/3 kis pe chalta
+
+44
+00:01:00,170 --> 00:01:00,570
+hai?
+
+45
+00:01:00,570 --> 00:01:01,845
+UDP pe!
+
+46
+00:01:02,138 --> 00:01:04,090
+QUIC upar reliability
+
+47
+00:01:04,090 --> 00:01:05,770
+congestion control
+
+48
+00:01:05,770 --> 00:01:07,450
+encryption banata hai
+
+49
+00:01:07,450 --> 00:01:09,610
+loss sirf apna stream rokta
+
+50
+00:01:09,610 --> 00:01:10,810
+Interview mein bolna
+
+51
+00:01:10,810 --> 00:01:12,790
+latency budget first
+
+52
+00:01:12,790 --> 00:01:14,345
+calls UDP pe
+
+53
+00:01:14,345 --> 00:01:16,345
+streams chunked HTTP pe
+
+54
+00:01:16,345 --> 00:01:18,365
+reliability chahiye toh QUIC
+
+55
+00:01:18,365 --> 00:01:19,325
+Dost ko bhejo
+
+56
+00:01:19,325 --> 00:01:20,125
+follow karo
+
+57
+00:01:20,125 --> 00:01:21,805
+Next index laga
+
+58
+00:01:21,805 --> 00:01:23,565
+phir bhi query 8 second
+
+59
+00:01:23,565 --> 00:01:24,015
+Kyun?

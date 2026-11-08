@@ -1,0 +1,239 @@
+1
+00:00:00,160 --> 00:00:01,120
+More indexes
+
+2
+00:00:01,120 --> 00:00:02,160
+more speed?
+
+3
+00:00:02,160 --> 00:00:03,120
+Yahin reject
+
+4
+00:00:03,120 --> 00:00:04,240
+Index lagaya
+
+5
+00:00:04,240 --> 00:00:05,920
+phir bhi query 8 second
+
+6
+00:00:05,920 --> 00:00:07,280
+5 crore users
+
+7
+00:00:07,280 --> 00:00:08,400
+email pe index
+
+8
+00:00:08,400 --> 00:00:10,560
+Teammate index every column
+
+9
+00:00:10,560 --> 00:00:11,520
+Kya karoge?
+
+10
+00:00:11,520 --> 00:00:12,000
+Socho
+
+11
+00:00:12,000 --> 00:00:14,540
+teen do
+
+12
+00:00:14,540 --> 00:00:14,580
+ek
+
+13
+00:00:14,580 --> 00:00:14,865
+Freshers bolte hain
+
+14
+00:00:14,865 --> 00:00:15,825
+more indexes
+
+15
+00:00:15,825 --> 00:00:16,545
+more speed
+
+16
+00:00:16,545 --> 00:00:17,905
+Yahin pakde jaate ho
+
+17
+00:00:17,905 --> 00:00:19,185
+Marriage bureau socho
+
+18
+00:00:19,185 --> 00:00:20,705
+almirah mein profiles
+
+19
+00:00:20,705 --> 00:00:22,545
+email-wise sorted register
+
+20
+00:00:22,625 --> 00:00:23,825
+yaani index
+
+21
+00:00:23,825 --> 00:00:24,785
+Rahul ka email?
+
+22
+00:00:24,785 --> 00:00:26,065
+Clerk root se leaf tak
+
+23
+00:00:26,065 --> 00:00:28,170
+3-4 page flips
+
+24
+00:00:28,170 --> 00:00:29,130
+yeh B-tree hai
+
+25
+00:00:29,130 --> 00:00:31,050
+Par query mein LOWER(email) hai
+
+26
+00:00:31,050 --> 00:00:32,970
+register mein sirf plain email
+
+27
+00:00:32,970 --> 00:00:34,730
+Clerk register skip karke poori
+
+28
+00:00:34,730 --> 00:00:36,090
+almirah kholta
+
+29
+00:00:36,090 --> 00:00:37,370
+full table scan
+
+30
+00:00:37,370 --> 00:00:39,770
+Fix expression index banao
+
+31
+00:00:39,770 --> 00:00:41,770
+EXPLAIN se confirm karo index use
+
+32
+00:00:41,770 --> 00:00:43,030
+hua
+
+33
+00:00:43,030 --> 00:00:43,745
+Har column ka register?
+
+34
+00:00:43,745 --> 00:00:45,585
+Har naye profile pe har register
+
+35
+00:00:45,585 --> 00:00:47,585
+update slow inserts
+
+36
+00:00:47,585 --> 00:00:48,385
+extra disk
+
+37
+00:00:48,385 --> 00:00:49,505
+memory
+
+38
+00:00:49,505 --> 00:00:51,345
+Twist index (city
+
+39
+00:00:51,345 --> 00:00:51,985
+age) hai
+
+40
+00:00:51,985 --> 00:00:53,985
+Sirf age 25 fast hogi?
+
+41
+00:00:53,985 --> 00:00:55,105
+Usually nahi
+
+42
+00:00:55,265 --> 00:00:56,925
+Register city
+
+43
+00:00:56,925 --> 00:00:57,730
+then age se sorted
+
+44
+00:00:57,730 --> 00:00:59,650
+same-age profiles har city mein
+
+45
+00:00:59,650 --> 00:01:00,210
+bikhre hain
+
+46
+00:01:00,210 --> 00:01:02,370
+Yeh leftmost prefix rule hai
+
+47
+00:01:02,530 --> 00:01:03,890
+Age-only queries?
+
+48
+00:01:03,890 --> 00:01:05,890
+Age leading column banao
+
+49
+00:01:05,890 --> 00:01:07,090
+equality first
+
+50
+00:01:07,090 --> 00:01:07,970
+range last
+
+51
+00:01:08,465 --> 00:01:09,985
+Interview mein bolna
+
+52
+00:01:10,145 --> 00:01:12,225
+index speeds reads
+
+53
+00:01:12,225 --> 00:01:14,065
+costs every insert
+
+54
+00:01:14,065 --> 00:01:15,665
+EXPLAIN se verify
+
+55
+00:01:15,745 --> 00:01:18,145
+function pe expression index
+
+56
+00:01:18,145 --> 00:01:19,265
+Dost ko bhejo
+
+57
+00:01:19,265 --> 00:01:20,845
+follow karo
+
+58
+00:01:20,845 --> 00:01:22,761
+Next 'budget phone' search kiya
+
+59
+00:01:22,761 --> 00:01:23,881
+zero results
+
+60
+00:01:23,881 --> 00:01:24,331
+Kyun?

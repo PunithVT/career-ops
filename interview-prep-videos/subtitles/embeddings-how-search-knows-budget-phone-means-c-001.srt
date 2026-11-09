@@ -1,0 +1,219 @@
+1
+00:00:00,240 --> 00:00:01,520
+LIKE ya LLM?
+
+2
+00:00:01,520 --> 00:00:02,800
+Yahin reject
+
+3
+00:00:02,800 --> 00:00:04,160
+Budget phone search kiya
+
+4
+00:00:04,160 --> 00:00:05,280
+zero results
+
+5
+00:00:05,280 --> 00:00:07,360
+Stock mein affordable smartphones
+
+6
+00:00:07,360 --> 00:00:08,720
+1 crore products
+
+7
+00:00:08,720 --> 00:00:09,520
+under 100 ms
+
+8
+00:00:09,520 --> 00:00:10,400
+Kya karoge?
+
+9
+00:00:10,400 --> 00:00:11,280
+Socho
+
+10
+00:00:11,280 --> 00:00:11,760
+teen do
+
+11
+00:00:11,760 --> 00:00:12,320
+ek
+
+12
+00:00:12,320 --> 00:00:14,880
+Freshers bolte hain
+
+13
+00:00:14,880 --> 00:00:15,020
+LIKE jodo
+
+14
+00:00:15,020 --> 00:00:16,515
+ya LLM ko bhejo
+
+15
+00:00:16,515 --> 00:00:17,955
+Yahin pakde jaate ho
+
+16
+00:00:17,955 --> 00:00:19,955
+Hypermarket board pe woh words
+
+17
+00:00:19,955 --> 00:00:20,595
+nahi likhe
+
+18
+00:00:20,595 --> 00:00:22,195
+toh word match zero
+
+19
+00:00:22,195 --> 00:00:23,875
+Har product ka spot uski meaning
+
+20
+00:00:23,875 --> 00:00:25,395
+se woh address hi embedding
+
+21
+00:00:25,395 --> 00:00:28,015
+like 768 numbers
+
+22
+00:00:28,015 --> 00:00:29,390
+Similar products ek corner
+
+23
+00:00:29,390 --> 00:00:31,150
+affordable smartphone
+
+24
+00:00:31,150 --> 00:00:32,030
+cheap mobile
+
+25
+00:00:32,030 --> 00:00:32,830
+chips door
+
+26
+00:00:32,830 --> 00:00:34,430
+Query ko same model se address
+
+27
+00:00:34,430 --> 00:00:36,910
+do phir nearest neighbours uthao
+
+28
+00:00:36,910 --> 00:00:38,910
+Every shelf check karna slow
+
+29
+00:00:38,910 --> 00:00:41,470
+HNSW signboards jaldi sahi corner
+
+30
+00:00:41,470 --> 00:00:42,090
+dikhate
+
+31
+00:00:42,090 --> 00:00:44,415
+Trap similar matlab correct nahi
+
+32
+00:00:44,415 --> 00:00:46,015
+'without notch' aksar 'with notch'
+
+33
+00:00:46,015 --> 00:00:47,055
+ke bagal
+
+34
+00:00:47,055 --> 00:00:48,655
+model numbers often weak
+
+35
+00:00:48,655 --> 00:00:51,935
+Hybrid BM25 keyword boards plus
+
+36
+00:00:51,935 --> 00:00:53,135
+meaning floor
+
+37
+00:00:53,135 --> 00:00:54,095
+dono merge
+
+38
+00:00:54,095 --> 00:00:55,135
+phir re-rank
+
+39
+00:00:55,135 --> 00:00:57,560
+Twist ANN exact search ke top
+
+40
+00:00:57,560 --> 00:00:59,880
+results ka sirf 95% deta
+
+41
+00:01:00,040 --> 00:01:00,760
+Bug?
+
+42
+00:01:00,760 --> 00:01:01,560
+Bug nahi
+
+43
+00:01:01,560 --> 00:01:02,920
+recall trade-off
+
+44
+00:01:02,920 --> 00:01:05,000
+signboards kabhi shelf miss karte
+
+45
+00:01:05,080 --> 00:01:06,680
+Higher ef_search
+
+46
+00:01:06,680 --> 00:01:07,560
+better recall
+
+47
+00:01:07,560 --> 00:01:09,380
+slower search
+
+48
+00:01:09,380 --> 00:01:11,235
+Bolna same model se embed
+
+49
+00:01:11,235 --> 00:01:13,155
+HNSW se neighbours
+
+50
+00:01:13,155 --> 00:01:14,515
+production mein hybrid
+
+51
+00:01:14,515 --> 00:01:15,555
+Dost ko bhejo
+
+52
+00:01:15,555 --> 00:01:16,435
+follow karo
+
+53
+00:01:16,435 --> 00:01:17,795
+Next same question
+
+54
+00:01:17,795 --> 00:01:18,675
+do answers
+
+55
+00:01:18,675 --> 00:01:19,510
+Bug ya feature?

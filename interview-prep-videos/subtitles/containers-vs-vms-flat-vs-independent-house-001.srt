@@ -1,0 +1,223 @@
+1
+00:00:00,120 --> 00:00:02,720
+Container matlab lightweight VM?
+
+2
+00:00:02,720 --> 00:00:04,320
+Interview wahin khatam
+
+3
+00:00:04,320 --> 00:00:06,960
+40 microservices on VMs
+
+4
+00:00:06,960 --> 00:00:08,560
+each boots a 2 GB OS
+
+5
+00:00:08,560 --> 00:00:10,080
+in about a minute
+
+6
+00:00:10,080 --> 00:00:12,160
+Docker pe start around ek second
+
+7
+00:00:12,160 --> 00:00:13,120
+Faster kyun
+
+8
+00:00:13,120 --> 00:00:14,160
+aur kya khoya?
+
+9
+00:00:14,160 --> 00:00:14,720
+Socho
+
+10
+00:00:14,945 --> 00:00:15,905
+teen do
+
+11
+00:00:15,905 --> 00:00:16,385
+ek
+
+12
+00:00:16,385 --> 00:00:17,665
+Freshers bolte hain
+
+13
+00:00:17,665 --> 00:00:18,785
+lightweight VM
+
+14
+00:00:18,785 --> 00:00:20,065
+same isolation
+
+15
+00:00:20,065 --> 00:00:21,505
+Yahin pakde jaate ho
+
+16
+00:00:21,505 --> 00:00:22,625
+Colony socho
+
+17
+00:00:22,625 --> 00:00:24,545
+VM ek independent house
+
+18
+00:00:24,545 --> 00:00:25,585
+apni foundation
+
+19
+00:00:25,585 --> 00:00:26,465
+guest kernel
+
+20
+00:00:26,465 --> 00:00:28,305
+Container ek flat hai
+
+21
+00:00:28,305 --> 00:00:29,585
+isolated process
+
+22
+00:00:29,585 --> 00:00:30,225
+apna lock
+
+23
+00:00:30,500 --> 00:00:31,300
+par foundation
+
+24
+00:00:31,300 --> 00:00:32,260
+host kernel
+
+25
+00:00:32,260 --> 00:00:33,220
+shared hai
+
+26
+00:00:33,220 --> 00:00:34,900
+Walls decide what you see
+
+27
+00:00:34,980 --> 00:00:36,020
+namespaces
+
+28
+00:00:36,020 --> 00:00:38,020
+Bijli-paani ka quota decides what
+
+29
+00:00:38,020 --> 00:00:38,740
+you use
+
+30
+00:00:38,740 --> 00:00:39,700
+cgroups
+
+31
+00:00:39,700 --> 00:00:41,460
+No foundation to build
+
+32
+00:00:41,460 --> 00:00:42,820
+images often MBs
+
+33
+00:00:43,085 --> 00:00:44,765
+start app jitna fast
+
+34
+00:00:44,765 --> 00:00:46,685
+ek plot pe zyada flats
+
+35
+00:00:46,685 --> 00:00:48,285
+One crack in the foundation
+
+36
+00:00:48,285 --> 00:00:49,245
+a kernel bug
+
+37
+00:00:49,245 --> 00:00:50,685
+can risk every flat
+
+38
+00:00:50,685 --> 00:00:52,205
+--privileged matlab tenant ko
+
+39
+00:00:52,205 --> 00:00:53,725
+building ki master key
+
+40
+00:00:53,805 --> 00:00:55,145
+almost host root
+
+41
+00:00:55,145 --> 00:00:57,020
+Follow-up Lambda har function
+
+42
+00:00:57,020 --> 00:00:58,860
+microVM mein kyun chalata?
+
+43
+00:00:58,860 --> 00:01:00,700
+Untrusted code needs its own
+
+44
+00:01:00,700 --> 00:01:03,500
+foundation Firecracker microVM
+
+45
+00:01:03,500 --> 00:01:04,380
+own kernel
+
+46
+00:01:04,380 --> 00:01:07,180
+under 125 ms boot
+
+47
+00:01:07,180 --> 00:01:08,380
+minimal config
+
+48
+00:01:08,380 --> 00:01:11,265
+Bolna VM has its own kernel
+
+49
+00:01:11,265 --> 00:01:12,465
+container shares it
+
+50
+00:01:12,465 --> 00:01:14,225
+fast never privileged
+
+51
+00:01:14,225 --> 00:01:15,425
+untrusted code?
+
+52
+00:01:15,425 --> 00:01:17,505
+MicroVMs ya gVisor
+
+53
+00:01:17,505 --> 00:01:18,705
+Dost ko bhejo
+
+54
+00:01:18,705 --> 00:01:19,505
+follow karo
+
+55
+00:01:19,505 --> 00:01:21,505
+Next 4 logon ki startup
+
+56
+00:01:21,505 --> 00:01:22,690
+12 microservices?

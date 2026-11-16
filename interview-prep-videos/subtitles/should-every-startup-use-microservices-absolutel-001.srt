@@ -1,0 +1,231 @@
+1
+00:00:00,240 --> 00:00:01,280
+Netflix karta hai
+
+2
+00:00:01,280 --> 00:00:02,240
+toh hum bhi?
+
+3
+00:00:02,320 --> 00:00:03,520
+Yahin reject
+
+4
+00:00:03,520 --> 00:00:05,040
+4 logon ki kirana startup
+
+5
+00:00:05,040 --> 00:00:06,720
+2,000 orders daily
+
+6
+00:00:06,720 --> 00:00:09,440
+CTO wants 12 microservices on day
+
+7
+00:00:09,440 --> 00:00:10,000
+one
+
+8
+00:00:10,000 --> 00:00:11,280
+Agree karoge?
+
+9
+00:00:11,280 --> 00:00:12,000
+Socho
+
+10
+00:00:12,000 --> 00:00:13,360
+teen do
+
+11
+00:00:13,360 --> 00:00:13,805
+ek
+
+12
+00:00:13,805 --> 00:00:14,845
+Freshers bolte hain
+
+13
+00:00:14,845 --> 00:00:16,045
+Netflix karta hai
+
+14
+00:00:16,045 --> 00:00:16,845
+toh hum bhi
+
+15
+00:00:16,845 --> 00:00:18,205
+Yahin pakde jaate ho
+
+16
+00:00:18,205 --> 00:00:19,485
+Tailor shop socho
+
+17
+00:00:19,485 --> 00:00:20,685
+measure cut
+
+18
+00:00:20,685 --> 00:00:22,045
+stitch under one roof
+
+19
+00:00:22,045 --> 00:00:23,245
+haath se haath
+
+20
+00:00:23,245 --> 00:00:24,365
+function call
+
+21
+00:00:24,365 --> 00:00:25,005
+Rush?
+
+22
+00:00:25,085 --> 00:00:26,285
+Open two copies
+
+23
+00:00:26,285 --> 00:00:27,518
+monoliths scale too
+
+24
+00:00:27,791 --> 00:00:29,730
+Microservices mainly solve team
+
+25
+00:00:29,730 --> 00:00:30,217
+scaling
+
+26
+00:00:30,487 --> 00:00:31,731
+Har step alag shop?
+
+27
+00:00:32,002 --> 00:00:33,570
+Har handoff courier ride
+
+28
+00:00:33,570 --> 00:00:35,410
+network call that can fail
+
+29
+00:00:35,410 --> 00:00:36,588
+Measuring took money
+
+30
+00:00:36,710 --> 00:00:38,450
+stitching lost the cloth
+
+31
+00:00:38,450 --> 00:00:39,330
+One transaction
+
+32
+00:00:39,330 --> 00:00:40,585
+teen shops?
+
+33
+00:00:40,585 --> 00:00:42,265
+Saga local steps
+
+34
+00:00:42,265 --> 00:00:43,865
+undo jaise refund
+
+35
+00:00:43,865 --> 00:00:45,865
+Shared godown aur saath deploy?
+
+36
+00:00:45,945 --> 00:00:47,465
+Distributed monolith
+
+37
+00:00:47,465 --> 00:00:48,585
+cost poori
+
+38
+00:00:48,585 --> 00:00:49,945
+independence zero
+
+39
+00:00:49,945 --> 00:00:50,825
+60 engineers
+
+40
+00:00:50,825 --> 00:00:52,105
+deploys takra rahe
+
+41
+00:00:52,105 --> 00:00:52,885
+Ab?
+
+42
+00:00:52,885 --> 00:00:54,540
+Pehle modular monolith
+
+43
+00:00:54,540 --> 00:00:55,420
+one shop
+
+44
+00:00:55,420 --> 00:00:56,700
+clear sections
+
+45
+00:00:56,860 --> 00:00:58,860
+koi doosre ka kapda nahi chhoota
+
+46
+00:00:58,860 --> 00:01:00,300
+Phir zaroori section dheere
+
+47
+00:01:00,300 --> 00:01:02,620
+nikaalo godown ke saath
+
+48
+00:01:02,620 --> 00:01:03,740
+strangler fig
+
+49
+00:01:03,740 --> 00:01:07,180
+Bolna microservices mainly team
+
+50
+00:01:07,180 --> 00:01:08,120
+scaling ke liye
+
+51
+00:01:08,465 --> 00:01:10,625
+har split network call
+
+52
+00:01:10,625 --> 00:01:12,305
+pehle modular monolith
+
+53
+00:01:12,305 --> 00:01:13,745
+phir strangler fig
+
+54
+00:01:13,745 --> 00:01:14,545
+Dost ko bhejo
+
+55
+00:01:14,545 --> 00:01:15,505
+follow karo
+
+56
+00:01:15,505 --> 00:01:16,945
+Next XSS
+
+57
+00:01:16,945 --> 00:01:18,065
+ek comment
+
+58
+00:01:18,065 --> 00:01:20,090
+10 lakh profiles infect?

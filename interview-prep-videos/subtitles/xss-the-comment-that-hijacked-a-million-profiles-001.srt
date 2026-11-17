@@ -1,0 +1,227 @@
+1
+00:00:00,120 --> 00:00:01,760
+Firewall laga do?
+
+2
+00:00:01,760 --> 00:00:02,800
+Interview wahin khatam
+
+3
+00:00:02,800 --> 00:00:03,600
+Ek review
+
+4
+00:00:03,600 --> 00:00:05,760
+har visitor ka session khatre mein
+
+5
+00:00:05,760 --> 00:00:06,880
+Review raw print kiya
+
+6
+00:00:06,880 --> 00:00:09,200
+script cookies evil.site bhejti
+
+7
+00:00:09,200 --> 00:00:09,600
+hai
+
+8
+00:00:09,600 --> 00:00:10,560
+Kya hoga?
+
+9
+00:00:10,560 --> 00:00:11,200
+Socho
+
+10
+00:00:11,200 --> 00:00:11,760
+teen do
+
+11
+00:00:11,760 --> 00:00:13,340
+ek
+
+12
+00:00:13,340 --> 00:00:13,865
+Freshers bolte hain
+
+13
+00:00:13,865 --> 00:00:14,905
+firewall laga do
+
+14
+00:00:14,905 --> 00:00:16,425
+Yahin pakde jaate ho
+
+15
+00:00:16,425 --> 00:00:17,945
+School assembly socho
+
+16
+00:00:17,945 --> 00:00:19,945
+announcer box ke saare notes mic
+
+17
+00:00:19,945 --> 00:00:20,825
+pe padhta hai
+
+18
+00:00:20,825 --> 00:00:22,185
+Attacker ka note
+
+19
+00:00:22,185 --> 00:00:23,865
+sab apna ID card gate ke
+
+20
+00:00:23,865 --> 00:00:24,825
+bahar do
+
+21
+00:00:24,825 --> 00:00:26,345
+Box as-is rakhta hai
+
+22
+00:00:26,345 --> 00:00:27,625
+Announcer raw padhta hai
+
+23
+00:00:27,810 --> 00:00:29,650
+students use school ka order
+
+24
+00:00:29,650 --> 00:00:30,690
+maante hain
+
+25
+00:00:30,690 --> 00:00:31,970
+stored XSS
+
+26
+00:00:32,050 --> 00:00:33,570
+Readable ID cards
+
+27
+00:00:33,570 --> 00:00:34,450
+yaani cookies
+
+28
+00:00:34,450 --> 00:00:35,250
+bahar gaye
+
+29
+00:00:35,250 --> 00:00:37,890
+gate ka firewall bas extra layer
+
+30
+00:00:37,890 --> 00:00:41,330
+2005 mein MySpace ka Samy worm
+
+31
+00:00:41,330 --> 00:00:43,150
+khud copy hua
+
+32
+00:00:43,150 --> 00:00:44,945
+lagbhag 20 hours mein 10 lakh+
+
+33
+00:00:44,945 --> 00:00:45,825
+users
+
+34
+00:00:45,825 --> 00:00:47,025
+Script ban karo?
+
+35
+00:00:47,025 --> 00:00:48,865
+img onerror ko script tag chahiye
+
+36
+00:00:48,865 --> 00:00:49,345
+nahi
+
+37
+00:00:49,345 --> 00:00:50,545
+Announcer bole
+
+38
+00:00:50,545 --> 00:00:51,905
+ek student ne likha
+
+39
+00:00:51,905 --> 00:00:53,905
+note quote ki tarah padhe
+
+40
+00:00:53,905 --> 00:00:55,105
+output encoding
+
+41
+00:00:55,105 --> 00:00:56,620
+Rich text?
+
+42
+00:00:56,620 --> 00:00:58,620
+DOMPurify jaise sanitizer se saaf
+
+43
+00:00:58,620 --> 00:00:59,340
+karo
+
+44
+00:00:59,340 --> 00:01:01,020
+Follow-up React hai
+
+45
+00:01:01,020 --> 00:01:02,380
+toh safe?
+
+46
+00:01:02,380 --> 00:01:05,100
+Mostly JSX escape karta hai
+
+47
+00:01:05,100 --> 00:01:06,780
+Par user HTML wala
+
+48
+00:01:06,780 --> 00:01:09,580
+dangerouslySetInnerHTML aur user
+
+49
+00:01:09,580 --> 00:01:10,700
+links risky hain
+
+50
+00:01:10,700 --> 00:01:13,065
+Bolna output encode karo
+
+51
+00:01:13,065 --> 00:01:15,065
+rich text sanitize karo
+
+52
+00:01:15,065 --> 00:01:17,865
+HttpOnly CSP sirf backup
+
+53
+00:01:17,865 --> 00:01:18,985
+Dost ko bhejo
+
+54
+00:01:18,985 --> 00:01:19,865
+follow karo
+
+55
+00:01:19,865 --> 00:01:21,385
+Next ek loop
+
+56
+00:01:21,385 --> 00:01:22,825
+101 queries
+
+57
+00:01:22,825 --> 00:01:23,275
+kaise?

@@ -1,0 +1,207 @@
+1
+00:00:00,120 --> 00:00:01,200
+DB slow hai
+
+2
+00:00:01,200 --> 00:00:02,080
+RAM badha do?
+
+3
+00:00:02,080 --> 00:00:03,040
+Yahin reject
+
+4
+00:00:03,040 --> 00:00:04,000
+Ek loop
+
+5
+00:00:04,000 --> 00:00:06,240
+database ko 101 queries gayi
+
+6
+00:00:06,240 --> 00:00:07,360
+100 orders
+
+7
+00:00:07,360 --> 00:00:08,800
+laptop pe instant
+
+8
+00:00:08,800 --> 00:00:10,160
+production mein slow
+
+9
+00:00:10,160 --> 00:00:10,960
+Kya galat?
+
+10
+00:00:10,960 --> 00:00:11,600
+Socho
+
+11
+00:00:11,600 --> 00:00:12,000
+teen do
+
+12
+00:00:12,000 --> 00:00:12,560
+ek
+
+13
+00:00:12,560 --> 00:00:13,760
+Freshers bolte hain
+
+14
+00:00:13,760 --> 00:00:14,705
+RAM badhao
+
+15
+00:00:14,705 --> 00:00:16,225
+Yahin pakde jaate ho
+
+16
+00:00:16,225 --> 00:00:17,585
+Hospital ward socho
+
+17
+00:00:17,585 --> 00:00:19,745
+Nurse ek baar records se patients
+
+18
+00:00:19,745 --> 00:00:21,025
+ki list mangwati hai
+
+19
+00:00:21,025 --> 00:00:22,385
+List mein report nahi
+
+20
+00:00:22,385 --> 00:00:23,985
+toh har bed pe ward boy
+
+21
+00:00:23,985 --> 00:00:25,025
+records room jaata
+
+22
+00:00:25,025 --> 00:00:28,605
+Code mein bas o.restaurant dikhta
+
+23
+00:00:28,605 --> 00:00:28,780
+chakkar andar chhupa
+
+24
+00:00:28,780 --> 00:00:29,740
+lazy loading
+
+25
+00:00:29,740 --> 00:00:31,340
+Ek list plus sau chakkar
+
+26
+00:00:31,340 --> 00:00:33,500
+yaani 1 + N round trips
+
+27
+00:00:33,500 --> 00:00:34,860
+Laptop pe room bagal mein
+
+28
+00:00:34,860 --> 00:00:36,380
+0.1 ms
+
+29
+00:00:36,380 --> 00:00:38,140
+Production mein ek trip 5 se
+
+30
+00:00:38,140 --> 00:00:39,960
+30 ms le sakta hai
+
+31
+00:00:39,960 --> 00:00:41,835
+Saare report IDs ek slip pe
+
+32
+00:00:41,835 --> 00:00:42,555
+ek trip
+
+33
+00:00:42,555 --> 00:00:43,915
+WHERE id IN
+
+34
+00:00:43,915 --> 00:00:45,275
+Bas 2 queries
+
+35
+00:00:45,275 --> 00:00:47,115
+Ya report list pe hi print
+
+36
+00:00:47,115 --> 00:00:48,075
+ho JOIN
+
+37
+00:00:48,075 --> 00:00:50,395
+Django mein select_related
+
+38
+00:00:50,395 --> 00:00:52,155
+JPA mein JOIN FETCH
+
+39
+00:00:52,155 --> 00:00:54,155
+Follow-up toh sab eagerly JOIN kar
+
+40
+00:00:54,155 --> 00:00:54,795
+do?
+
+41
+00:00:54,795 --> 00:00:56,375
+Nahi
+
+42
+00:00:56,375 --> 00:00:57,890
+Do one-to-many JOINs
+
+43
+00:00:57,890 --> 00:00:58,850
+rows multiply
+
+44
+00:00:58,850 --> 00:01:00,770
+cartesian explosion
+
+45
+00:01:00,770 --> 00:01:02,530
+Wahan batched IN lo
+
+46
+00:01:02,530 --> 00:01:05,010
+Bolna lazy loading in a loop
+
+47
+00:01:05,010 --> 00:01:07,519
+Fix JOIN ya batched IN
+
+48
+00:01:07,519 --> 00:01:09,599
+Tests mein query count check karo
+
+49
+00:01:09,599 --> 00:01:10,719
+Dost ko bhejo
+
+50
+00:01:10,719 --> 00:01:11,759
+follow karo
+
+51
+00:01:11,759 --> 00:01:14,559
+Next WHERE phone = NULL
+
+52
+00:01:14,559 --> 00:01:15,890
+2 lakh users kahan gaye?

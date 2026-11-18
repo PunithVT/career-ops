@@ -1,207 +1,223 @@
 1
-00:00:00,120 --> 00:00:01,200
-DB slow hai
+00:00:00,120 --> 00:00:01,153
+Orders page crawling?
 
 2
-00:00:01,200 --> 00:00:02,080
-RAM badha do?
+00:00:01,362 --> 00:00:02,036
+Add RAM?
 
 3
-00:00:02,080 --> 00:00:03,040
-Yahin reject
+00:00:02,252 --> 00:00:04,017
+Rejected because one loop fired
 
 4
-00:00:03,040 --> 00:00:04,000
-Ek loop
+00:00:04,087 --> 00:00:06,176
+101 queries at your database
 
 5
-00:00:04,000 --> 00:00:06,240
-database ko 101 queries gayi
+00:00:06,415 --> 00:00:07,797
+My Orders shows 100 orders
 
 6
-00:00:06,240 --> 00:00:07,360
-100 orders
+00:00:07,866 --> 00:00:08,946
+instant on your laptop
 
 7
-00:00:07,360 --> 00:00:08,800
-laptop pe instant
+00:00:08,969 --> 00:00:09,840
+slow in production
 
 8
-00:00:08,800 --> 00:00:10,160
-production mein slow
+00:00:10,065 --> 00:00:10,646
+What's wrong?
 
 9
-00:00:10,160 --> 00:00:10,960
-Kya galat?
+00:00:10,902 --> 00:00:11,352
+Think
 
 10
-00:00:10,960 --> 00:00:11,600
-Socho
+00:00:11,473 --> 00:00:12,216
+three two
 
 11
-00:00:11,600 --> 00:00:12,000
-teen do
+00:00:12,239 --> 00:00:12,689
+one
 
 12
-00:00:12,000 --> 00:00:12,560
-ek
+00:00:12,832 --> 00:00:14,748
+Most freshers say add more RAM
 
 13
-00:00:12,560 --> 00:00:13,760
-Freshers bolte hain
+00:00:14,771 --> 00:00:15,920
+and that's where you get caught
 
 14
-00:00:13,760 --> 00:00:14,705
-RAM badhao
+00:00:16,066 --> 00:00:17,181
+Picture a hospital ward
 
 15
-00:00:14,705 --> 00:00:16,225
-Yahin pakde jaate ho
+00:00:17,366 --> 00:00:18,678
+the nurse gets the patients list
 
 16
-00:00:16,225 --> 00:00:17,585
-Hospital ward socho
+00:00:18,713 --> 00:00:19,885
+from the records room in one
 
 17
-00:00:17,585 --> 00:00:19,745
-Nurse ek baar records se patients
+00:00:19,920 --> 00:00:20,370
+go
 
 18
-00:00:19,745 --> 00:00:21,025
-ki list mangwati hai
+00:00:20,501 --> 00:00:21,894
+But it has no reports
 
 19
-00:00:21,025 --> 00:00:22,385
-List mein report nahi
+00:00:22,103 --> 00:00:23,426
+so for every bed the ward
 
 20
-00:00:22,385 --> 00:00:23,985
-toh har bed pe ward boy
+00:00:23,461 --> 00:00:24,940
+boy walks to the records room
 
 21
-00:00:23,985 --> 00:00:25,025
-records room jaata
+00:00:25,099 --> 00:00:27,050
+Your code only shows o.restaurant
 
 22
-00:00:25,025 --> 00:00:28,605
-Code mein bas o.restaurant dikhta
+00:00:27,085 --> 00:00:28,580
+because the trip hides inside it
 
 23
-00:00:28,605 --> 00:00:28,780
-chakkar andar chhupa
+00:00:28,745 --> 00:00:30,460
+and that's lazy loading
 
 24
-00:00:28,780 --> 00:00:29,740
-lazy loading
+00:00:30,644 --> 00:00:31,993
+So it's one list plus a
 
 25
-00:00:29,740 --> 00:00:31,340
-Ek list plus sau chakkar
+00:00:32,037 --> 00:00:32,873
+hundred trips
 
 26
-00:00:31,340 --> 00:00:33,500
-yaani 1 + N round trips
+00:00:32,943 --> 00:00:34,348
+which means 1 + N round
 
 27
-00:00:33,500 --> 00:00:34,860
-Laptop pe room bagal mein
+00:00:34,371 --> 00:00:34,905
+trips
 
 28
-00:00:34,860 --> 00:00:36,380
-0.1 ms
+00:00:35,086 --> 00:00:36,340
+On your laptop the room's next
 
 29
-00:00:36,380 --> 00:00:38,140
-Production mein ek trip 5 se
+00:00:36,375 --> 00:00:38,524
+door 0.1 milliseconds
 
 30
-00:00:38,140 --> 00:00:39,960
-30 ms le sakta hai
+00:00:38,713 --> 00:00:40,605
+but production trips can take 5
 
 31
-00:00:39,960 --> 00:00:41,835
-Saare report IDs ek slip pe
+00:00:40,686 --> 00:00:41,859
+to 30 milliseconds
 
 32
-00:00:41,835 --> 00:00:42,555
-ek trip
+00:00:42,100 --> 00:00:43,226
+So the fix is one slip
 
 33
-00:00:42,555 --> 00:00:43,915
-WHERE id IN
+00:00:43,273 --> 00:00:44,538
+with every report ID
 
 34
-00:00:43,915 --> 00:00:45,275
-Bas 2 queries
+00:00:44,783 --> 00:00:46,281
+one trip with WHERE id IN
 
 35
-00:00:45,275 --> 00:00:47,115
-Ya report list pe hi print
+00:00:46,542 --> 00:00:47,575
+just 2 queries
 
 36
-00:00:47,115 --> 00:00:48,075
-ho JOIN
+00:00:47,786 --> 00:00:48,937
+Or the reports come printed on
 
 37
-00:00:48,075 --> 00:00:50,395
-Django mein select_related
+00:00:48,959 --> 00:00:50,062
+the list with a JOIN
 
 38
-00:00:50,395 --> 00:00:52,155
-JPA mein JOIN FETCH
+00:00:50,374 --> 00:00:52,324
+select_related in Django or JOIN
 
 39
-00:00:52,155 --> 00:00:54,155
-Follow-up toh sab eagerly JOIN kar
+00:00:52,405 --> 00:00:53,460
+FETCH in JPA
 
 40
-00:00:54,155 --> 00:00:54,795
-do?
+00:00:53,628 --> 00:00:54,400
+Then the follow-up
 
 41
-00:00:54,795 --> 00:00:56,375
-Nahi
+00:00:54,598 --> 00:00:55,620
+so we just eagerly JOIN
 
 42
-00:00:56,375 --> 00:00:57,890
-Do one-to-many JOINs
+00:00:55,655 --> 00:00:56,131
+everything?
 
 43
-00:00:57,890 --> 00:00:58,850
-rows multiply
+00:00:56,344 --> 00:00:58,155
+No because two one-to-many JOINs
 
 44
-00:00:58,850 --> 00:01:00,770
-cartesian explosion
+00:00:58,236 --> 00:00:59,525
+make the rows multiply
 
 45
-00:01:00,770 --> 00:01:02,530
-Wahan batched IN lo
+00:00:59,749 --> 00:01:01,100
+a cartesian explosion
 
 46
-00:01:02,530 --> 00:01:05,010
-Bolna lazy loading in a loop
+00:01:01,298 --> 00:01:02,960
+so use batched IN there
 
 47
-00:01:05,010 --> 00:01:07,519
-Fix JOIN ya batched IN
+00:01:03,106 --> 00:01:04,673
+In the interview say lazy loading
 
 48
-00:01:07,519 --> 00:01:09,599
-Tests mein query count check karo
+00:01:04,696 --> 00:01:05,200
+in a loop
 
 49
-00:01:09,599 --> 00:01:10,719
-Dost ko bhejo
+00:01:05,351 --> 00:01:06,709
+fixed by a JOIN or batched
 
 50
-00:01:10,719 --> 00:01:11,759
-follow karo
+00:01:06,732 --> 00:01:08,737
+IN with tests checking the query
 
 51
-00:01:11,759 --> 00:01:14,559
-Next WHERE phone = NULL
+00:01:08,795 --> 00:01:09,245
+count
 
 52
-00:01:14,559 --> 00:01:15,890
-2 lakh users kahan gaye?
+00:01:09,361 --> 00:01:10,731
+Send this to a friend with
+
+53
+00:01:10,754 --> 00:01:11,700
+an interview coming up
+
+54
+00:01:11,877 --> 00:01:12,780
+Follow for next
+
+55
+00:01:12,973 --> 00:01:14,378
+WHERE phone = NULL
+
+56
+00:01:14,542 --> 00:01:15,790
+where did 2 lakh users go?

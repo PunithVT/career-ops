@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Category | Databases & SQL |
-| Duration | 77.3 s |
+| Duration | 77.2 s |
 | Video | [delivery-boy-ne-101-chakkar-kyun-lagaye-the-n-pl-001.mp4](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/videos/delivery-boy-ne-101-chakkar-kyun-lagaye-the-n-pl-001.mp4) |
 | Cover / thumbnail | [delivery-boy-ne-101-chakkar-kyun-lagaye-the-n-pl-001.jpg](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/covers/delivery-boy-ne-101-chakkar-kyun-lagaye-the-n-pl-001.jpg) |
 | Subtitles | [delivery-boy-ne-101-chakkar-kyun-lagaye-the-n-pl-001.srt](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/subtitles/delivery-boy-ne-101-chakkar-kyun-lagaye-the-n-pl-001.srt) |

@@ -1,223 +1,231 @@
 1
-00:00:00,120 --> 00:00:01,153
-Orders page crawling?
+00:00:00,247 --> 00:00:01,660
+Arre orders page crawling?
 
 2
-00:00:01,362 --> 00:00:02,036
+00:00:01,710 --> 00:00:02,380
 Add RAM?
 
 3
-00:00:02,252 --> 00:00:04,017
+00:00:02,447 --> 00:00:04,100
 Rejected because one loop fired
 
 4
-00:00:04,087 --> 00:00:06,176
+00:00:04,380 --> 00:00:05,939
 101 queries at your database
 
 5
-00:00:06,415 --> 00:00:07,797
+00:00:06,067 --> 00:00:07,463
 My Orders shows 100 orders
 
 6
-00:00:07,866 --> 00:00:08,946
+00:00:07,513 --> 00:00:08,583
 instant on your laptop
 
 7
-00:00:08,969 --> 00:00:09,840
+00:00:08,631 --> 00:00:09,543
 slow in production
 
 8
-00:00:10,065 --> 00:00:10,646
-What's wrong?
+00:00:09,575 --> 00:00:10,263
+What would you do?
 
 9
-00:00:10,902 --> 00:00:11,352
+00:00:10,303 --> 00:00:10,753
 Think
 
 10
-00:00:11,473 --> 00:00:12,216
+00:00:10,770 --> 00:00:12,023
 three two
 
 11
-00:00:12,239 --> 00:00:12,689
+00:00:12,063 --> 00:00:12,391
 one
 
 12
-00:00:12,832 --> 00:00:14,748
-Most freshers say add more RAM
+00:00:12,391 --> 00:00:13,223
+Most freshers say
 
 13
-00:00:14,771 --> 00:00:15,920
-and that's where you get caught
+00:00:13,303 --> 00:00:14,183
+add more RAM
 
 14
-00:00:16,066 --> 00:00:17,181
-Picture a hospital ward
+00:00:14,323 --> 00:00:15,583
+and that's where you get caught
 
 15
-00:00:17,366 --> 00:00:18,678
-the nurse gets the patients list
+00:00:15,608 --> 00:00:16,263
+Picture a ward
 
 16
-00:00:18,713 --> 00:00:19,885
-from the records room in one
+00:00:16,283 --> 00:00:17,623
+the nurse gets the patients list
 
 17
-00:00:19,920 --> 00:00:20,370
-go
+00:00:17,655 --> 00:00:18,903
+from the records room in one
 
 18
-00:00:20,501 --> 00:00:21,894
-But it has no reports
+00:00:18,956 --> 00:00:19,406
+go
 
 19
-00:00:22,103 --> 00:00:23,426
-so for every bed the ward
+00:00:19,563 --> 00:00:20,423
+But no reports
 
 20
-00:00:23,461 --> 00:00:24,940
-boy walks to the records room
+00:00:20,476 --> 00:00:21,623
+so for every bed the ward
 
 21
-00:00:25,099 --> 00:00:27,050
-Your code only shows o.restaurant
+00:00:21,683 --> 00:00:22,903
+boy walks to the records room
 
 22
-00:00:27,085 --> 00:00:28,580
-because the trip hides inside it
+00:00:22,930 --> 00:00:23,290
+yaar
 
 23
-00:00:28,745 --> 00:00:30,460
-and that's lazy loading
+00:00:23,290 --> 00:00:25,208
+Your code only shows o.restaurant
 
 24
-00:00:30,644 --> 00:00:31,993
-So it's one list plus a
+00:00:25,252 --> 00:00:26,823
+but the trip hides inside
 
 25
-00:00:32,037 --> 00:00:32,873
-hundred trips
+00:00:26,871 --> 00:00:27,783
+that's lazy loading
 
 26
-00:00:32,943 --> 00:00:34,348
-which means 1 + N round
+00:00:27,836 --> 00:00:28,286
+So bas
 
 27
-00:00:34,371 --> 00:00:34,905
-trips
+00:00:28,316 --> 00:00:29,623
+it's one list plus a hundred
 
 28
-00:00:35,086 --> 00:00:36,340
-On your laptop the room's next
+00:00:29,690 --> 00:00:31,386
+trips which means 1 + N
 
 29
-00:00:36,375 --> 00:00:38,524
-door 0.1 milliseconds
+00:00:31,426 --> 00:00:32,106
+round trips
 
 30
-00:00:38,713 --> 00:00:40,605
-but production trips can take 5
+00:00:32,253 --> 00:00:33,466
+On your laptop the room's next
 
 31
-00:00:40,686 --> 00:00:41,859
-to 30 milliseconds
+00:00:33,498 --> 00:00:35,066
+door 0.1 milliseconds
 
 32
-00:00:42,100 --> 00:00:43,226
-So the fix is one slip
+00:00:35,106 --> 00:00:36,666
+but production trips can take 5
 
 33
-00:00:43,273 --> 00:00:44,538
-with every report ID
+00:00:36,693 --> 00:00:37,946
+to 30 milliseconds
 
 34
-00:00:44,783 --> 00:00:46,281
-one trip with WHERE id IN
+00:00:38,093 --> 00:00:38,986
+Chalo the fix
 
 35
-00:00:46,542 --> 00:00:47,575
-just 2 queries
+00:00:39,026 --> 00:00:40,506
+one slip with every report ID
 
 36
-00:00:47,786 --> 00:00:48,937
-Or the reports come printed on
+00:00:40,546 --> 00:00:42,026
+one trip with WHERE id IN
 
 37
-00:00:48,959 --> 00:00:50,062
-the list with a JOIN
+00:00:42,058 --> 00:00:42,986
+just 2 queries
 
 38
-00:00:50,374 --> 00:00:52,324
-select_related in Django or JOIN
+00:00:43,013 --> 00:00:44,106
+Or reports come printed on the
 
 39
-00:00:52,405 --> 00:00:53,460
-FETCH in JPA
+00:00:44,170 --> 00:00:45,226
+list with a JOIN
 
 40
-00:00:53,628 --> 00:00:54,400
-Then the follow-up
+00:00:45,258 --> 00:00:46,826
+that's select_related in Django
 
 41
-00:00:54,598 --> 00:00:55,620
-so we just eagerly JOIN
+00:00:46,890 --> 00:00:48,106
+JOIN FETCH in JPA
 
 42
-00:00:55,655 --> 00:00:56,131
-everything?
+00:00:48,226 --> 00:00:48,994
+Then the follow-up
 
 43
-00:00:56,344 --> 00:00:58,155
-No because two one-to-many JOINs
+00:00:49,047 --> 00:00:50,834
+so we just eagerly JOIN everything
 
 44
-00:00:58,236 --> 00:00:59,525
-make the rows multiply
+00:00:50,866 --> 00:00:51,154
+boss?
 
 45
-00:00:59,749 --> 00:01:01,100
-a cartesian explosion
+00:00:51,154 --> 00:00:51,794
+Arre no
 
 46
-00:01:01,298 --> 00:01:02,960
-so use batched IN there
+00:00:51,834 --> 00:00:53,474
+two one-to-many JOINs multiply the
 
 47
-00:01:03,106 --> 00:01:04,673
-In the interview say lazy loading
+00:00:53,538 --> 00:00:55,234
+rows a cartesian explosion
 
 48
-00:01:04,696 --> 00:01:05,200
-in a loop
+00:00:55,287 --> 00:00:56,474
+so use batched IN there
 
 49
-00:01:05,351 --> 00:01:06,709
-fixed by a JOIN or batched
+00:00:56,654 --> 00:00:57,104
+Say this
 
 50
-00:01:06,732 --> 00:01:08,737
-IN with tests checking the query
+00:00:57,138 --> 00:00:58,194
+lazy loading in a loop
 
 51
-00:01:08,795 --> 00:01:09,245
-count
+00:00:58,247 --> 00:00:59,634
+fixed by a JOIN or batched
 
 52
-00:01:09,361 --> 00:01:10,731
-Send this to a friend with
+00:00:59,687 --> 00:01:00,914
+IN caught by tests on the
 
 53
-00:01:10,754 --> 00:01:11,700
-an interview coming up
+00:01:00,967 --> 00:01:01,554
+query count
 
 54
-00:01:11,877 --> 00:01:12,780
-Follow for next
+00:01:01,618 --> 00:01:02,514
+Send this to a friend with
 
 55
-00:01:12,973 --> 00:01:14,378
-WHERE phone = NULL
+00:01:02,567 --> 00:01:03,474
+an interview coming up
 
 56
-00:01:14,542 --> 00:01:15,790
+00:01:03,508 --> 00:01:04,434
+Follow for the next one
+
+57
+00:01:04,474 --> 00:01:05,954
+WHERE phone = NULL
+
+58
+00:01:05,981 --> 00:01:07,300
 where did 2 lakh users go?

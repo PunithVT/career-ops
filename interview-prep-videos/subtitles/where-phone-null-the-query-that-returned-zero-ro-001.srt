@@ -1,0 +1,263 @@
+1
+00:00:00,280 --> 00:00:01,880
+2 lakh users missing a phone
+
+2
+00:00:01,920 --> 00:00:03,320
+query finds zero
+
+3
+00:00:03,368 --> 00:00:04,360
+NULL means empty?
+
+4
+00:00:04,424 --> 00:00:05,400
+Interview over
+
+5
+00:00:05,469 --> 00:00:06,520
+So the interviewer asks
+
+6
+00:00:06,560 --> 00:00:08,664
+the query was WHERE alt_phone =
+
+7
+00:00:08,664 --> 00:00:10,200
+NULL so why zero rows?
+
+8
+00:00:10,232 --> 00:00:11,000
+What would you do?
+
+9
+00:00:11,067 --> 00:00:11,560
+Think
+
+10
+00:00:11,587 --> 00:00:12,840
+three two
+
+11
+00:00:12,900 --> 00:00:13,350
+one
+
+12
+00:00:13,534 --> 00:00:14,400
+Most freshers say
+
+13
+00:00:14,440 --> 00:00:15,480
+NULL is just empty
+
+14
+00:00:15,533 --> 00:00:16,600
+so equals works
+
+15
+00:00:16,660 --> 00:00:17,920
+and that's where you get caught
+
+16
+00:00:17,960 --> 00:00:19,160
+Chalo picture an airport
+
+17
+00:00:19,224 --> 00:00:20,280
+lost-baggage counter
+
+18
+00:00:20,320 --> 00:00:21,640
+where some bags have a tag
+
+19
+00:00:21,688 --> 00:00:23,080
+with no phone written on it
+
+20
+00:00:23,107 --> 00:00:24,360
+So the staff draw a question
+
+21
+00:00:24,408 --> 00:00:25,960
+mark meaning we don't know
+
+22
+00:00:26,000 --> 00:00:27,560
+and that's NULL in SQL
+
+23
+00:00:27,600 --> 00:00:28,520
+not an empty string
+
+24
+00:00:28,645 --> 00:00:29,725
+Now ask the staff if the
+
+25
+00:00:29,778 --> 00:00:30,925
+phone equals NULL
+
+26
+00:00:30,973 --> 00:00:32,525
+that's unknown versus unknown
+
+27
+00:00:32,552 --> 00:00:33,405
+so they just shrug
+
+28
+00:00:33,458 --> 00:00:33,965
+no idea
+
+29
+00:00:33,992 --> 00:00:34,431
+yaar
+
+30
+00:00:34,431 --> 00:00:35,726
+And the staff only hand over
+
+31
+00:00:35,790 --> 00:00:37,006
+bags with a sure yes
+
+32
+00:00:37,054 --> 00:00:38,686
+just like WHERE keeps only TRUE
+
+33
+00:00:38,766 --> 00:00:40,206
+rows so you walk away with
+
+34
+00:00:40,254 --> 00:00:41,006
+zero rows
+
+35
+00:00:41,210 --> 00:00:42,606
+Bas now ask whether the tag
+
+36
+00:00:42,646 --> 00:00:43,566
+has a question mark
+
+37
+00:00:43,614 --> 00:00:44,606
+that's IS NULL
+
+38
+00:00:44,646 --> 00:00:45,326
+and boom
+
+39
+00:00:45,406 --> 00:00:46,926
+all 2 lakh users come right
+
+40
+00:00:46,974 --> 00:00:47,394
+back
+
+41
+00:00:47,394 --> 00:00:47,886
+But careful
+
+42
+00:00:47,934 --> 00:00:49,646
+boss ask for city not Mumbai
+
+43
+00:00:49,686 --> 00:00:51,326
+and Rahul comes back while Amit's
+
+44
+00:00:51,366 --> 00:00:53,166
+unknown city gets silently dropped
+
+45
+00:00:53,219 --> 00:00:54,926
+so add OR city IS NULL
+
+46
+00:00:55,140 --> 00:00:56,046
+Then comes the follow-up
+
+47
+00:00:56,110 --> 00:00:58,126
+find users who never ordered using
+
+48
+00:00:58,206 --> 00:00:58,766
+NOT IN
+
+49
+00:00:58,806 --> 00:01:01,006
+but one order's user_id is NULL
+
+50
+00:01:01,038 --> 00:01:01,726
+What happens?
+
+51
+00:01:01,746 --> 00:01:02,846
+You get zero rows
+
+52
+00:01:02,886 --> 00:01:04,526
+because every not-equal against
+
+53
+00:01:04,574 --> 00:01:06,446
+that NULL is unknown and never
+
+54
+00:01:06,510 --> 00:01:07,486
+TRUE so bhai
+
+55
+00:01:07,534 --> 00:01:09,326
+just use NOT EXISTS instead
+
+56
+00:01:09,393 --> 00:01:10,126
+In the interview
+
+57
+00:01:10,186 --> 00:01:11,806
+say NULL means unknown so you
+
+58
+00:01:11,866 --> 00:01:12,766
+use IS NULL
+
+59
+00:01:12,826 --> 00:01:14,846
+add OR IS NULL on not-equals
+
+60
+00:01:14,886 --> 00:01:16,366
+and swap NOT IN for NOT
+
+61
+00:01:16,435 --> 00:01:17,006
+EXISTS
+
+62
+00:01:17,038 --> 00:01:17,966
+Send this to a friend with
+
+63
+00:01:17,993 --> 00:01:19,006
+an interview coming up
+
+64
+00:01:19,029 --> 00:01:19,966
+Follow for the next one
+
+65
+00:01:20,023 --> 00:01:22,206
+design bit.ly in 30 seconds
+
+66
+00:01:22,246 --> 00:01:23,240
+can you actually do it?

@@ -1,0 +1,275 @@
+1
+00:00:00,282 --> 00:00:01,360
+Chop an MD5?
+
+2
+00:00:01,392 --> 00:00:02,080
+Interview over
+
+3
+00:00:02,144 --> 00:00:02,540
+boss!
+
+4
+00:00:02,540 --> 00:00:03,687
+You've got thirty seconds to
+
+5
+00:00:03,726 --> 00:00:04,640
+design bit.ly
+
+6
+00:00:04,700 --> 00:00:05,920
+and it's the season finale!
+
+7
+00:00:06,145 --> 00:00:07,360
+Ten crore links a month
+
+8
+00:00:07,440 --> 00:00:08,800
+a hundred clicks each
+
+9
+00:00:08,864 --> 00:00:10,880
+redirects under fifty milliseconds
+
+10
+00:00:10,933 --> 00:00:11,880
+so how do you build it?
+
+11
+00:00:11,920 --> 00:00:12,960
+Chalo pause and comment your
+
+12
+00:00:13,017 --> 00:00:13,467
+design
+
+13
+00:00:13,493 --> 00:00:14,000
+Think
+
+14
+00:00:14,027 --> 00:00:15,200
+three two
+
+15
+00:00:15,260 --> 00:00:15,658
+one
+
+16
+00:00:15,658 --> 00:00:16,570
+Most freshers say
+
+17
+00:00:16,634 --> 00:00:18,170
+just take the first 7 characters
+
+18
+00:00:18,197 --> 00:00:18,890
+of MD5
+
+19
+00:00:18,970 --> 00:00:19,930
+no collision check
+
+20
+00:00:19,990 --> 00:00:21,210
+and that's where you get caught
+
+21
+00:00:21,432 --> 00:00:22,810
+So picture a temple shoe stand
+
+22
+00:00:22,850 --> 00:00:24,010
+you hand over your shoes
+
+23
+00:00:24,070 --> 00:00:24,810
+get a token
+
+24
+00:00:24,850 --> 00:00:26,370
+and showing it brings them back
+
+25
+00:00:26,394 --> 00:00:27,130
+your redirect
+
+26
+00:00:27,170 --> 00:00:28,090
+Now chop a hash for the
+
+27
+00:00:28,157 --> 00:00:29,930
+token and Rahul and Rakesh both
+
+28
+00:00:29,990 --> 00:00:30,650
+get RA
+
+29
+00:00:30,804 --> 00:00:32,253
+so Rakesh takes the wrong shoes
+
+30
+00:00:32,333 --> 00:00:33,053
+a collision
+
+31
+00:00:33,085 --> 00:00:33,773
+Here's the fix
+
+32
+00:00:33,826 --> 00:00:35,293
+every pair gets a unique serial
+
+33
+00:00:35,339 --> 00:00:37,053
+number written in base62
+
+34
+00:00:37,093 --> 00:00:38,013
+seven characters
+
+35
+00:00:38,053 --> 00:00:38,813
+and bas
+
+36
+00:00:38,845 --> 00:00:41,093
+that's 3.5 lakh crore codes
+
+37
+00:00:41,133 --> 00:00:42,413
+Accha reads are a hundred times
+
+38
+00:00:42,470 --> 00:00:44,180
+writes so popular pairs wait on
+
+39
+00:00:44,213 --> 00:00:45,533
+a hot shelf by the counter
+
+40
+00:00:45,717 --> 00:00:46,737
+and that's your cache
+
+41
+00:00:46,873 --> 00:00:47,943
+But serials count up
+
+42
+00:00:47,996 --> 00:00:49,143
+so a stranger asks for the
+
+43
+00:00:49,191 --> 00:00:49,783
+next one
+
+44
+00:00:49,847 --> 00:00:51,383
+sees other people's links
+
+45
+00:00:51,410 --> 00:00:53,223
+so you scramble IDs and rate-limit
+
+46
+00:00:53,280 --> 00:00:53,783
+misses
+
+47
+00:00:53,923 --> 00:00:54,983
+And then comes the twist
+
+48
+00:00:55,043 --> 00:00:56,343
+bhai three regions
+
+49
+00:00:56,383 --> 00:00:57,383
+one ID counter
+
+50
+00:00:57,436 --> 00:00:59,063
+so every write goes cross-region?
+
+51
+00:00:59,116 --> 00:01:00,823
+Chill each server leases an ID
+
+52
+00:01:00,873 --> 00:01:01,863
+booklet of a thousand
+
+53
+00:01:01,916 --> 00:01:03,463
+so the counter's barely touched
+
+54
+00:01:03,503 --> 00:01:04,583
+and if one crashes
+
+55
+00:01:04,647 --> 00:01:05,463
+gaps are fine
+
+56
+00:01:05,589 --> 00:01:06,829
+Say this in the interview
+
+57
+00:01:06,861 --> 00:01:07,629
+estimates first
+
+58
+00:01:07,686 --> 00:01:09,229
+unique ID in base62
+
+59
+00:01:09,269 --> 00:01:10,269
+a cache in front
+
+60
+00:01:10,322 --> 00:01:11,309
+scramble codes
+
+61
+00:01:11,349 --> 00:01:12,909
+and lease ranges per server
+
+62
+00:01:13,258 --> 00:01:13,789
+Season one's done
+
+63
+00:01:13,816 --> 00:01:14,221
+yaar!
+
+64
+00:01:14,221 --> 00:01:15,069
+Send this to a friend with
+
+65
+00:01:15,096 --> 00:01:16,029
+an interview coming up
+
+66
+00:01:16,075 --> 00:01:17,069
+Follow for season two
+
+67
+00:01:17,129 --> 00:01:18,189
+created clicked
+
+68
+00:01:18,469 --> 00:01:18,919
+404
+
+69
+00:01:18,989 --> 00:01:19,439
+why?

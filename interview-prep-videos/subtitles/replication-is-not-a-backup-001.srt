@@ -1,0 +1,267 @@
+1
+00:00:00,570 --> 00:00:01,250
+One DELETE
+
+2
+00:00:01,310 --> 00:00:02,930
+and three replicas go blank
+
+3
+00:00:02,970 --> 00:00:03,730
+Three replicas
+
+4
+00:00:03,783 --> 00:00:04,450
+so it's safe?
+
+5
+00:00:04,583 --> 00:00:05,490
+Rejected
+
+6
+00:00:05,570 --> 00:00:07,330
+Arre at ten AM an intern
+
+7
+00:00:07,410 --> 00:00:09,090
+ran DELETE FROM orders with no
+
+8
+00:00:09,143 --> 00:00:09,593
+WHERE
+
+9
+00:00:09,863 --> 00:00:11,810
+Accha you need those orders back
+
+10
+00:00:11,863 --> 00:00:12,690
+so what would you do?
+
+11
+00:00:12,797 --> 00:00:13,570
+Think
+
+12
+00:00:13,623 --> 00:00:15,010
+three two
+
+13
+00:00:15,090 --> 00:00:15,540
+one
+
+14
+00:00:15,770 --> 00:00:16,618
+Most freshers say
+
+15
+00:00:16,671 --> 00:00:17,578
+three replicas
+
+16
+00:00:17,605 --> 00:00:18,778
+so the data is safe
+
+17
+00:00:18,818 --> 00:00:20,138
+and that's where you get caught
+
+18
+00:00:20,188 --> 00:00:21,618
+Picture the campus xerox shop
+
+19
+00:00:21,631 --> 00:00:23,178
+yaar where every page of the
+
+20
+00:00:23,222 --> 00:00:24,858
+original notes gets printed into
+
+21
+00:00:24,898 --> 00:00:26,498
+three copies instantly
+
+22
+00:00:26,548 --> 00:00:28,138
+The original is your primary
+
+23
+00:00:28,158 --> 00:00:29,898
+the copies are your replicas
+
+24
+00:00:29,938 --> 00:00:31,338
+and if the original burns
+
+25
+00:00:31,386 --> 00:00:32,378
+that's failover
+
+26
+00:00:32,418 --> 00:00:34,258
+one copy becomes the new original
+
+27
+00:00:34,498 --> 00:00:35,018
+And then
+
+28
+00:00:35,098 --> 00:00:35,818
+by mistake
+
+29
+00:00:35,858 --> 00:00:36,938
+a page gets torn
+
+30
+00:00:36,978 --> 00:00:38,458
+and the machine happily prints
+
+31
+00:00:38,474 --> 00:00:40,298
+that torn page into all three
+
+32
+00:00:40,367 --> 00:00:40,858
+copies
+
+33
+00:00:40,938 --> 00:00:42,458
+That's exactly your DELETE
+
+34
+00:00:42,490 --> 00:00:44,138
+boss because replication copies
+
+35
+00:00:44,178 --> 00:00:45,098
+the mistake too
+
+36
+00:00:45,151 --> 00:00:46,378
+so it's no backup at all
+
+37
+00:00:46,845 --> 00:00:48,058
+So what actually saves you
+
+38
+00:00:48,118 --> 00:00:48,578
+bhai?
+
+39
+00:00:48,634 --> 00:00:50,058
+Last night's copy in the locker
+
+40
+00:00:50,122 --> 00:00:52,218
+plus a register that logs every
+
+41
+00:00:52,275 --> 00:00:53,218
+single change
+
+42
+00:00:53,405 --> 00:00:55,098
+Chalo restore the locker copy
+
+43
+00:00:55,130 --> 00:00:56,618
+then replay the register up to
+
+44
+00:00:56,698 --> 00:00:58,618
+9:59 one minute before the
+
+45
+00:00:58,680 --> 00:01:00,698
+disaster and that's point-in-time
+
+46
+00:01:00,751 --> 00:01:01,298
+recovery
+
+47
+00:01:01,465 --> 00:01:02,545
+But here's the twist
+
+48
+00:01:02,593 --> 00:01:03,685
+when did you last test a
+
+49
+00:01:03,725 --> 00:01:04,305
+restore?
+
+50
+00:01:05,052 --> 00:01:06,385
+In 2017
+
+51
+00:01:06,465 --> 00:01:08,225
+GitLab found several backups had
+
+52
+00:01:08,282 --> 00:01:09,832
+failed and about six hours of
+
+53
+00:01:09,905 --> 00:01:11,025
+data was gone
+
+54
+00:01:11,078 --> 00:01:12,865
+so an untested backup is no
+
+55
+00:01:12,911 --> 00:01:13,625
+backup at all
+
+56
+00:01:13,803 --> 00:01:14,790
+So say this
+
+57
+00:01:14,834 --> 00:01:16,310
+replicas are for availability
+
+58
+00:01:16,380 --> 00:01:18,710
+backups plus PITR are for undoing
+
+59
+00:01:18,772 --> 00:01:20,390
+mistakes and you run restore
+
+60
+00:01:20,447 --> 00:01:21,350
+drills regularly
+
+61
+00:01:21,430 --> 00:01:21,880
+bas
+
+62
+00:01:21,910 --> 00:01:22,870
+Send this to a friend with
+
+63
+00:01:22,897 --> 00:01:23,950
+an interview coming up
+
+64
+00:01:23,979 --> 00:01:24,950
+Follow for the next one
+
+65
+00:01:24,990 --> 00:01:26,070
+you double the servers
+
+66
+00:01:26,110 --> 00:01:27,510
+but the app's still slow
+
+67
+00:01:27,570 --> 00:01:28,020
+why?

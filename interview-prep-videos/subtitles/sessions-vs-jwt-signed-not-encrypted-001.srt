@@ -1,0 +1,271 @@
+1
+00:00:00,797 --> 00:00:03,470
+Paste a login token into jwt.io
+
+2
+00:00:03,537 --> 00:00:04,110
+no key
+
+3
+00:00:04,140 --> 00:00:05,670
+and the user's email and role
+
+4
+00:00:05,734 --> 00:00:06,470
+just pop up
+
+5
+00:00:06,570 --> 00:00:07,430
+And you say
+
+6
+00:00:07,480 --> 00:00:09,070
+our JWT is encrypted
+
+7
+00:00:09,123 --> 00:00:09,950
+so it's safe?
+
+8
+00:00:11,006 --> 00:00:12,270
+Then how am I reading it
+
+9
+00:00:12,318 --> 00:00:12,750
+boss?
+
+10
+00:00:12,750 --> 00:00:13,510
+Think
+
+11
+00:00:13,563 --> 00:00:15,030
+three two
+
+12
+00:00:15,110 --> 00:00:15,558
+one
+
+13
+00:00:15,558 --> 00:00:18,130
+Most freshers say exactly that
+
+14
+00:00:18,270 --> 00:00:19,850
+and that's where you get caught
+
+15
+00:00:19,895 --> 00:00:21,250
+Imagine a water park where the
+
+16
+00:00:21,284 --> 00:00:22,850
+ticket office ties a wristband on
+
+17
+00:00:22,917 --> 00:00:24,130
+Rahul all rides
+
+18
+00:00:24,162 --> 00:00:25,010
+till 6 PM
+
+19
+00:00:25,842 --> 00:00:27,810
+That printed part is the payload
+
+20
+00:00:27,890 --> 00:00:29,490
+so even the lifeguard reads it
+
+21
+00:00:29,570 --> 00:00:30,450
+no key needed
+
+22
+00:00:30,550 --> 00:00:32,090
+But the hologram comes only from
+
+23
+00:00:32,130 --> 00:00:32,810
+the office
+
+24
+00:00:32,863 --> 00:00:34,010
+so if his friend edits the
+
+25
+00:00:34,058 --> 00:00:35,210
+time to 9 PM
+
+26
+00:00:35,263 --> 00:00:36,090
+it fails
+
+27
+00:00:36,138 --> 00:00:37,130
+that's the signature
+
+28
+00:00:37,210 --> 00:00:38,650
+And the ride operator checks the
+
+29
+00:00:38,703 --> 00:00:39,930
+hologram and the time
+
+30
+00:00:39,983 --> 00:00:41,290
+never opens a list
+
+31
+00:00:41,322 --> 00:00:42,090
+that's stateless
+
+32
+00:00:42,170 --> 00:00:43,450
+Same with your token
+
+33
+00:00:43,557 --> 00:00:44,170
+no key
+
+34
+00:00:44,250 --> 00:00:45,690
+a base64 decode
+
+35
+00:00:45,720 --> 00:00:46,650
+because it's signed
+
+36
+00:00:46,690 --> 00:00:47,650
+not encrypted
+
+37
+00:00:47,717 --> 00:00:48,817
+So never put a secret in
+
+38
+00:00:48,830 --> 00:00:49,450
+the payload
+
+39
+00:00:49,477 --> 00:00:50,010
+yaar
+
+40
+00:00:50,078 --> 00:00:51,530
+but the real trap's still coming
+
+41
+00:00:52,290 --> 00:00:54,010
+Now Rahul's token gets stolen!
+
+42
+00:00:54,063 --> 00:00:54,730
+He logs out
+
+43
+00:00:54,783 --> 00:00:56,010
+so does the thief's copy still
+
+44
+00:00:56,074 --> 00:00:57,490
+work yes or no?
+
+45
+00:00:57,530 --> 00:00:58,970
+Tell me in the comments first
+
+46
+00:00:59,510 --> 00:01:00,290
+Yes bhai
+
+47
+00:01:00,310 --> 00:01:01,810
+the copy works till expiry
+
+48
+00:01:01,856 --> 00:01:03,490
+unless the server keeps a denylist
+
+49
+00:01:03,517 --> 00:01:04,610
+of revoked tokens
+
+50
+00:01:04,770 --> 00:01:06,050
+A session works like the bag
+
+51
+00:01:06,100 --> 00:01:07,650
+counter you carry only a random
+
+52
+00:01:07,707 --> 00:01:09,010
+number and only the server's
+
+53
+00:01:09,063 --> 00:01:10,570
+register knows it's yours
+
+54
+00:01:10,610 --> 00:01:11,890
+When the counter strikes off that
+
+55
+00:01:11,957 --> 00:01:13,330
+entry the number's useless
+
+56
+00:01:13,386 --> 00:01:14,850
+instantly and the thief's turned
+
+57
+00:01:14,914 --> 00:01:16,370
+away instant logout
+
+58
+00:01:16,810 --> 00:01:17,530
+Say this
+
+59
+00:01:17,577 --> 00:01:19,010
+short-lived access tokens
+
+60
+00:01:19,050 --> 00:01:20,610
+revocable refresh tokens
+
+61
+00:01:20,663 --> 00:01:21,970
+no secrets in the payload
+
+62
+00:01:22,010 --> 00:01:23,250
+and for instant logout
+
+63
+00:01:23,303 --> 00:01:25,170
+sessions or a jti denylist
+
+64
+00:01:25,197 --> 00:01:26,530
+which brings state back
+
+65
+00:01:26,566 --> 00:01:27,890
+Tomorrow anyone can close your
+
+66
+00:01:27,950 --> 00:01:28,610
+padlock
+
+67
+00:01:28,679 --> 00:01:29,570
+so who can open it?
+
+68
+00:01:29,650 --> 00:01:30,920
+Follow so you're ready

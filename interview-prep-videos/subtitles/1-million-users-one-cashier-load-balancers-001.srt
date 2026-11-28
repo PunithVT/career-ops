@@ -1,0 +1,291 @@
+1
+00:00:00,224 --> 00:00:01,450
+Your app runs smooth at 1,000
+
+2
+00:00:01,517 --> 00:00:03,130
+users then 10 lakh show up
+
+3
+00:00:03,178 --> 00:00:03,770
+same code
+
+4
+00:00:03,790 --> 00:00:04,570
+and it crashes
+
+5
+00:00:04,602 --> 00:00:05,210
+Your fix
+
+6
+00:00:05,242 --> 00:00:06,409
+just buy a bigger server?
+
+7
+00:00:06,647 --> 00:00:07,132
+Okay boss
+
+8
+00:00:07,164 --> 00:00:08,172
+that's half an answer
+
+9
+00:00:08,204 --> 00:00:09,052
+what's the other half?
+
+10
+00:00:09,119 --> 00:00:09,612
+Think
+
+11
+00:00:09,639 --> 00:00:10,652
+three two
+
+12
+00:00:10,692 --> 00:00:10,972
+one
+
+13
+00:00:10,972 --> 00:00:12,012
+Most freshers say
+
+14
+00:00:12,058 --> 00:00:12,732
+bigger server
+
+15
+00:00:12,792 --> 00:00:14,012
+and that's where you get caught
+
+16
+00:00:14,042 --> 00:00:15,052
+because it's one step
+
+17
+00:00:15,112 --> 00:00:16,092
+not the full answer
+
+18
+00:00:16,160 --> 00:00:17,452
+Now imagine a pani puri stall
+
+19
+00:00:17,479 --> 00:00:18,092
+at Chowpatty
+
+20
+00:00:18,152 --> 00:00:18,812
+one vendor
+
+21
+00:00:18,852 --> 00:00:19,852
+and a huge crowd
+
+22
+00:00:20,163 --> 00:00:20,774
+Faster vendor?
+
+23
+00:00:20,814 --> 00:00:21,794
+Sure but even he has a
+
+24
+00:00:21,814 --> 00:00:22,414
+limit boss
+
+25
+00:00:22,454 --> 00:00:23,534
+and if he falls sick
+
+26
+00:00:23,554 --> 00:00:24,494
+the stall shuts
+
+27
+00:00:24,614 --> 00:00:25,140
+Better answer
+
+28
+00:00:25,180 --> 00:00:26,100
+bhai three stalls
+
+29
+00:00:26,140 --> 00:00:27,300
+and a helper at the entry
+
+30
+00:00:27,360 --> 00:00:28,500
+who sends everybody to the
+
+31
+00:00:28,544 --> 00:00:29,300
+shortest line
+
+32
+00:00:29,332 --> 00:00:30,820
+That helper is your load balancer
+
+33
+00:00:30,860 --> 00:00:32,420
+his rule is least connections
+
+34
+00:00:32,556 --> 00:00:33,945
+but the real trap is coming
+
+35
+00:00:34,009 --> 00:00:34,989
+And then the follow-up
+
+36
+00:00:35,056 --> 00:00:36,429
+users are randomly getting logged
+
+37
+00:00:36,489 --> 00:00:36,869
+out
+
+38
+00:00:36,869 --> 00:00:37,149
+Why?
+
+39
+00:00:37,149 --> 00:00:38,269
+One word in the comments
+
+40
+00:00:38,315 --> 00:00:39,229
+before I tell you
+
+41
+00:00:39,263 --> 00:00:40,189
+Answer memory
+
+42
+00:00:40,216 --> 00:00:40,549
+yaar
+
+43
+00:00:40,549 --> 00:00:41,709
+You paid for six puris
+
+44
+00:00:41,749 --> 00:00:43,229
+but that count lives only in
+
+45
+00:00:43,275 --> 00:00:44,189
+Server 1's memory
+
+46
+00:00:44,242 --> 00:00:45,556
+So your next puri goes to
+
+47
+00:00:45,595 --> 00:00:46,189
+Server 2
+
+48
+00:00:46,229 --> 00:00:47,309
+and that vendor says
+
+49
+00:00:47,449 --> 00:00:47,899
+who are you
+
+50
+00:00:47,909 --> 00:00:48,589
+pay first?
+
+51
+00:00:48,621 --> 00:00:49,469
+That's your logout
+
+52
+00:00:49,496 --> 00:00:50,429
+Chalo the fix
+
+53
+00:00:50,469 --> 00:00:51,549
+put the count in a shared
+
+54
+00:00:51,589 --> 00:00:52,589
+store like Redis
+
+55
+00:00:52,637 --> 00:00:54,029
+that every server reads
+
+56
+00:00:54,056 --> 00:00:55,229
+Or give the customer a signed
+
+57
+00:00:55,296 --> 00:00:56,749
+token like JWT
+
+58
+00:00:56,781 --> 00:00:58,349
+that any server can verify with
+
+59
+00:00:58,369 --> 00:00:58,802
+the key
+
+60
+00:00:58,802 --> 00:01:00,036
+Arre Stall 3 runs out of
+
+61
+00:01:00,082 --> 00:01:00,509
+water?
+
+62
+00:01:00,509 --> 00:01:02,109
+A health check stops traffic going
+
+63
+00:01:02,136 --> 00:01:02,669
+there bas
+
+64
+00:01:02,807 --> 00:01:03,554
+So in the interview
+
+65
+00:01:03,594 --> 00:01:04,994
+say stateless servers
+
+66
+00:01:05,038 --> 00:01:06,674
+sessions in Redis or a JWT
+
+67
+00:01:06,706 --> 00:01:07,394
+with the client
+
+68
+00:01:07,434 --> 00:01:08,674
+and health checks on
+
+69
+00:01:08,701 --> 00:01:10,274
+Tomorrow your images load fast in
+
+70
+00:01:10,331 --> 00:01:11,874
+Mumbai but slow in Chennai
+
+71
+00:01:11,906 --> 00:01:12,674
+same files
+
+72
+00:01:12,878 --> 00:01:13,143
+why?
+
+73
+00:01:13,143 --> 00:01:13,930
+Follow so you're ready

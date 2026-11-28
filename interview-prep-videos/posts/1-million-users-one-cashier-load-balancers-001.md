@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Category | System Design & Scaling |
-| Duration | 75.3 s |
+| Duration | 87.1 s |
 | Video | [1-million-users-one-cashier-load-balancers-001.mp4](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/videos/1-million-users-one-cashier-load-balancers-001.mp4) |
 | Cover / thumbnail | [1-million-users-one-cashier-load-balancers-001.jpg](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/covers/1-million-users-one-cashier-load-balancers-001.jpg) |
 | Subtitles | [1-million-users-one-cashier-load-balancers-001.srt](https://raw.githubusercontent.com/PunithVT/career-ops/main/interview-prep-videos/subtitles/1-million-users-one-cashier-load-balancers-001.srt) |
